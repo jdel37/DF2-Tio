@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
-
+import Equipo from "/public/images/Equipo 1.jpg" 
 const About = () => {
   const stats = [
     { value: '20+', label: 'Años de Experiencia' },
@@ -17,7 +17,7 @@ const About = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/public/images/Equipo 1.jpg" 
+                src={Equipo} 
                 alt="Team of consultants in a meeting" 
                 className="w-full h-auto object-cover"
               />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
-
+import logo from '/public/images/logo-03-300 dpi.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="text-2xl font-bold">
               <img
                 className="w-32 md:w-44 sm:w-24 max-w-full h-auto"
-                src="/public/images/logo-03-300 dpi.png"
+                src={logo}
                 alt="logo"
               />
             </div>

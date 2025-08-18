@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 
-const images = [
-  "/public/images/Academy 4.jpg",
-  "/public/images/Academy 77.jpg",
-  "/public/images/Equipo 10.jpg"
+import Academy4 from "/public/images/Academy 4.jpg"
+import Academy77 from "/public/images/Academy 77.jpg"
+import Equipo10 from "/public/images/Equipo 10.jpg"
+ const images = [
+  Academy4,
+  Academy77,
+  Equipo10
 ];
 
 function Carousel() {
