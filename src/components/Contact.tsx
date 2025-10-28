@@ -42,7 +42,7 @@ const Contact = () => {
     {
       icon: <MapPin size={24} className="text-[#DF1021]" />,
       title: "Visitanos",
-      details: ["Cra 21b #154-50", "Bogota DC"]
+      details: [" We Work Bogota, Medellin, Bucaramanga, Cali", "Bogota DC"]
     },
     {
       icon: <Phone size={24} className="text-[#DF1021]" />,
