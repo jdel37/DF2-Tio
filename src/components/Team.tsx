@@ -7,22 +7,22 @@ const Team = () => {
   const team = [
     {
       name: "Diego Forero",
-      title: "Chief Executive Officer",
-      bio: "Diego aporta más de 20 años de experiencia en liderazgo estratégico en múltiples industrias.",
+      title: "Chief Executive Officer (CEO)",
+      bio: "Diego aporta más de 20 años de experiencia en liderazgo estratégico, innovación corporativa y gestión de alto nivel en múltiples industrias.",
       image: Ceo,
       socials: {
         linkedin: "https://www.linkedin.com/in/diego-fernando-forero/",
-        email: "mailto:alexandra@example.com",
+        email: "https://mail.google.com/mail/?view=cm&fs=1&to=diegoforerotrivino@gmail.com",
       },
     },
     {
       name: "Alejandra Rivera",
-      title: "Chief Strategy Officer",
-      bio: "Alejandra es experta en el analisi de datos e inteligencia de negocios.",
+      title: "Chief Strategy Officer (CSO)",
+      bio: "Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento organizacional.",
       image: Gerente,
       socials: {
-        linkedin: "#",
-        email: "mailto:david@example.com",
+        linkedin: "https://www.linkedin.com/in/alejandra-rivera-garc%C3%ADa-177266208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        email: "https://mail.google.com/mail/?view=cm&fs=1&to=alejandra@example.com",
       },
     },
   ];
@@ -31,18 +31,24 @@ const Team = () => {
     <section
       id="equipo"
       className="bg-gray-50 flex flex-col items-center justify-center min-h-screen px-6 py-10"
+      aria-labelledby="equipo-title"
     >
-      {/* Título */}
+      {/* Título SEO */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
-          Nuestro Equipo de Liderazgo
+        <h2
+          id="equipo-title"
+          className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4"
+        >
+          Equipo de Liderazgo
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Conozca a nuestro equipo de consultores experimentados que se dedican a brindar resultados excepcionales para nuestros clientes.
+          Conozca a los líderes que impulsan la visión estratégica y el crecimiento 
+          de nuestra organización, aportando experiencia, innovación y compromiso 
+          con la excelencia.
         </p>
       </div>
 
-      {/* Contenedor principal centrado */}
+      {/* Contenedor principal */}
       <div
         className="
           flex 
@@ -71,14 +77,16 @@ const Team = () => {
               text-center 
               w-80
             "
+            aria-label={`Perfil profesional de ${member.name}`}
           >
-            {/* Imagen circular */}
+            {/* Imagen */}
             <div className="flex justify-center mt-6">
               <div className="w-48 h-48 overflow-hidden rounded-full border-4 border-[#1E76B8]">
                 <img
                   src={member.image}
-                  alt={member.name}
+                  alt={`Fotografía profesional de ${member.name}, ${member.title}`}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -97,7 +105,7 @@ const Team = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-500 hover:text-[#1E76B8] transition-colors"
-                    aria-label={`${member.name} LinkedIn`}
+                    aria-label={`Perfil de LinkedIn de ${member.name}`}
                   >
                     <Linkedin size={20} />
                   </a>
@@ -105,8 +113,10 @@ const Team = () => {
                 {member.socials.email && (
                   <a
                     href={member.socials.email}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-[#DF1021] transition-colors"
-                    aria-label={`Email ${member.name}`}
+                    aria-label={`Enviar correo electrónico a ${member.name}`}
                   >
                     <Mail size={20} />
                   </a>

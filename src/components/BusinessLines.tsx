@@ -24,7 +24,8 @@ const BusinessLines = () => {
       title: "Gestión Estratégica",
       icon: <BarChart3 size={24} className="text-[#DF1021]" />,
       image: Gestion,
-      description: "Ayudamos a las organizaciones a desarrollar e implementar iniciativas estratégicas que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestro enfoque combina un profundo conocimiento del los sectores con metodologías probadas para crear estrategias viables.",
+      alt: "Equipo trabajando en gestión estratégica",
+      description: "Ayudamos a las organizaciones a desarrollar e implementar iniciativas estratégicas que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestro enfoque combina un profundo conocimiento de los sectores con metodologías probadas para crear estrategias viables.",
       services: [
         "Desarrollo Corporativo Estratégico",
         "Entrada al Mercado & Expansión",
@@ -37,6 +38,7 @@ const BusinessLines = () => {
       title: "Transformación Digital",
       icon: <Lightbulb size={24} className="text-[#DF1021]" />,
       image: Digital,
+      alt: "Transformación digital en empresa",
       description: "Nuestros servicios de transformación digital ayudan a las empresas a aprovechar las tecnologías emergentes para reimaginar sus operaciones, experiencias de cliente y modelos de negocio. Le guiamos en cada etapa de su transformación digital.",
       services: [
         "Estrategia Digital & Hoja de Ruta",
@@ -50,6 +52,7 @@ const BusinessLines = () => {
       title: "Gestión de Proyectos",
       icon: <LineChart size={24} className="text-[#DF1021]" />,
       image: Proyectos,
+      alt: "Gestión de proyectos empresariales",
       description: "Ofrecemos servicios integrales de gestión de proyectos para optimizar resultados, controlar riesgos y garantizar la entrega eficiente. Nuestros expertos le apoyan en todas las fases para maximizar el éxito.",
       services: [
         "Planificación & Ejecución",
@@ -63,6 +66,7 @@ const BusinessLines = () => {
       title: "Marketing y Comunicación",
       icon: <Globe size={24} className="text-[#DF1021]" />,
       image: Marketing,
+      alt: "Estrategias de marketing digital",
       description: "Optimizamos operaciones de marketing y comunicación para fortalecer la marca, atraer clientes y generar experiencias memorables que potencian la lealtad.",
       services: [
         "Estrategia de Marketing",
@@ -76,6 +80,7 @@ const BusinessLines = () => {
       title: "Desarrollo de Franquicias",
       icon: <Users size={24} className="text-[#DF1021]" />,
       image: Franquicias,
+      alt: "Modelo de franquicias empresariales",
       description: "Guiamos a las empresas en la creación, expansión y consolidación de modelos de franquicia que garanticen escalabilidad y sostenibilidad.",
       services: [
         "Diseño del Modelo de Franquicia",
@@ -89,6 +94,7 @@ const BusinessLines = () => {
       title: "Academia",
       icon: <BarChart3 size={24} className="text-[#DF1021]" />,
       image: Academia,
+      alt: "Capacitación y formación empresarial",
       description: "Capacitamos a líderes y equipos a través de programas de formación práctica y estratégica, orientados a fortalecer habilidades críticas para el éxito empresarial.",
       services: [
         "Formación en Estrategia",
@@ -100,8 +106,14 @@ const BusinessLines = () => {
   ];
 
   return (
-    <section id="servicios" className="py-20 bg-gray-50">
+    <section 
+      id="servicios" 
+      aria-label="Líneas de negocio de D2F Consulting"
+      className="py-20 bg-gray-50"
+    >
       <div className="container mx-auto px-4 md:px-6">
+        
+        {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
             Nuestras Líneas de Negocio
@@ -111,7 +123,7 @@ const BusinessLines = () => {
           </p>
         </div>
 
-        {/* Tabs navigation */}
+        {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
           {businessLines.map((line) => (
             <button
@@ -122,6 +134,7 @@ const BusinessLines = () => {
                   ? 'bg-[#1E76B8] text-white shadow-md' 
                   : 'bg-white text-[#1E76B8] hover:bg-gray-100'
                 }`}
+              aria-expanded={activeTab === line.id}
             >
               {line.icon}
               <span className="hidden md:inline font-medium">{line.title}</span>
@@ -133,16 +146,16 @@ const BusinessLines = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500">
           <div className="p-6 md:p-8">
             <div className="flex flex-col items-center md:flex-row gap-5">
-              
-              {/* Imagen circular perfecta */}
-             <div className="flex-shrink-0 w-40 h-40 rounded-full shadow-[7px_11px_28px_6px_rgba(0,_0,_0,_0.1)] overflow-hidden flex items-center justify-center">
-  <img
-    src={businessLines[activeTab].image}
-    alt=""
-    className="w-full h-full object-cover "
-  />
-</div>
 
+              {/* Circular image */}
+              <div className="flex-shrink-0 w-40 h-40 rounded-full shadow-[7px_11px_28px_6px_rgba(0,_0,_0,_0.1)] overflow-hidden flex items-center justify-center">
+                <img
+                  src={businessLines[activeTab].image}
+                  alt={businessLines[activeTab].alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               {/* Info */}
               <div className="md:w-1/3">
@@ -153,9 +166,6 @@ const BusinessLines = () => {
                 <p className="text-gray-600 mb-6">
                   {businessLines[activeTab].description}
                 </p>
-                <button className="text-[#DF1021] hover:bg-[#DF1021] hover:text-white font-medium py-2 px-6 rounded-md transition-colors duration-300 shadow-[7px_11px_28px_6px_rgba(0,_0,_0,_0.1)]">
-                  Learn More
-                </button>
               </div>
 
               {/* Services */}
@@ -178,6 +188,7 @@ const BusinessLines = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -1,39 +1,61 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
-import logo from '/public/images/logo-03-300 dpi.png'
-const Navbar = () => {
+import logo from "/public/images/logo-03-300 dpi.png";
+
+const NAV_ITEMS = [
+  { label: "Inicio", id: "inicio" },
+  { label: "Servicios", id: "servicios" },
+  { label: "Conócenos", id: "conócenos" },
+  { label: "Testimonios", id: "testimonios" },
+  { label: "Equipo", id: "equipo" },
+  { label: "Contacto", id: "contacto" },
+];
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detectar si es móvil
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Comportamiento del scroll
+  useEffect(() => {
+    if (isMobile) {
+      setScrolled(true); // En móvil siempre blanco
+      return;
+    }
+
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMobile]);
 
-  // 🚀 Scroll con animación personalizada y offset para el navbar
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
     const navbar = document.getElementById("navbar");
 
-    if (section) {
-      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+    if (target) {
+      const navbarHeight = navbar?.offsetHeight || 0;
       const targetY =
-        section.getBoundingClientRect().top + window.scrollY - navbarHeight;
-      const startY = window.scrollY;
+        target.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
-      animate(startY, targetY, {
-        duration: 0.8,
+      animate(window.scrollY, targetY, {
+        duration: 0.7,
         ease: "easeInOut",
-        onUpdate: (latest) => window.scrollTo(0, latest),
+        onUpdate: (y) => window.scrollTo(0, y),
       });
 
       setIsOpen(false);
@@ -43,93 +65,76 @@ const Navbar = () => {
   return (
     <motion.nav
       id="navbar"
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
-      }`}
+      className={`
+        fixed w-full z-50 transition-all duration-500 
+        ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}
+        ${isMobile ? "bg-white shadow-md py-2" : ""}
+      `}
     >
-      <div className="container mx-auto px-1 md:px-6">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-2xl font-bold">
-              <img
-                className="w-32 md:w-44 sm:w-24 max-w-full h-auto"
-                src={logo}
-                alt="logo"
-              />
-            </div>
-          </div>
+      <div className="container mx-auto px-3 md:px-6 flex justify-between items-center">
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            {[
-              "Inicio",
-              "Servicios",
-              "About",
-              "Testimonios",
-              "Equipo",
-              "Contactanos",
-            ].map((item) => (
+        {/* LOGO */}
+        <button onClick={() => scrollToSection("inicio")}>
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-28 md:w-40 transition-all"
+          />
+        </button>
+
+        {/* DESKTOP NAV */}
+        <ul className="hidden md:flex space-x-10 items-center">
+          {NAV_ITEMS.map(({ label, id }) => (
+            <li key={id}>
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className={`text-sm font-medium hover:text-[#DF1021] transition-colors ${
-                  scrolled ? "text-[#1E76B8]" : "text-white"
-                }`}
+                onClick={() => scrollToSection(id)}
+                className={`text-sm font-semibold tracking-wide transition-colors 
+                  ${
+                    scrolled
+                      ? "text-[#1E76B8] hover:text-[#DF1021]"
+                      : "text-white hover:text-[#DF1021]"
+                  }`}
               >
-                {item}
+                {label}
               </button>
-            ))}
-          </div>
+            </li>
+          ))}
+        </ul>
 
-          {/* Mobile Navigation Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className={`${
-                scrolled ? "text-[#1E76B8]" : "text-white"
-              } focus:outline-none`}
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
+        {/* MOBILE BUTTON */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={`md:hidden transition-colors text-[#1E76B8]`}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white shadow-lg"
+          className="md:hidden bg-white pb-4 shadow-lg"
         >
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {[
-              "Inicio",
-              "Servicios",
-              "About",
-              "Testimonios",
-              "Equipo",
-              "Contactanos",
-            ].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-[#1E76B8] hover:text-[#DF1021] transition-colors py-2 px-4 text-left"
-              >
-                {item}
-              </button>
+          <ul className="flex flex-col container mx-auto px-6 space-y-3 py-3">
+            {NAV_ITEMS.map(({ label, id }) => (
+              <li key={id}>
+                <button
+                  onClick={() => scrollToSection(id)}
+                  className="block text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021] py-2"
+                >
+                  {label}
+                </button>
+              </li>
             ))}
-          </div>
+          </ul>
         </motion.div>
       )}
     </motion.nav>
   );
-};
-
-export default Navbar;
+}

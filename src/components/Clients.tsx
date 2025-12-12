@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 import kosha from '../../public/images/kosha.jpg';
 import Dco from '../../public/images/Dco.jpg';
 import creative from '../../public/images/creative.jpg';
@@ -24,25 +25,24 @@ const Clients = () => {
     { name: "HealthCare Plus", logo: camiux, industry: "Healthcare" },
     { name: "Retail Dynamics", logo: shake2go, industry: "Retail" },
     { name: "Energy Innovations", logo: kailua, industry: "Energy" },
-    { name: "Energy Innovations", logo: opticalia, industry: "Energy" },
-    { name: "Energy Innovations", logo: sabana, industry: "Energy" },
-    { name: "Energy Innovations", logo: city, industry: "Energy" },
-    { name: "Energy Innovations", logo: deka, industry: "Energy" },
-    { name: "Energy Innovations", logo: gant, industry: "Energy" },
-    { name: "Energy Innovations", logo: snow, industry: "Energy" },
-    { name: "Energy Innovations", logo: mpc, industry: "Energy" },
-    { name: "Energy Innovations", logo: ddg, industry: "Energy" },
-    { name: "Energy Innovations", logo: love, industry: "Energy" },
+    { name: "Opticalia", logo: opticalia, industry: "Retail" },
+    { name: "Universidad de La Sabana", logo: sabana, industry: "Education" },
+    { name: "City Group", logo: city, industry: "Services" },
+    { name: "Deka Industries", logo: deka, industry: "Manufacturing" },
+    { name: "Gant Group", logo: gant, industry: "Business Services" },
+    { name: "SnowTech", logo: snow, industry: "Technology" },
+    { name: "MPC Corp", logo: mpc, industry: "Industrial" },
+    { name: "DDG Labs", logo: ddg, industry: "Technology" },
+    { name: "Love & Co", logo: love, industry: "Retail" },
   ];
 
-  const logos = [...clients, ...clients]; // duplicación para scroll infinito
+  const logos = [...clients, ...clients]; 
   const scrollRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Animación continua
   useEffect(() => {
     let animationFrame;
-    const scrollSpeed = 1; // pixels por frame
+    const scrollSpeed = 1;
 
     const step = () => {
       if (!scrollRef.current || isHovered) {
@@ -51,7 +51,6 @@ const Clients = () => {
       }
       scrollRef.current.scrollLeft += scrollSpeed;
 
-      // reiniciar scroll al llegar al final
       if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
         scrollRef.current.scrollLeft = 0;
       }
@@ -63,10 +62,10 @@ const Clients = () => {
     return () => cancelAnimationFrame(animationFrame);
   }, [isHovered]);
 
-  // Flechas
   const scrollBy = (distance) => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft += distance;
+
       if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
         scrollRef.current.scrollLeft = 0;
       }
@@ -79,6 +78,7 @@ const Clients = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6">
+        
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1E76B8] mb-3">
             Confían en nosotros
@@ -89,9 +89,11 @@ const Clients = () => {
         </div>
 
         <div className="relative flex items-center gap-3">
+
           <button
             className="p-2 md:p-3 bg-white rounded-full shadow-md hover:bg-gray-100 z-10"
             onClick={() => scrollBy(-200)}
+            aria-label="Desplazar logos hacia la izquierda"
           >
             <ChevronLeft size={20} />
           </button>
@@ -110,9 +112,10 @@ const Clients = () => {
               >
                 <img
                   src={client.logo}
-                  alt={client.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  alt={`Logo de ${client.name}`}
+                  className="w-full h-full object-contain"
                 />
+
                 <div className="absolute inset-0 bg-[#1E76B8]/80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center text-white p-2 md:p-4">
                   <p className="font-semibold text-sm md:text-base">{client.name}</p>
                   <p className="text-xs md:text-sm">{client.industry}</p>
@@ -124,19 +127,22 @@ const Clients = () => {
           <button
             className="p-2 md:p-3 bg-white rounded-full shadow-md hover:bg-gray-100 z-10"
             onClick={() => scrollBy(200)}
+            aria-label="Desplazar logos hacia la derecha"
           >
             <ChevronRight size={20} />
           </button>
+
         </div>
 
         <div className="mt-12 text-center">
           <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 bg-[#DF1021] hover:bg-red-700 text-white font-medium py-2 md:py-3 px-6 md:px-8 rounded-md transition-colors duration-300 text-sm md:text-base"
           >
-            Become Our Next Success Story
+            Conviértete en Nuestra Próxima Historia de Éxito
           </button>
         </div>
+
       </div>
     </section>
   );
