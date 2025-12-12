@@ -15,7 +15,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center md:text-left">
             {/* LOGO */}
             <img
-              src="/public/images/logo-03-300 dpi.png"
+              src="public/images/logo-03-300 dpi.png
+"
               alt="D2F Consulting Logo"
               className="w-40 md:w-44 mx-auto md:mx-0"
             />

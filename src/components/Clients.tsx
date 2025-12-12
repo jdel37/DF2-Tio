@@ -19,14 +19,14 @@ import city from '../../public/images/city.jpg';
 
 const Clients = () => {
   const clients = [
-    { name: "Global Tech Solutions", logo: kosha, industry: "Technology" },
-    { name: "Meridian Finance", logo: Dco, industry: "Financial Services" },
+    { name: "Kosha", logo: kosha, industry: "Technology" },
+    { name: "Deco", logo: Dco, industry: "Financial Services" },
     { name: "EcoSmart Industries", logo: creative, industry: "Manufacturing" },
     { name: "HealthCare Plus", logo: camiux, industry: "Healthcare" },
     { name: "Retail Dynamics", logo: shake2go, industry: "Retail" },
     { name: "Energy Innovations", logo: kailua, industry: "Energy" },
     { name: "Opticalia", logo: opticalia, industry: "Retail" },
-    { name: "Universidad de La Sabana", logo: sabana, industry: "Education" },
+    { name: "Universidad de La Sabana", logo: sabana, industry: "Educación" },
     { name: "City Group", logo: city, industry: "Services" },
     { name: "Deka Industries", logo: deka, industry: "Manufacturing" },
     { name: "Gant Group", logo: gant, industry: "Business Services" },
