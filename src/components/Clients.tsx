@@ -19,21 +19,21 @@ import city from '../../public/images/city.jpg';
 
 const Clients = () => {
   const clients = [
-    { name: "Kosha", logo: kosha, industry: "Technology" },
-    { name: "Deco", logo: Dco, industry: "Financial Services" },
-    { name: "EcoSmart Industries", logo: creative, industry: "Manufacturing" },
-    { name: "HealthCare Plus", logo: camiux, industry: "Healthcare" },
-    { name: "Retail Dynamics", logo: shake2go, industry: "Retail" },
-    { name: "Energy Innovations", logo: kailua, industry: "Energy" },
-    { name: "Opticalia", logo: opticalia, industry: "Retail" },
+    { name: "Kosha", logo: kosha, industry: "Cosmética" },
+    { name: "Dco", logo: Dco, industry: "Consultoría en Talento Humano" },
+    { name: "Ideas", logo: creative, industry: "Servicios" },
+    { name: "Cami", logo: camiux, industry: "Diseño Gráfico" },
+    { name: "Shake2Go", logo: shake2go, industry: "Alimentos & Bebidas" },
+    { name: "KaiLua", logo: kailua, industry: "Eventos" },
+    { name: "Opticalia", logo: opticalia, industry: "Salud" },
     { name: "Universidad de La Sabana", logo: sabana, industry: "Educación" },
-    { name: "City Group", logo: city, industry: "Services" },
-    { name: "Deka Industries", logo: deka, industry: "Manufacturing" },
-    { name: "Gant Group", logo: gant, industry: "Business Services" },
-    { name: "SnowTech", logo: snow, industry: "Technology" },
-    { name: "MPC Corp", logo: mpc, industry: "Industrial" },
-    { name: "DDG Labs", logo: ddg, industry: "Technology" },
-    { name: "Love & Co", logo: love, industry: "Retail" },
+    { name: "CityKidz", logo: city, industry: "Entretenimiento" },
+    { name: "Deka", logo: deka, industry: "Diseño" },
+    { name: "G&T", logo: gant, industry: "Consultoría" },
+    { name: "SnowTotal", logo: snow, industry: "Entretenimiento" },
+    { name: "MPC", logo: mpc, industry: "Consultoría en Talento Humano" },
+    { name: "DDG", logo: ddg, industry: "Entretenimiento" },
+    { name: "Love Trendy", logo: love, industry: "Ropa" },
   ];
 
   const logos = [...clients, ...clients]; 
@@ -136,7 +136,7 @@ const Clients = () => {
 
         <div className="mt-12 text-center">
           <button
-            onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 bg-[#DF1021] hover:bg-red-700 text-white font-medium py-2 md:py-3 px-6 md:px-8 rounded-md transition-colors duration-300 text-sm md:text-base"
           >
             Conviértete en Nuestra Próxima Historia de Éxito

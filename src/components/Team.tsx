@@ -22,7 +22,7 @@ const Team = () => {
       image: Gerente,
       socials: {
         linkedin: "https://www.linkedin.com/in/alejandra-rivera-garc%C3%ADa-177266208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        email: "https://mail.google.com/mail/?view=cm&fs=1&to=alejandra@example.com",
+        email: "https://mail.google.com/mail/?view=cm&fs=1&to=Ale_rivera612@hotmail.com",
       },
     },
   ];

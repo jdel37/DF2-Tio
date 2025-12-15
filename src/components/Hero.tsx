@@ -68,7 +68,7 @@ const Hero = () => {
               rounded-md hover:bg-white/10 transition-colors duration-300 focus:outline-none 
               focus:ring-0"
               onClick={() => {
-                const contact = document.getElementById("contacts");
+                const contact = document.getElementById("contacto");
                 if (contact) contact.scrollIntoView({ behavior: "smooth" });
               }}
               aria-label="Ir a la sección de contacto"

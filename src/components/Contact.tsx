@@ -217,9 +217,10 @@ ${message}
                     {[
                       "Gestión Estratégica",
                       "Transformación Digital",
-                      "Asesoría Financiera",
-                      "Desarrollo Organizacional",
-                      "Operaciones Globales"
+                      "Gestión de Proyectos",
+                      "Marketing y Comunicación",
+                      "Desarrollo de Franquicias",
+                      "Academia"
                     ].map((service, idx) => (
                       <label key={idx} className="flex items-center gap-3 bg-gray-50 p-3 rounded-md border hover:bg-gray-100 cursor-pointer">
                         <input
