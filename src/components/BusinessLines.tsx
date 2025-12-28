@@ -16,6 +16,8 @@ import {
   Globe
 } from 'lucide-react';
 
+import { motion } from 'framer-motion';
+
 const BusinessLines = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(0);
@@ -107,6 +109,9 @@ const BusinessLines = () => {
     }
   ];
 
+
+  // ... (keep constants and data same, just adding imports and motion wrappers)
+
   return (
     <section
       id="servicios"
@@ -116,20 +121,30 @@ const BusinessLines = () => {
       <div className="container mx-auto px-4 md:px-6">
 
         {/* Title */}
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
             {t('businessLines.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             {t('businessLines.description')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
-          {businessLines.map((line) => (
-            <button
+          {businessLines.map((line, idx) => (
+            <motion.button
               key={line.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
               onClick={() => setActiveTab(line.id)}
               className={`px-4 py-3 rounded-md transition-all duration-300 flex items-center gap-2 
                 ${activeTab === line.id
@@ -140,12 +155,18 @@ const BusinessLines = () => {
             >
               {line.icon}
               <span className="hidden md:inline font-medium">{line.title}</span>
-            </button>
+            </motion.button>
           ))}
         </div>
 
         {/* Content */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500">
+        <motion.div
+          key={activeTab} // Key forces re-render animation when tab changes
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white rounded-lg shadow-lg overflow-hidden"
+        >
           <div className="p-6 md:p-8">
             <div className="flex flex-col items-center md:flex-row gap-5">
 
@@ -189,10 +210,10 @@ const BusinessLines = () => {
 
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </section >
   );
 };
 

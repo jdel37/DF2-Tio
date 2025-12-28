@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import {
   MapPin,
   Mail,
@@ -139,21 +141,33 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contacto" className="py-20 bg-white">
+    <section id="contacto" className="py-20 bg-white" aria-label="Sección de contacto">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
             {t("contact.title")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600">
             {t("contact.description")}
           </p>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12">
 
           {/* FORMULARIO */}
-          <div className="lg:w-2/3 bg-white rounded-lg shadow-lg p-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:w-2/3 bg-gray-50 p-8 rounded-lg shadow-lg"
+          >
 
             {formSubmitted ? (
               <div className="bg-green-50 border border-green-200 rounded-md p-6 text-center">
@@ -272,10 +286,16 @@ const Contact = () => {
 
               </form>
             )}
-          </div>
+          </motion.div>
 
           {/* INFO DE CONTACTO */}
-          <div className="lg:w-1/3">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="lg:w-1/3 space-y-8"
+          >
             <div className="bg-[#1E76B8] text-white rounded-lg shadow-lg p-8 h-full">
               <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
 
@@ -307,11 +327,11 @@ const Contact = () => {
               </div>
 
             </div>
-          </div>
-
+          </motion.div>
         </div>
+
       </div>
-    </section>
+    </section >
   );
 };
 

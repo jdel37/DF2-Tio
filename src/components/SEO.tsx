@@ -15,7 +15,7 @@ const SEO: React.FC<SEOProps> = ({
     description,
     keywords,
     image = "/images/logo-web.jpg",
-    url = "https://www.d2fconsulting.com"
+    url = "https://www.d2fgestion.com"
 }) => {
     const { i18n } = useTranslation();
     const currentLang = i18n.language;
@@ -34,9 +34,9 @@ const SEO: React.FC<SEOProps> = ({
             <link rel="canonical" href={url} />
 
             {/* Alternate Languages (Hreflang) */}
-            <link rel="alternate" hrefLang="es" href="https://www.d2fconsulting.com" />
-            <link rel="alternate" hrefLang="en" href="https://www.d2fconsulting.com?lng=en" />
-            <link rel="alternate" hrefLang="x-default" href="https://www.d2fconsulting.com" />
+            <link rel="alternate" hrefLang="es" href="https://www.d2fgestion.com" />
+            <link rel="alternate" hrefLang="en" href="https://www.d2fgestion.com?lng=en" />
+            <link rel="alternate" hrefLang="x-default" href="https://www.d2fgestion.com" />
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />

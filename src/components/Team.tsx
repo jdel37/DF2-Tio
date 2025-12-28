@@ -1,13 +1,15 @@
 import { Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
 const Ceo = '/images/1716174004243.jpg';
 const Gerente = '/images/amiga-tio.jpg';
-import { useTranslation } from 'react-i18next';
 
 const Team = () => {
   const { t } = useTranslation();
   const team = [
     {
-      name: t("team.members.0.name"), // Assuming name stays same, but good to have in json if titles included
+      name: t("team.members.0.name"),
       title: t("team.members.0.title"),
       bio: t("team.members.0.bio"),
       image: Ceo,
@@ -60,22 +62,13 @@ const Team = () => {
         "
       >
         {team.map((member, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="
-              bg-white 
-              rounded-2xl 
-              overflow-hidden 
-              shadow-lg 
-              transition-transform 
-              duration-300 
-              hover:-translate-y-2 
-              flex 
-              flex-col 
-              items-center 
-              text-center 
-              w-80
-            "
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.2 }}
+            className="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col items-center text-center w-full max-w-xs"
             aria-label={`Perfil profesional de ${member.name}`}
           >
             {/* Imagen */}
@@ -120,7 +113,7 @@ const Team = () => {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -17,8 +17,8 @@ function App() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "D2F Consulting",
-    "url": "https://www.d2fconsulting.com",
-    "logo": "https://www.d2fconsulting.com/images/logo-web.jpg",
+    "url": "https://www.d2fgestion.com",
+    "logo": "https://www.d2fgestion.com/images/logo-web.jpg",
     "description": t('hero.description'),
     "address": {
       "@type": "PostalAddress",
