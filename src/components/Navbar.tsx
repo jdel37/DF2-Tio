@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
-import logo from "/public/images/logo-03-300 dpi.png";
-
-const NAV_ITEMS = [
-  { label: "Inicio", id: "inicio" },
-  { label: "Servicios", id: "servicios" },
-  { label: "Conócenos", id: "conócenos" },
-  { label: "Testimonios", id: "testimonios" },
-  { label: "Equipo", id: "equipo" },
-  { label: "Contacto", id: "contacto" },
-];
+import { useTranslation } from "react-i18next";
+const logo = "/images/logo-03-300 dpi.png";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+
+  const NAV_ITEMS = [
+    { label: t("navbar.inicio"), id: "inicio" },
+    { label: t("navbar.servicios"), id: "servicios" },
+    { label: t("navbar.conocenos"), id: "conócenos" },
+    { label: t("navbar.testimonios"), id: "testimonios" },
+    { label: t("navbar.equipo"), id: "equipo" },
+    { label: t("navbar.contacto"), id: "contacto" },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -92,10 +94,9 @@ export default function Navbar() {
               <button
                 onClick={() => scrollToSection(id)}
                 className={`text-sm font-semibold tracking-wide transition-colors 
-                  ${
-                    scrolled
-                      ? "text-[#1E76B8] hover:text-[#DF1021]"
-                      : "text-white hover:text-[#DF1021]"
+                  ${scrolled
+                    ? "text-[#1E76B8] hover:text-[#DF1021]"
+                    : "text-white hover:text-[#DF1021]"
                   }`}
               >
                 {label}

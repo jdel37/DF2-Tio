@@ -1,7 +1,8 @@
-import React from "react";
-import logo from "/public/images/logo-03-300 dpi.png";
+const logo = "/images/logo-03-300 dpi.png";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-[#1E76B8] text-white pt-10 pb-6">
       <div className="container mx-auto px-6">
@@ -24,15 +25,13 @@ const Footer = () => {
 
             {/* TEXTO BREVE */}
             <p className="text-white/80 max-w-md leading-relaxed mt-4 md:mt-0">
-              Transformando negocios con consultoría estratégica,
-              innovación y soluciones diseñadas para impulsar
-              el crecimiento sostenible.
+              {t("footer.text")}
             </p>
           </div>
 
           {/* COPYRIGHT */}
           <p className="text-sm text-white/70 text-center md:text-right">
-            © {new Date().getFullYear()} D2F Consulting — Todos los derechos reservados.
+            {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
 
         </div>

@@ -1,43 +1,115 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import Academy4 from "/public/images/Academy 4.jpg"
-import Academy77 from "/public/images/Academy 77.jpg"
-import Equipo10 from "/public/images/Equipo 10.jpg"
- const images = [
+const Academy4 = "/images/Academy 4.jpg";
+const Academy77 = "/images/Academy 77.jpg";
+const Equipo10 = "/images/Equipo 10.jpg";
+
+const Equipo2 = "/images/Equipo 2.jpg";
+
+const images = [
   Academy4,
   Academy77,
-  Equipo10
+  Equipo10,
+
+  Equipo2
 ];
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Cambiar imagen automáticamente cada 5 segundos
+  const slideVariants = {
+    hidden: (direction: number) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0
+    }),
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 }
+      }
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+      transition: {
+        x: { type: "spring", stiffness: 300, damping: 30 },
+        opacity: { duration: 0.2 }
+      }
+    })
+  };
+
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
+    if (!isHovered) {
+      const timer = setInterval(() => {
+        nextSlide();
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [currentIndex, isHovered]);
 
-    return () => clearInterval(interval);
-  }, []);
+  const swipeConfidenceThreshold = 10000;
+  const swipePower = (offset: number, velocity: number) => {
+    return Math.abs(offset) * velocity;
+  };
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      <div
-        className="flex h-full transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Slide ${index}`}
-            className="w-full h-full object-cover flex-shrink-0"
-          />
-        ))}
-      </div>
+    <div
+      className="relative w-full h-full overflow-hidden bg-black"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          custom={direction}
+          variants={slideVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+
+            if (swipe < -swipeConfidenceThreshold) {
+              nextSlide();
+            } else if (swipe > swipeConfidenceThreshold) {
+              prevSlide();
+            }
+          }}
+          className="absolute w-full h-full object-cover"
+          alt={`Slide ${currentIndex + 1}`}
+        />
+      </AnimatePresence>
+
+      {/* Overlay - Optional dark gradient for text visibility if needed, 
+          but Hero.tsx already has one. Keeping it clean here. 
+      */}
+
+      {/* Navigation Arrows */}
+
     </div>
   );
 }

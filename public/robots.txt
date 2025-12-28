@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.d2fconsulting.com/sitemap.xml

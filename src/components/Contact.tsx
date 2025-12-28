@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
+import {
+  MapPin,
+  Mail,
   Send,
   Instagram,
   Linkedin,
   Facebook
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const { t } = useTranslation();
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    phone: string;
+    company: string;
+    message: string;
+    service: string[];
+  }>({
     name: '',
     email: '',
     phone: '',
@@ -21,8 +29,10 @@ const Contact = () => {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    // Type assertion for checkbox since it's not on all input/textarea elements common interface in a simple way without casting
+    const checked = (e.target as HTMLInputElement).checked;
 
     // Cambiar checkbox → array
     if (type === "checkbox") {
@@ -40,28 +50,28 @@ const Contact = () => {
   };
 
   // Envío del formulario
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const { name, email, phone, company, message, service } = formData;
     const to = "d2fgestion@gmail.com";
-    const subject = encodeURIComponent(`Nuevo mensaje de contacto - ${name}`);
+    const subject = encodeURIComponent(`${t("contact.form.submit")} - ${name}`);
 
     const serviceText = service.length > 0
       ? service.map(s => `- ${s}`).join("\n")
       : "No seleccionó servicios";
 
     const body = encodeURIComponent(
-`
-Nombre: ${name}
-Email: ${email}
-Teléfono: ${phone}
-Compañía: ${company}
+      `
+${t("contact.form.name")}: ${name}
+${t("contact.form.email")}: ${email}
+${t("contact.form.phone")}: ${phone}
+${t("contact.form.company")}: ${company}
 
-Servicios de interés:
+${t("contact.form.services")}:
 ${serviceText}
 
-Mensaje:
+${t("contact.form.message")}:
 ${message}
 `
     );
@@ -100,31 +110,31 @@ ${message}
   const contactInfo = [
     {
       icon: <MapPin size={24} className="text-[#DF1021]" />,
-      title: "Visítanos",
+      title: t("contact.info.visit"),
       details: ["We Work Bogotá, Medellín"],
       link: null
     },
     {
       icon: <Mail size={24} className="text-[#DF1021]" />,
-      title: "Envíanos un Email",
+      title: t("contact.info.email"),
       details: ["d2fgestion@gmail.com"],
       link: "mailto:d2fgestion@gmail.com"
     },
     {
       icon: <Instagram size={24} className="text-[#DF1021]" />,
-      title: "Instagram",
+      title: t("contact.info.instagram"),
       details: ["@d2f_consulting_agency"],
       link: "https://www.instagram.com/d2f_consulting_agency/"
     },
     {
       icon: <Linkedin size={24} className="text-[#DF1021]" />,
-      title: "LinkedIn",
+      title: t("contact.info.linkedin"),
       details: ["D2F Consulting Agency"],
       link: "https://www.linkedin.com/company/10602504/admin/dashboard/"
     },
     {
       icon: <Facebook size={24} className="text-[#DF1021]" />,
-      title: "Facebook",
+      title: t("contact.info.facebook"),
       details: ["D2F Consulting Agency"],
       link: "https://www.facebook.com/D2FConsultingAgency?ref=aymt_homepage_panel#"
     }
@@ -135,10 +145,10 @@ ${message}
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
-            Contáctenos
+            {t("contact.title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            ¿Listo para transformar tu negocio? Contáctenos hoy para programar una consulta con nuestro equipo de expertos.
+            {t("contact.description")}
           </p>
         </div>
 
@@ -152,9 +162,9 @@ ${message}
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
                   <Send size={24} className="text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-green-800 mb-2">¡Mensaje enviado!</h3>
+                <h3 className="text-xl font-bold text-green-800 mb-2">{t("contact.form.successTitle")}</h3>
                 <p className="text-green-700">
-                  Gracias por contactarnos. Nuestro equipo responderá pronto.
+                  {t("contact.form.successDesc")}
                 </p>
               </div>
             ) : (
@@ -163,7 +173,7 @@ ${message}
                 {/* CAMPOS */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact.form.name")} *</label>
                     <input
                       type="text"
                       name="name"
@@ -174,7 +184,7 @@ ${message}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Dirección de Email *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact.form.email")} *</label>
                     <input
                       type="email"
                       name="email"
@@ -186,7 +196,7 @@ ${message}
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Número de Teléfono</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact.form.phone")}</label>
                     <input
                       type="tel"
                       name="phone"
@@ -197,7 +207,7 @@ ${message}
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Compañía</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact.form.company")}</label>
                     <input
                       type="text"
                       name="company"
@@ -210,17 +220,17 @@ ${message}
 
                 {/* BURBUJAS CHECKBOX */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Servicios de Interés *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">{t("contact.form.services")} *</label>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
                     {[
-                      "Gestión Estratégica",
-                      "Transformación Digital",
-                      "Gestión de Proyectos",
-                      "Marketing y Comunicación",
-                      "Desarrollo de Franquicias",
-                      "Academia"
+                      t("contact.serviceOptions.0"),
+                      t("contact.serviceOptions.1"),
+                      t("contact.serviceOptions.2"),
+                      t("contact.serviceOptions.3"),
+                      t("contact.serviceOptions.4"),
+                      t("contact.serviceOptions.5")
                     ].map((service, idx) => (
                       <label key={idx} className="flex items-center gap-3 bg-gray-50 p-3 rounded-md border hover:bg-gray-100 cursor-pointer">
                         <input
@@ -239,7 +249,7 @@ ${message}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Su Mensaje *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact.form.message")} *</label>
                   <textarea
                     name="message"
                     rows={4}
@@ -254,7 +264,7 @@ ${message}
                   type="submit"
                   className="w-full bg-[#DF1021] hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md"
                 >
-                  Enviar Mensaje
+                  {t("contact.form.submit")}
                 </button>
 
               </form>

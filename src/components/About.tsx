@@ -1,19 +1,20 @@
-import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import Equipo from "/public/images/Equipo 1.jpg";
+const Equipo = "/images/Equipo 1.jpg";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const stats = [
-    { value: '20+', label: 'Años de Experiencia' },
-    { value: '25+', label: 'Clientes en Colombia' },
-    { value: '100%', label: 'Clientes Satisfechos' },
-    { value: '35+', label: 'Asociados de las Industrias' }
+    { value: '20+', label: t('about.stats.experience') },
+    { value: '25+', label: t('about.stats.clients') },
+    { value: '100%', label: t('about.stats.satisfied') },
+    { value: '35+', label: t('about.stats.associates') }
   ];
 
   return (
-    <section 
-      id="conócenos" 
-      aria-label="Acerca de D2F Consulting" 
+    <section
+      id="conócenos"
+      aria-label="Acerca de D2F Consulting"
       className="py-20 bg-white"
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -36,26 +37,26 @@ const About = () => {
           {/* Content column */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-6">
-              Impulsando la excelencia empresarial desde 2015
+              {t('about.title')}
             </h2>
 
             <p className="text-gray-700 mb-6 text-lg">
-              D2F Consulting es una firma de consultoría de gestión dedicada a ayudar a las organizaciones a lograr un crecimiento sostenible y la excelencia operativa. Combinamos un profundo conocimiento de los sectores, experiencia funcional y un enfoque centrado en el cliente para ofrecer resultados excepcionales.
+              {t('about.description')}
             </p>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-[#1E76B8] mb-4">¿Por qué elegirnos?</h3>
+              <h3 className="text-xl font-semibold text-[#1E76B8] mb-4">{t('about.whyChooseUs')}</h3>
               <ul className="space-y-3">
                 {[
-                  "Experiencia en la industria en diversos sectores",
-                  "Soluciones a la medida que abordan sus desafíos únicos",
-                  "Metodologías probadas con resultados tangibles",
-                  "Un integrador de servicios adaptado a sus necesidades"
+                  t('about.points.0'),
+                  t('about.points.1'),
+                  t('about.points.2'),
+                  t('about.points.3')
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <CheckCircle2 
-                      size={20} 
-                      className="text-[#DF1021] mt-1 flex-shrink-0" 
+                    <CheckCircle2
+                      size={20}
+                      className="text-[#DF1021] mt-1 flex-shrink-0"
                     />
                     <span className="text-gray-700">{item}</span>
                   </li>

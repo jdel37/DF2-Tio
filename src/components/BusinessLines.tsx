@@ -1,125 +1,127 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import Gestion from '../../public/images/Strategic planing.jpg';
-import Digital from '../../public/images/Equipo 2.jpg';
-import Proyectos from '../../public/images/Project Management 45.jpg';
-import Marketing from '../../public/images/Marketing Digital 9.jpg';
-import Franquicias from '../../public/images/Franchise 8.jpg';
-import Academia from '../../public/images/shutterstock_225208390.jpg';
+const Gestion = '/images/Strategic planing.jpg';
+const Digital = '/images/Equipo 2.jpg';
+const Proyectos = '/images/Project Management 45.jpg';
+const Marketing = '/images/Marketing Digital 9.jpg';
+const Franquicias = '/images/Franchise 8.jpg';
+const Academia = '/images/shutterstock_225208390.jpg';
 
-import { 
-  BarChart3, 
-  Lightbulb, 
-  LineChart, 
-  Users, 
+import {
+  BarChart3,
+  Lightbulb,
+  LineChart,
+  Users,
   Globe
 } from 'lucide-react';
 
 const BusinessLines = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(0);
-  
+
   const businessLines = [
     {
       id: 0,
-      title: "Gestión Estratégica",
+      title: t('businessLines.lines.0.title'),
       icon: <BarChart3 size={24} className="text-[#DF1021]" />,
       image: Gestion,
       alt: "Equipo trabajando en gestión estratégica",
-      description: "Ayudamos a las organizaciones a desarrollar e implementar iniciativas estratégicas que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestro enfoque combina un profundo conocimiento de los sectores con metodologías probadas para crear estrategias viables.",
+      description: t('businessLines.lines.0.description'),
       services: [
-        "Desarrollo Corporativo Estratégico",
-        "Entrada al Mercado & Expansión",
-        "Análisis Competitivo",
-        "Crecimiento & Estrategia de Innovación"
+        t('businessLines.lines.0.services.0'),
+        t('businessLines.lines.0.services.1'),
+        t('businessLines.lines.0.services.2'),
+        t('businessLines.lines.0.services.3')
       ]
     },
     {
       id: 1,
-      title: "Transformación Digital",
+      title: t('businessLines.lines.1.title'),
       icon: <Lightbulb size={24} className="text-[#DF1021]" />,
       image: Digital,
       alt: "Transformación digital en empresa",
-      description: "Nuestros servicios de transformación digital ayudan a las empresas a aprovechar las tecnologías emergentes para reimaginar sus operaciones, experiencias de cliente y modelos de negocio. Le guiamos en cada etapa de su transformación digital.",
+      description: t('businessLines.lines.1.description'),
       services: [
-        "Estrategia Digital & Hoja de Ruta",
-        "Automatización de Procesos",
-        "Soluciones de Data Analytics",
-        "Implementación de Tecnología"
+        t('businessLines.lines.1.services.0'),
+        t('businessLines.lines.1.services.1'),
+        t('businessLines.lines.1.services.2'),
+        t('businessLines.lines.1.services.3')
       ]
     },
     {
       id: 2,
-      title: "Gestión de Proyectos",
+      title: t('businessLines.lines.2.title'),
       icon: <LineChart size={24} className="text-[#DF1021]" />,
       image: Proyectos,
       alt: "Gestión de proyectos empresariales",
-      description: "Ofrecemos servicios integrales de gestión de proyectos para optimizar resultados, controlar riesgos y garantizar la entrega eficiente. Nuestros expertos le apoyan en todas las fases para maximizar el éxito.",
+      description: t('businessLines.lines.2.description'),
       services: [
-        "Planificación & Ejecución",
-        "Gestión de Recursos",
-        "Control de Riesgos",
-        "Metodologías Ágiles & Tradicionales"
+        t('businessLines.lines.2.services.0'),
+        t('businessLines.lines.2.services.1'),
+        t('businessLines.lines.2.services.2'),
+        t('businessLines.lines.2.services.3')
       ]
     },
     {
       id: 3,
-      title: "Marketing y Comunicación",
+      title: t('businessLines.lines.3.title'),
       icon: <Globe size={24} className="text-[#DF1021]" />,
       image: Marketing,
       alt: "Estrategias de marketing digital",
-      description: "Optimizamos operaciones de marketing y comunicación para fortalecer la marca, atraer clientes y generar experiencias memorables que potencian la lealtad.",
+      description: t('businessLines.lines.3.description'),
       services: [
-        "Estrategia de Marketing",
-        "Gestión de Marca",
-        "Comunicación Digital",
-        "Campañas Publicitarias"
+        t('businessLines.lines.3.services.0'),
+        t('businessLines.lines.3.services.1'),
+        t('businessLines.lines.3.services.2'),
+        t('businessLines.lines.3.services.3')
       ]
     },
     {
       id: 4,
-      title: "Desarrollo de Franquicias",
+      title: t('businessLines.lines.4.title'),
       icon: <Users size={24} className="text-[#DF1021]" />,
       image: Franquicias,
       alt: "Modelo de franquicias empresariales",
-      description: "Guiamos a las empresas en la creación, expansión y consolidación de modelos de franquicia que garanticen escalabilidad y sostenibilidad.",
+      description: t('businessLines.lines.4.description'),
       services: [
-        "Diseño del Modelo de Franquicia",
-        "Expansión Nacional & Internacional",
-        "Gestión de Franquiciados",
-        "Estrategia de Crecimiento"
+        t('businessLines.lines.4.services.0'),
+        t('businessLines.lines.4.services.1'),
+        t('businessLines.lines.4.services.2'),
+        t('businessLines.lines.4.services.3')
       ]
     },
     {
       id: 5,
-      title: "Academia",
+      title: t('businessLines.lines.5.title'),
       icon: <BarChart3 size={24} className="text-[#DF1021]" />,
       image: Academia,
       alt: "Capacitación y formación empresarial",
-      description: "Capacitamos a líderes y equipos a través de programas de formación práctica y estratégica, orientados a fortalecer habilidades críticas para el éxito empresarial.",
+      description: t('businessLines.lines.5.description'),
       services: [
-        "Formación en Estrategia",
-        "Liderazgo Empresarial",
-        "Innovación y Creatividad",
-        "Cursos Personalizados"
+        t('businessLines.lines.5.services.0'),
+        t('businessLines.lines.5.services.1'),
+        t('businessLines.lines.5.services.2'),
+        t('businessLines.lines.5.services.3')
       ]
     }
   ];
 
   return (
-    <section 
-      id="servicios" 
+    <section
+      id="servicios"
       aria-label="Líneas de negocio de D2F Consulting"
       className="py-20 bg-gray-50"
     >
       <div className="container mx-auto px-4 md:px-6">
-        
+
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
-            Nuestras Líneas de Negocio
+            {t('businessLines.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Proveemos consultoría integral a través de nuestras líneas de negocio especializadas, cada una diseñada para superar desafíos específicos y crear valor sostenible.
+            {t('businessLines.description')}
           </p>
         </div>
 
@@ -130,8 +132,8 @@ const BusinessLines = () => {
               key={line.id}
               onClick={() => setActiveTab(line.id)}
               className={`px-4 py-3 rounded-md transition-all duration-300 flex items-center gap-2 
-                ${activeTab === line.id 
-                  ? 'bg-[#1E76B8] text-white shadow-md' 
+                ${activeTab === line.id
+                  ? 'bg-[#1E76B8] text-white shadow-md'
                   : 'bg-white text-[#1E76B8] hover:bg-gray-100'
                 }`}
               aria-expanded={activeTab === line.id}
@@ -171,12 +173,12 @@ const BusinessLines = () => {
               {/* Services */}
               <div className="md:w-2/3 bg-gray-50 rounded-lg p-6">
                 <h4 className="font-semibold text-lg text-[#1E76B8] mb-4">
-                  Nuestros Servicios
+                  {t('businessLines.servicesTitle')}
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {businessLines[activeTab].services.map((service, idx) => (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className="bg-white py-4 px-2 rounded-md shadow-sm border-l-4 border-[#DF1021]"
                     >
                       <p className="font-medium text-gray-800">{service}</p>

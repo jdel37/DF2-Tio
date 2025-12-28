@@ -1,14 +1,15 @@
-import React from 'react';
 import { Linkedin, Mail } from 'lucide-react';
-import Ceo from '../../public/images/1716174004243.jpg';
-import Gerente from '../../public/images/amiga-tio.jpg';
+const Ceo = '/images/1716174004243.jpg';
+const Gerente = '/images/amiga-tio.jpg';
+import { useTranslation } from 'react-i18next';
 
 const Team = () => {
+  const { t } = useTranslation();
   const team = [
     {
-      name: "Diego Forero",
-      title: "Chief Executive Officer (CEO)",
-      bio: "Diego aporta más de 20 años de experiencia en liderazgo estratégico, innovación corporativa y gestión de alto nivel en múltiples industrias.",
+      name: t("team.members.0.name"), // Assuming name stays same, but good to have in json if titles included
+      title: t("team.members.0.title"),
+      bio: t("team.members.0.bio"),
       image: Ceo,
       socials: {
         linkedin: "https://www.linkedin.com/in/diego-fernando-forero/",
@@ -16,9 +17,9 @@ const Team = () => {
       },
     },
     {
-      name: "Alejandra Rivera",
-      title: "Chief Strategy Officer (CSO)",
-      bio: "Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento organizacional.",
+      name: t("team.members.1.name"),
+      title: t("team.members.1.title"),
+      bio: t("team.members.1.bio"),
       image: Gerente,
       socials: {
         linkedin: "https://www.linkedin.com/in/alejandra-rivera-garc%C3%ADa-177266208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -39,12 +40,10 @@ const Team = () => {
           id="equipo-title"
           className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4"
         >
-          Equipo de Liderazgo
+          {t("team.title")}
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Conozca a los líderes que impulsan la visión estratégica y el crecimiento 
-          de nuestra organización, aportando experiencia, innovación y compromiso 
-          con la excelencia.
+          {t("team.description")}
         </p>
       </div>
 

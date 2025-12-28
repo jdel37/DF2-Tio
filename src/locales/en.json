@@ -1,0 +1,191 @@
+{
+    "navbar": {
+        "inicio": "Home",
+        "servicios": "Services",
+        "conocenos": "About Us",
+        "testimonios": "Testimonials",
+        "equipo": "Team",
+        "contacto": "Contact"
+    },
+    "hero": {
+        "title": "Strategic Consulting",
+        "subtitle": "Transforming Growth",
+        "description": "Driving innovation and excellence across industries with our five specialized business consulting services.",
+        "servicesBtn": "Our Services",
+        "contactBtn": "Contact Us"
+    },
+    "about": {
+        "title": "Driving business excellence since 2015",
+        "description": "D2F Consulting is a management consulting firm dedicated to helping organizations achieve sustainable growth and operational excellence. We combine deep industry knowledge, functional expertise, and a client-centric approach to deliver exceptional results.",
+        "whyChooseUs": "Why Choose Us?",
+        "points": {
+            "0": "Industry expertise across diverse sectors",
+            "1": "Tailored solutions addressing your unique challenges",
+            "2": "Proven methodologies with tangible results",
+            "3": "A service integrator adapted to your needs"
+        },
+        "stats": {
+            "experience": "Years of Experience",
+            "clients": "Clients in Colombia",
+            "satisfied": "Satisfied Clients",
+            "associates": "Industry Associates"
+        }
+    },
+    "businessLines": {
+        "title": "Our Business Lines",
+        "description": "We provide comprehensive consulting through our specialized business lines, each designed to overcome specific challenges and create sustainable value.",
+        "servicesTitle": "Our Services",
+        "lines": {
+            "0": {
+                "title": "Strategic Management",
+                "description": "We help organizations develop and implement strategic initiatives that drive sustainable growth and competitive advantage. Our approach combines deep sector knowledge with proven methodologies to create actionable strategies.",
+                "services": {
+                    "0": "Strategic Corporate Development",
+                    "1": "Market Entry & Expansion",
+                    "2": "Competitive Analysis",
+                    "3": "Growth & Innovation Strategy"
+                }
+            },
+            "1": {
+                "title": "Digital Transformation",
+                "description": "Our digital transformation services help companies leverage emerging technologies to reimagine their operations, customer experiences, and business models. We guide you through every stage of your digital transformation.",
+                "services": {
+                    "0": "Digital Strategy & Roadmap",
+                    "1": "Process Automation",
+                    "2": "Data Analytics Solutions",
+                    "3": "Technology Implementation"
+                }
+            },
+            "2": {
+                "title": "Project Management",
+                "description": "We offer comprehensive project management services to optimize results, control risks, and guarantee efficient delivery. Our experts support you in all phases to maximize success.",
+                "services": {
+                    "0": "Planning & Execution",
+                    "1": "Resource Management",
+                    "2": "Risk Control",
+                    "3": "Agile & Traditional Methodologies"
+                }
+            },
+            "3": {
+                "title": "Marketing and Communication",
+                "description": "We optimize marketing and communication operations to strengthen the brand, attract clients, and generate memorable experiences that enhance loyalty.",
+                "services": {
+                    "0": "Marketing Strategy",
+                    "1": "Brand Management",
+                    "2": "Digital Communication",
+                    "3": "Advertising Campaigns"
+                }
+            },
+            "4": {
+                "title": "Franchise Development",
+                "description": "We guide companies in the creation, expansion, and consolidation of franchise models that guarantee scalability and sustainability.",
+                "services": {
+                    "0": "Franchise Model Design",
+                    "1": "National & International Expansion",
+                    "2": "Franchisee Management",
+                    "3": "Growth Strategy"
+                }
+            },
+            "5": {
+                "title": "Academy",
+                "description": "We train leaders and teams through practical and strategic training programs, strictly oriented to strengthen critical skills for business success.",
+                "services": {
+                    "0": "Strategy Training",
+                    "1": "Business Leadership",
+                    "2": "Innovation and Creativity",
+                    "3": "Customized Courses"
+                }
+            }
+        }
+    },
+    "clients": {
+        "title": "They trust us",
+        "description": "We have helped transform companies across various sectors, delivering exceptional results and lasting partnerships.",
+        "cta": "Become Our Next Success Story",
+        "industries": {
+            "cosmetica": "Cosmetics",
+            "talento": "Talent Consulting",
+            "servicios": "Services",
+            "diseno": "Graphic Design",
+            "alimentos": "Food & Beverages",
+            "eventos": "Events",
+            "salud": "Health",
+            "educacion": "Education",
+            "entretenimiento": "Entertainment",
+            "consultoria": "Consulting",
+            "ropa": "Clothing"
+        }
+    },
+    "team": {
+        "title": "Leadership Team",
+        "description": "Meet the leaders driving the strategic vision and growth of our organization, bring expertise, innovation, and commitment to excellence.",
+        "members": {
+            "0": {
+                "name": "Diego Forero",
+                "title": "Chief Executive Officer (CEO)",
+                "bio": "Diego brings over 20 years of experience in strategic leadership, corporate innovation, and high-level management across multiple industries."
+            },
+            "1": {
+                "name": "Alejandra Rivera",
+                "title": "Chief Strategy Officer (CSO)",
+                "bio": "Specialist in data analysis, business intelligence, and strategic optimization for organizational growth."
+            }
+        }
+    },
+    "testimonials": {
+        "title": "What our clients say",
+        "description": "We are proud of our clients' success stories and the positive impact our consulting services have generated.",
+        "list": {
+            "0": {
+                "quote": "I had the wonderful opportunity to work with Diego, with whom I was able to share the creation of projects, and I saw how his passion, knowledge, leadership, and great commitment make him an excellent professional and, more than that, a great human being.",
+                "author": "Johanna Gutierrez",
+                "title": "Client Management Assistant, Millward Brown."
+            },
+            "1": {
+                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour – someone who gets things done! He is a calculated risk taker, pragmatic leader and realist who seems to grasp ideas holistically whilst still taking note of the more acute details. I have no hesitation in recommending Diego and know that he will always give his best in any endeavour.",
+                "author": "Yamel Ramos",
+                "title": "VP Attractions Business Development LA, White Water"
+            },
+            "2": {
+                "quote": "Excellent organizational, planning, leadership, and negotiation skills. I have the opportunity to work with them and they have always had a professional commitment of total delivery to their projects.",
+                "author": "Victor Garcia",
+                "title": "Chief Operation Officer, VidantaWorld Entertainment - Cirque Du Soleil and Luxury Theme Parks"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "description": "Ready to transform your business? Contact us today to schedule a consultation with our team of experts.",
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "company": "Company",
+            "message": "Your Message",
+            "services": "Services of Interest",
+            "submit": "Send Message",
+            "successTitle": "Message Sent!",
+            "successDesc": "Thank you for contacting us. Our team will respond shortly."
+        },
+        "info": {
+            "title": "Contact Information",
+            "visit": "Visit Us",
+            "email": "Send us an Email",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn",
+            "facebook": "Facebook"
+        },
+        "serviceOptions": {
+            "0": "Strategic Management",
+            "1": "Digital Transformation",
+            "2": "Project Management",
+            "3": "Marketing and Communication",
+            "4": "Franchise Development",
+            "5": "Academy"
+        }
+    },
+    "footer": {
+        "text": "Transforming businesses with strategic consulting, innovation, and solutions designed to drive sustainable growth.",
+        "copyright": "© {{year}} D2F Consulting — All rights reserved."
+    }
+}

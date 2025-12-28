@@ -1,33 +1,29 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
   const testimonials = [
     {
       id: 1,
-      quote:
-        "Tuve la maravillosa oportunidad de trabajar con Diego, con quien pude compartir la creación de proyectos y vi cómo su pasión, conocimientos, liderazgo y gran compromiso hacen de él un excelente profesional y, más que eso, un gran ser humano.",
-      author: "Johanna Gutierrez",
-      title: "Client Management Assistant, Millward Brown."
+      quote: t("testimonials.list.0.quote"),
+      author: t("testimonials.list.0.author"),
+      title: t("testimonials.list.0.title")
     },
     {
       id: 2,
-      quote:
-        "Diego has built a strong reputation as someone with vision, diligence and honour – someone who gets things done! He is a calculated risk taker, pragmatic leader and realist who seems to grasp ideas holistically whilst still taking note of the more acute details. I have no hesitation in recommending Diego and know that he will always give his best in any endeavour.",
-      author: "Yamel Ramos",
-      title: "VP Attractions Business Development LA, White Water",
-      image:
-        "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+      quote: t("testimonials.list.1.quote"),
+      author: t("testimonials.list.1.author"),
+      title: t("testimonials.list.1.title"),
+      image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
     },
     {
       id: 3,
-      quote:
-        "Excelentes habilidades de organización, planeación, liderazgo y negociación. Tengo la oportunidad de trabajar con ellos y siempre han tenido un compromiso profesional de entrega total a sus proyectos.",
-      author: "Victor Garcia",
-      title:
-        "Chief Operation Officer, VidantaWorld Entertainment - Cirque Du Soleil and Luxury Theme Parks",
-      image:
-        "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
+      quote: t("testimonials.list.2.quote"),
+      author: t("testimonials.list.2.author"),
+      title: t("testimonials.list.2.title"),
+      image: "https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750"
     }
   ];
 
@@ -52,12 +48,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Lo que dicen nuestros clientes
+            {t("testimonials.title")}
           </h2>
 
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            Estamos orgullosos de las historias de éxito de nuestros clientes y
-            del impacto positivo que nuestros servicios de consultoría han generado.
+            {t("testimonials.description")}
           </p>
         </div>
 
@@ -107,9 +102,8 @@ const Testimonials = () => {
                   role="tab"
                   aria-selected={idx === activeIndex}
                   aria-label={`Ir al testimonio ${idx + 1}`}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    idx === activeIndex ? "bg-[#DF1021] w-6" : "bg-white/50"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === activeIndex ? "bg-[#DF1021] w-6" : "bg-white/50"
+                    }`}
                 ></button>
               ))}
             </div>

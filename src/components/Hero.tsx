@@ -1,8 +1,10 @@
 import React from "react";
 import { ChevronDown } from "lucide-react";
 import Carousel from "./Carrousel";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
   const scrollToServices = () => {
     const services = document.getElementById("servicios");
     if (services) {
@@ -34,19 +36,18 @@ const Hero = () => {
           <h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fadeIn"
           >
-            Consultoría Estratégica
+            {t("hero.title")}
           </h1>
 
           <h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#DF1021] 
             mb-6 leading-tight animate-fadeIn md:whitespace-nowrap"
           >
-            Crecimiento Transformacional
+            {t("hero.subtitle")}
           </h2>
 
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Impulsando la innovación y la excelencia en todas las industrias con
-            nuestros cinco servicios especializados de consultoría empresarial.
+            {t("hero.description")}
           </p>
 
           {/* Botones */}
@@ -59,7 +60,7 @@ const Hero = () => {
               onClick={scrollToServices}
               aria-label="Ver servicios"
             >
-              Nuestros Servicios
+              {t("hero.servicesBtn")}
             </button>
 
             {/* Botón 2 */}
@@ -73,7 +74,7 @@ const Hero = () => {
               }}
               aria-label="Ir a la sección de contacto"
             >
-              Contáctanos
+              {t("hero.contactBtn")}
             </button>
           </div>
         </div>

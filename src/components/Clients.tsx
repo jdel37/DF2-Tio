@@ -1,58 +1,81 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-import kosha from '../../public/images/kosha.jpg';
-import Dco from '../../public/images/Dco.jpg';
-import creative from '../../public/images/creative.jpg';
-import camiux from '../../public/images/cami-ux.jpg';
-import shake2go from '../../public/images/shake2go.jpg';
-import kailua from '../../public/images/kailua.png';
-import opticalia from '../../public/images/opticalia.png';
-import sabana from '../../public/images/Logo-Universidad-de-La-Sabana.jpg';
-import deka from '../../public/images/deka2.png';
-import gant from '../../public/images/gandt.jpg';
-import ddg from '../../public/images/ddg.jpg';
-import mpc from '../../public/images/mpc.jpg';
-import snow from '../../public/images/snow.jpg';
-import love from '../../public/images/love.jpg';
-import city from '../../public/images/city.jpg';
+const kosha = '/images/kosha.jpg';
+const Dco = '/images/Dco.jpg';
+const creative = '/images/creative.jpg';
+const camiux = '/images/cami-ux.jpg';
+const shake2go = '/images/shake2go.jpg';
+const kailua = '/images/kailua.png';
+const opticalia = '/images/opticalia.png';
+const sabana = '/images/Logo-Universidad-de-La-Sabana.jpg';
+const deka = '/images/deka2.png';
+const gant = '/images/gandt.jpg';
+const ddg = '/images/ddg.jpg';
+const mpc = '/images/mpc.jpg';
+const snow = '/images/snow.jpg';
+const love = '/images/love.jpg';
+const city = '/images/city.jpg';
 
 const Clients = () => {
+  const { t } = useTranslation();
   const clients = [
-    { name: "Kosha", logo: kosha, industry: "Cosmética" },
-    { name: "Dco", logo: Dco, industry: "Consultoría en Talento Humano" },
-    { name: "Ideas", logo: creative, industry: "Servicios" },
-    { name: "Cami", logo: camiux, industry: "Diseño Gráfico" },
-    { name: "Shake2Go", logo: shake2go, industry: "Alimentos & Bebidas" },
-    { name: "KaiLua", logo: kailua, industry: "Eventos" },
-    { name: "Opticalia", logo: opticalia, industry: "Salud" },
-    { name: "Universidad de La Sabana", logo: sabana, industry: "Educación" },
-    { name: "CityKidz", logo: city, industry: "Entretenimiento" },
-    { name: "Deka", logo: deka, industry: "Diseño" },
-    { name: "G&T", logo: gant, industry: "Consultoría" },
-    { name: "SnowTotal", logo: snow, industry: "Entretenimiento" },
-    { name: "MPC", logo: mpc, industry: "Consultoría en Talento Humano" },
-    { name: "DDG", logo: ddg, industry: "Entretenimiento" },
-    { name: "Love Trendy", logo: love, industry: "Ropa" },
+    { name: "Kosha", logo: kosha, industry: t("clients.industries.cosmetica") },
+    { name: "Dco", logo: Dco, industry: t("clients.industries.talento") },
+    { name: "Ideas", logo: creative, industry: t("clients.industries.servicios") },
+    { name: "Cami", logo: camiux, industry: t("clients.industries.diseno") },
+    { name: "Shake2Go", logo: shake2go, industry: t("clients.industries.alimentos") },
+    { name: "KaiLua", logo: kailua, industry: t("clients.industries.eventos") },
+    { name: "Opticalia", logo: opticalia, industry: t("clients.industries.salud") },
+    { name: "Universidad de La Sabana", logo: sabana, industry: t("clients.industries.educacion") },
+    { name: "CityKidz", logo: city, industry: t("clients.industries.entretenimiento") },
+    { name: "Deka", logo: deka, industry: t("clients.industries.diseno") },
+    { name: "G&T", logo: gant, industry: t("clients.industries.consultoria") },
+    { name: "SnowTotal", logo: snow, industry: t("clients.industries.entretenimiento") },
+    { name: "MPC", logo: mpc, industry: t("clients.industries.talento") },
+    { name: "DDG", logo: ddg, industry: t("clients.industries.entretenimiento") },
+    { name: "Love Trendy", logo: love, industry: t("clients.industries.ropa") },
   ];
 
-  const logos = [...clients, ...clients]; 
-  const scrollRef = useRef(null);
+  // Triplicate for infinite scroll simulation
+  const logos = [...clients, ...clients, ...clients];
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [isInteracting, setIsInteracting] = useState(false); // New state to pause on manual interaction
+
+  // Initial scroll position to the middle set
+  useEffect(() => {
+    if (scrollRef.current) {
+      const singleSetWidth = scrollRef.current.scrollWidth / 3;
+      scrollRef.current.scrollLeft = singleSetWidth;
+    }
+  }, []);
 
   useEffect(() => {
-    let animationFrame;
-    const scrollSpeed = 1;
+    let animationFrame: number;
+    const scrollSpeed = 0.5;
 
     const step = () => {
-      if (!scrollRef.current || isHovered) {
+      // Pause if hovered OR if user is manually interacting (clicking arrows/touching)
+      if (isHovered || isInteracting) {
         animationFrame = requestAnimationFrame(step);
         return;
       }
-      scrollRef.current.scrollLeft += scrollSpeed;
 
-      if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
-        scrollRef.current.scrollLeft = 0;
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += scrollSpeed;
+
+        // Infinite Scroll Logic (Silent Jump)
+        const scrollWidth = scrollRef.current.scrollWidth;
+        const singleSetWidth = scrollWidth / 3;
+
+        if (scrollRef.current.scrollLeft >= singleSetWidth * 2) {
+          scrollRef.current.scrollLeft = singleSetWidth;
+        }
+        else if (scrollRef.current.scrollLeft <= 0) {
+          scrollRef.current.scrollLeft = singleSetWidth;
+        }
       }
 
       animationFrame = requestAnimationFrame(step);
@@ -60,76 +83,131 @@ const Clients = () => {
 
     animationFrame = requestAnimationFrame(step);
     return () => cancelAnimationFrame(animationFrame);
-  }, [isHovered]);
+  }, [isHovered, isInteracting]);
 
-  const scrollBy = (distance) => {
+  const scrollBy = (distance: number) => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft += distance;
+      // Pause auto-scroll temporarily
+      setIsInteracting(true);
 
-      if (scrollRef.current.scrollLeft >= scrollRef.current.scrollWidth / 2) {
-        scrollRef.current.scrollLeft = 0;
-      }
-      if (scrollRef.current.scrollLeft < 0) {
-        scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 2;
-      }
+      scrollRef.current.scrollBy({ left: distance, behavior: 'smooth' });
+
+      // Resume after animation mostly completes
+      setTimeout(() => {
+        setIsInteracting(false);
+      }, 1000);
     }
   };
 
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1E76B8] mb-3">
-            Confían en nosotros
+            {t("clients.title")}
           </h2>
           <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-            Hemos ayudado a transformar empresas en diversos sectores, brindando resultados excepcionales y asociaciones duraderas.
+            {t("clients.description")}
           </p>
         </div>
 
-        <div className="relative flex items-center gap-3">
+        <div className="relative flex items-center gap-2 group/carousel">
 
+          {/* Left Arrow */}
           <button
-            className="p-2 md:p-3 bg-white rounded-full shadow-md hover:bg-gray-100 z-10"
-            onClick={() => scrollBy(-200)}
-            aria-label="Desplazar logos hacia la izquierda"
+            className="hidden md:flex p-2 bg-white rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2"
+            onClick={() => scrollBy(-300)}
+            aria-label="Anterior"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={24} className="text-[#1E76B8]" />
           </button>
 
+          {/* Scroll Container */}
           <div
             ref={scrollRef}
-            className="overflow-hidden flex gap-6 scroll-smooth"
+            className="
+                flex 
+                gap-6 
+                overflow-x-auto 
+                scroll-smooth 
+                scrollbar-hide 
+                py-4
+                cursor-grab 
+                active:cursor-grabbing
+                w-full
+            "
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsInteracting(true)} // Don't just hover, set interacting
+            onTouchEnd={() => {
+              setTimeout(() => setIsInteracting(false), 2000);
+            }}
           >
             {logos.map((client, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 relative flex items-center justify-center bg-white cursor-pointer rounded-lg p-2"
+                className="
+                    flex-shrink-0 
+                    relative 
+                    group 
+                    bg-white 
+                    rounded-lg 
+                    p-4
+                    flex 
+                    items-center 
+                    justify-center
+                    transition-all
+                    duration-300
+                    hover:shadow-lg
+                    border border-transparent
+                    hover:border-gray-100
+                "
                 style={{ width: '180px', height: '140px' }}
               >
+                {/* Image: Removed grayscale and opacity filters */}
                 <img
                   src={client.logo}
                   alt={`Logo de ${client.name}`}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain transition-all duration-300"
                 />
 
-                <div className="absolute inset-0 bg-[#1E76B8]/80 opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center text-white p-2 md:p-4">
-                  <p className="font-semibold text-sm md:text-base">{client.name}</p>
-                  <p className="text-xs md:text-sm">{client.industry}</p>
+                {/* Hover Details Overlay */}
+                <div className="
+                    absolute 
+                    inset-0 
+                    bg-[#1E76B8]/90 
+                    opacity-0 
+                    group-hover:opacity-100 
+                    transition-opacity 
+                    duration-300 
+                    flex 
+                    flex-col 
+                    items-center 
+                    justify-center 
+                    text-white 
+                    text-center 
+                    p-2 
+                    rounded-lg
+                ">
+                  <p className="font-bold text-sm mb-1 line-clamp-2">{client.name}</p>
+                  <p className="text-xs font-light line-clamp-2">{client.industry}</p>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Right Arrow */}
           <button
-            className="p-2 md:p-3 bg-white rounded-full shadow-md hover:bg-gray-100 z-10"
-            onClick={() => scrollBy(200)}
-            aria-label="Desplazar logos hacia la derecha"
+            className="hidden md:flex p-2 bg-white rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2"
+            onClick={() => scrollBy(300)}
+            aria-label="Siguiente"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={24} className="text-[#1E76B8]" />
           </button>
 
         </div>
@@ -139,7 +217,7 @@ const Clients = () => {
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center gap-2 bg-[#DF1021] hover:bg-red-700 text-white font-medium py-2 md:py-3 px-6 md:px-8 rounded-md transition-colors duration-300 text-sm md:text-base"
           >
-            Conviértete en Nuestra Próxima Historia de Éxito
+            {t("clients.cta")}
           </button>
         </div>
 

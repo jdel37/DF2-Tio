@@ -1,0 +1,191 @@
+{
+    "navbar": {
+        "inicio": "Inicio",
+        "servicios": "Servicios",
+        "conocenos": "Conócenos",
+        "testimonios": "Testimonios",
+        "equipo": "Equipo",
+        "contacto": "Contacto"
+    },
+    "hero": {
+        "title": "Consultoría Estratégica",
+        "subtitle": "Crecimiento Transformacional",
+        "description": "Impulsando la innovación y la excelencia en todas las industrias con nuestros cinco servicios especializados de consultoría empresarial.",
+        "servicesBtn": "Nuestros Servicios",
+        "contactBtn": "Contáctanos"
+    },
+    "about": {
+        "title": "Impulsando la excelencia empresarial desde 2015",
+        "description": "D2F Consulting es una firma de consultoría de gestión dedicada a ayudar a las organizaciones a lograr un crecimiento sostenible y la excelencia operativa. Combinamos un profundo conocimiento de los sectores, experiencia funcional y un enfoque centrado en el cliente para ofrecer resultados excepcionales.",
+        "whyChooseUs": "¿Por qué elegirnos?",
+        "points": {
+            "0": "Experiencia en la industria en diversos sectores",
+            "1": "Soluciones a la medida que abordan sus desafíos únicos",
+            "2": "Metodologías probadas con resultados tangibles",
+            "3": "Un integrador de servicios adaptado a sus necesidades"
+        },
+        "stats": {
+            "experience": "Años de Experiencia",
+            "clients": "Clientes en Colombia",
+            "satisfied": "Clientes Satisfechos",
+            "associates": "Asociados de las Industrias"
+        }
+    },
+    "businessLines": {
+        "title": "Nuestras Líneas de Negocio",
+        "description": "Proveemos consultoría integral a través de nuestras líneas de negocio especializadas, cada una diseñada para superar desafíos específicos y crear valor sostenible.",
+        "servicesTitle": "Nuestros Servicios",
+        "lines": {
+            "0": {
+                "title": "Gestión Estratégica",
+                "description": "Ayudamos a las organizaciones a desarrollar e implementar iniciativas estratégicas que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestro enfoque combina un profundo conocimiento de los sectores con metodologías probadas para crear estrategias viables.",
+                "services": {
+                    "0": "Desarrollo Corporativo Estratégico",
+                    "1": "Entrada al Mercado & Expansión",
+                    "2": "Análisis Competitivo",
+                    "3": "Crecimiento & Estrategia de Innovación"
+                }
+            },
+            "1": {
+                "title": "Transformación Digital",
+                "description": "Nuestros servicios de transformación digital ayudan a las empresas a aprovechar las tecnologías emergentes para reimaginar sus operaciones, experiencias de cliente y modelos de negocio. Le guiamos en cada etapa de su transformación digital.",
+                "services": {
+                    "0": "Estrategia Digital & Hoja de Ruta",
+                    "1": "Automatización de Procesos",
+                    "2": "Soluciones de Data Analytics",
+                    "3": "Implementación de Tecnología"
+                }
+            },
+            "2": {
+                "title": "Gestión de Proyectos",
+                "description": "Ofrecemos servicios integrales de gestión de proyectos para optimizar resultados, controlar riesgos y garantizar la entrega eficiente. Nuestros expertos le apoyan en todas las fases para maximizar el éxito.",
+                "services": {
+                    "0": "Planificación & Ejecución",
+                    "1": "Gestión de Recursos",
+                    "2": "Control de Riesgos",
+                    "3": "Metodologías Ágiles & Tradicionales"
+                }
+            },
+            "3": {
+                "title": "Marketing y Comunicación",
+                "description": "Optimizamos operaciones de marketing y comunicación para fortalecer la marca, atraer clientes y generar experiencias memorables que potencian la lealtad.",
+                "services": {
+                    "0": "Estrategia de Marketing",
+                    "1": "Gestión de Marca",
+                    "2": "Comunicación Digital",
+                    "3": "Campañas Publicitarias"
+                }
+            },
+            "4": {
+                "title": "Desarrollo de Franquicias",
+                "description": "Guiamos a las empresas en la creación, expansión y consolidación de modelos de franquicia que garanticen escalabilidad y sostenibilidad.",
+                "services": {
+                    "0": "Diseño del Modelo de Franquicia",
+                    "1": "Expansión Nacional & Internacional",
+                    "2": "Gestión de Franquiciados",
+                    "3": "Estrategia de Crecimiento"
+                }
+            },
+            "5": {
+                "title": "Academia",
+                "description": "Capacitamos a líderes y equipos a través de programas de formación práctica y estratégica, orientados a fortalecer habilidades críticas para el éxito empresarial.",
+                "services": {
+                    "0": "Formación en Estrategia",
+                    "1": "Liderazgo Empresarial",
+                    "2": "Innovación y Creatividad",
+                    "3": "Cursos Personalizados"
+                }
+            }
+        }
+    },
+    "clients": {
+        "title": "Confían en nosotros",
+        "description": "Hemos ayudado a transformar empresas en diversos sectores, brindando resultados excepcionales y asociaciones duraderas.",
+        "cta": "Conviértete en Nuestra Próxima Historia de Éxito",
+        "industries": {
+            "cosmetica": "Cosmética",
+            "talento": "Consultoría en Talento Humano",
+            "servicios": "Servicios",
+            "diseno": "Diseño Gráfico",
+            "alimentos": "Alimentos & Bebidas",
+            "eventos": "Eventos",
+            "salud": "Salud",
+            "educacion": "Educación",
+            "entretenimiento": "Entretenimiento",
+            "consultoria": "Consultoría",
+            "ropa": "Ropa"
+        }
+    },
+    "team": {
+        "title": "Equipo de Liderazgo",
+        "description": "Conozca a los líderes que impulsan la visión estratégica y el crecimiento de nuestra organización, aportando experiencia, innovación y compromiso con la excelencia.",
+        "members": {
+            "0": {
+                "name": "Diego Forero",
+                "title": "Chief Executive Officer (CEO)",
+                "bio": "Diego aporta más de 20 años de experiencia en liderazgo estratégico, innovación corporativa y gestión de alto nivel en múltiples industrias."
+            },
+            "1": {
+                "name": "Alejandra Rivera",
+                "title": "Chief Strategy Officer (CSO)",
+                "bio": "Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento organizacional."
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Lo que dicen nuestros clientes",
+        "description": "Estamos orgullosos de las historias de éxito de nuestros clientes y del impacto positivo que nuestros servicios de consultoría han generado.",
+        "list": {
+            "0": {
+                "quote": "Tuve la maravillosa oportunidad de trabajar con Diego, con quien pude compartir la creación de proyectos y vi cómo su pasión, conocimientos, liderazgo y gran compromiso hacen de él un excelente profesional y, más que eso, un gran ser humano.",
+                "author": "Johanna Gutierrez",
+                "title": "Client Management Assistant, Millward Brown."
+            },
+            "1": {
+                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour – someone who gets things done! He is a calculated risk taker, pragmatic leader and realist who seems to grasp ideas holistically whilst still taking note of the more acute details. I have no hesitation in recommending Diego and know that he will always give his best in any endeavour.",
+                "author": "Yamel Ramos",
+                "title": "VP Attractions Business Development LA, White Water"
+            },
+            "2": {
+                "quote": "Excelentes habilidades de organización, planeación, liderazgo y negociación. Tengo la oportunidad de trabajar con ellos y siempre han tenido un compromiso profesional de entrega total a sus proyectos.",
+                "author": "Victor Garcia",
+                "title": "Chief Operation Officer, VidantaWorld Entertainment - Cirque Du Soleil and Luxury Theme Parks"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contáctenos",
+        "description": "¿Listo para transformar tu negocio? Contáctenos hoy para programar una consulta con nuestro equipo de expertos.",
+        "form": {
+            "name": "Nombre Completo",
+            "email": "Dirección de Email",
+            "phone": "Número de Teléfono",
+            "company": "Compañía",
+            "message": "Su Mensaje",
+            "services": "Servicios de Interés",
+            "submit": "Enviar Mensaje",
+            "successTitle": "¡Mensaje enviado!",
+            "successDesc": "Gracias por contactarnos. Nuestro equipo responderá pronto."
+        },
+        "info": {
+            "title": "Información de Contacto",
+            "visit": "Visítanos",
+            "email": "Envíanos un Email",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn",
+            "facebook": "Facebook"
+        },
+        "serviceOptions": {
+            "0": "Gestión Estratégica",
+            "1": "Transformación Digital",
+            "2": "Gestión de Proyectos",
+            "3": "Marketing y Comunicación",
+            "4": "Desarrollo de Franquicias",
+            "5": "Academia"
+        }
+    },
+    "footer": {
+        "text": "Transformando negocios con consultoría estratégica, innovación y soluciones diseñadas para impulsar el crecimiento sostenible.",
+        "copyright": "© {{year}} D2F Consulting — Todos los derechos reservados."
+    }
+}
