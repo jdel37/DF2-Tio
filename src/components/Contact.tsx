@@ -28,10 +28,12 @@ const Contact = () => {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    // Type assertion for checkbox since it's not on all input/textarea elements common interface in a simple way without casting
+    // Type assertion for checkbox
     const checked = (e.target as HTMLInputElement).checked;
 
     // Cambiar checkbox → array
@@ -49,61 +51,57 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Envío del formulario
-  const handleSubmit = (e: React.FormEvent) => {
+  // Envío del formulario con Formspree
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage("");
 
-    const { name, email, phone, company, message, service } = formData;
-    const to = "d2fgestion@gmail.com";
-    const subject = encodeURIComponent(`${t("contact.form.submit")} - ${name}`);
+    try {
+      // Using FormSubmit.co AJAX endpoint for cleaner JSON response without redirects
+      const response = await fetch("https://formsubmit.co/ajax/d2fgestion@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...formData,
+          // FormSubmit customization fields
+          _subject: `Nuevo mensaje de ${formData.name} - Web D2F`,
+          _template: "table", // Format email as a clean table
+          _captcha: "false",  // Optional: Disable captcha for smoother experience (enable if spam becomes an issue)
 
-    const serviceText = service.length > 0
-      ? service.map(s => `- ${s}`).join("\n")
-      : "No seleccionó servicios";
-
-    const body = encodeURIComponent(
-      `
-${t("contact.form.name")}: ${name}
-${t("contact.form.email")}: ${email}
-${t("contact.form.phone")}: ${phone}
-${t("contact.form.company")}: ${company}
-
-${t("contact.form.services")}:
-${serviceText}
-
-${t("contact.form.message")}:
-${message}
-`
-    );
-
-    const userProvider = email.split("@")[1]?.toLowerCase();
-    let url = "";
-
-    if (userProvider?.includes("gmail")) {
-      url = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
-    } else if (["outlook", "hotmail", "live"].some(p => userProvider?.includes(p))) {
-      url = `https://outlook.office.com/mail/deeplink/compose?to=${to}&subject=${subject}&body=${body}`;
-    } else if (userProvider?.includes("yahoo")) {
-      url = `https://compose.mail.yahoo.com/?to=${to}&subject=${subject}&body=${body}`;
-    } else {
-      url = `mailto:${to}?subject=${subject}&body=${body}`;
-    }
-
-    window.open(url, "_blank");
-
-    setFormSubmitted(true);
-
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        service: []
+          // Join services for better readability in email
+          service: formData.service.join(", ")
+        })
       });
-      setFormSubmitted(false);
-    }, 5000);
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          service: []
+        });
+
+        // Auto hide success message after 5 seconds
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+      } else {
+        console.error("Formspree error", response);
+        setErrorMessage("Hubo un error al enviar el mensaje. Por favor intenta nuevamente.");
+      }
+    } catch (error) {
+      console.error("Submission error", error);
+      setErrorMessage("Hubo un error de conexión.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Redes sociales
@@ -262,10 +260,15 @@ ${message}
 
                 <button
                   type="submit"
-                  className="w-full bg-[#DF1021] hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md"
+                  disabled={isSubmitting}
+                  className={`w-full bg-[#DF1021] text-white font-medium py-3 px-6 rounded-md transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-red-700'}`}
                 >
-                  {t("contact.form.submit")}
+                  {isSubmitting ? 'Enviando...' : t("contact.form.submit")}
                 </button>
+
+                {errorMessage && (
+                  <p className="text-red-500 text-sm text-center mt-2">{errorMessage}</p>
+                )}
 
               </form>
             )}
@@ -290,8 +293,6 @@ ${message}
                           <a
                             key={i}
                             href={info.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="text-white/80 underline hover:text-white"
                           >
                             {detail}

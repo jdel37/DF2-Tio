@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -41,8 +41,10 @@ const Clients = () => {
   // Triplicate for infinite scroll simulation
   const logos = [...clients, ...clients, ...clients];
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isInteracting, setIsInteracting] = useState(false); // New state to pause on manual interaction
+
+  // Refs for synchronous loop control (prevents race conditions with smooth scroll)
+  const isHoveredRef = useRef(false);
+  const isInteractingRef = useRef(false);
 
   // Initial scroll position to the middle set
   useEffect(() => {
@@ -52,13 +54,32 @@ const Clients = () => {
     }
   }, []);
 
+  const handleMouseEnter = () => {
+    isHoveredRef.current = true;
+  };
+
+  const handleMouseLeave = () => {
+    isHoveredRef.current = false;
+  };
+
+  const handleTouchStart = () => {
+    isInteractingRef.current = true;
+  };
+
+  const handleTouchEnd = () => {
+    setTimeout(() => {
+      isInteractingRef.current = false;
+    }, 2000);
+  };
+
   useEffect(() => {
     let animationFrame: number;
     const scrollSpeed = 0.5;
 
     const step = () => {
-      // Pause if hovered OR if user is manually interacting (clicking arrows/touching)
-      if (isHovered || isInteracting) {
+      // Synchronous check: Stop immediately if executing this frame but user interacted
+      // We check REFS, not state, so it's instant.
+      if (isHoveredRef.current || isInteractingRef.current) {
         animationFrame = requestAnimationFrame(step);
         return;
       }
@@ -83,18 +104,18 @@ const Clients = () => {
 
     animationFrame = requestAnimationFrame(step);
     return () => cancelAnimationFrame(animationFrame);
-  }, [isHovered, isInteracting]);
+  }, []); // Empty dependency array as we use Refs for control
 
   const scrollBy = (distance: number) => {
     if (scrollRef.current) {
-      // Pause auto-scroll temporarily
-      setIsInteracting(true);
+      // Immediate synchronous pause via Ref
+      isInteractingRef.current = true;
 
       scrollRef.current.scrollBy({ left: distance, behavior: 'smooth' });
 
-      // Resume after animation mostly completes
+      // Release after animation mostly completes
       setTimeout(() => {
-        setIsInteracting(false);
+        isInteractingRef.current = false;
       }, 1000);
     }
   };
@@ -141,12 +162,10 @@ const Clients = () => {
               scrollbarWidth: 'none',
               msOverflowStyle: 'none'
             }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            onTouchStart={() => setIsInteracting(true)} // Don't just hover, set interacting
-            onTouchEnd={() => {
-              setTimeout(() => setIsInteracting(false), 2000);
-            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {logos.map((client, idx) => (
               <div

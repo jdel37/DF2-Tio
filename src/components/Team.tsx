@@ -112,8 +112,6 @@ const Team = () => {
                 {member.socials.email && (
                   <a
                     href={member.socials.email}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-[#DF1021] transition-colors"
                     aria-label={`Enviar correo electrónico a ${member.name}`}
                   >
