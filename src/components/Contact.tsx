@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -150,10 +151,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4" suppressHydrationWarning>
             {t("contact.title")}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-gray-600 max-w-2xl mx-auto" suppressHydrationWarning>
             {t("contact.description")}
           </p>
         </motion.div>
@@ -297,7 +298,7 @@ const Contact = () => {
             className="lg:w-1/3 space-y-8"
           >
             <div className="bg-[#1E76B8] text-white rounded-lg shadow-lg p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
+              <h3 className="text-2xl font-bold mb-6" suppressHydrationWarning>{t("contact.info.title")}</h3>
 
               <div className="space-y-8">
                 {contactInfo.map((info, idx) => (

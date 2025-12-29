@@ -1,6 +1,7 @@
+"use client";
+import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 
 const Ceo = '/images/1716174004243.jpg';
 const Gerente = '/images/amiga-tio.jpg';
@@ -38,13 +39,10 @@ const Team = () => {
     >
       {/* Título SEO */}
       <div className="text-center mb-12">
-        <h2
-          id="equipo-title"
-          className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4"
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4 text-center" suppressHydrationWarning>
           {t("team.title")}
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12" suppressHydrationWarning>
           {t("team.description")}
         </p>
       </div>

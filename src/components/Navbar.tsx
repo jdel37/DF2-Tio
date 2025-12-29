@@ -1,4 +1,6 @@
+"use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -80,10 +82,14 @@ export default function Navbar() {
 
         {/* LOGO */}
         <button onClick={() => scrollToSection("inicio")}>
-          <img
+          <Image
             src={logo}
-            alt="Logo"
-            className="w-28 md:w-40 transition-all"
+            alt="D2F Consulting - Consultoría Empresarial Colombia"
+            width={160}
+            height={60}
+            className="w-28 md:w-40 h-auto"
+            style={{ width: 'auto' }}
+            priority
           />
         </button>
 
@@ -98,6 +104,7 @@ export default function Navbar() {
                     ? "text-[#1E76B8] hover:text-[#DF1021]"
                     : "text-white hover:text-[#DF1021]"
                   }`}
+                suppressHydrationWarning
               >
                 {label}
               </button>
@@ -128,6 +135,7 @@ export default function Navbar() {
                 <button
                   onClick={() => scrollToSection(id)}
                   className="block text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021] py-2"
+                  suppressHydrationWarning
                 >
                   {label}
                 </button>

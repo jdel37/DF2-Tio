@@ -1,8 +1,9 @@
+"use client";
 import { CheckCircle2 } from 'lucide-react';
-const Equipo = "/images/Equipo 1.jpg";
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import { motion } from 'framer-motion';
+const Equipo = "/images/Equipo 1.jpg";
 
 const About = () => {
   const { t } = useTranslation();

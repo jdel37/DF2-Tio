@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+"use client";
+import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -125,10 +126,10 @@ const Clients = () => {
       <div className="container mx-auto px-4 md:px-6">
 
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1E76B8] mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1E76B8] mb-3" suppressHydrationWarning>
             {t("clients.title")}
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto" suppressHydrationWarning>
             {t("clients.description")}
           </p>
         </div>
@@ -213,8 +214,8 @@ const Clients = () => {
                     p-2 
                     rounded-lg
                 ">
-                  <p className="font-bold text-sm mb-1 line-clamp-2">{client.name}</p>
-                  <p className="text-xs font-light line-clamp-2">{client.industry}</p>
+                  <p className="font-bold text-sm mb-1 line-clamp-2" suppressHydrationWarning>{client.name}</p>
+                  <p className="text-xs font-light line-clamp-2" suppressHydrationWarning>{client.industry}</p>
                 </div>
               </div>
             ))}
@@ -234,7 +235,9 @@ const Clients = () => {
         <div className="mt-12 text-center">
           <button
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 bg-[#DF1021] hover:bg-red-700 text-white font-medium py-2 md:py-3 px-6 md:px-8 rounded-md transition-colors duration-300 text-sm md:text-base"
+            className="inline-block px-8 py-4 bg-[#DF1021] text-white rounded-md text-lg 
+            font-semibold transition-all duration-300 hover:bg-red-700 hover:scale-105"
+            suppressHydrationWarning
           >
             {t("clients.cta")}
           </button>

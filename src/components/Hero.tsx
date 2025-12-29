@@ -1,3 +1,5 @@
+"use client";
+import { motion } from 'framer-motion';
 import React from "react";
 import { ChevronDown } from "lucide-react";
 import Carousel from "./Carrousel";
@@ -35,6 +37,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fadeIn"
+            suppressHydrationWarning
           >
             {t("hero.title")}
           </h1>
@@ -42,11 +45,12 @@ const Hero = () => {
           <h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#DF1021] 
             mb-6 leading-tight animate-fadeIn md:whitespace-nowrap"
+            suppressHydrationWarning
           >
             {t("hero.subtitle")}
           </h2>
 
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" suppressHydrationWarning>
             {t("hero.description")}
           </p>
 
@@ -59,6 +63,7 @@ const Hero = () => {
               focus:outline-none focus:ring-0"
               onClick={scrollToServices}
               aria-label="Ver servicios"
+              suppressHydrationWarning
             >
               {t("hero.servicesBtn")}
             </button>
@@ -73,6 +78,7 @@ const Hero = () => {
                 if (contact) contact.scrollIntoView({ behavior: "smooth" });
               }}
               aria-label="Ir a la sección de contacto"
+              suppressHydrationWarning
             >
               {t("hero.contactBtn")}
             </button>

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+"use client";
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Gestion = '/images/Strategic planing.jpg';

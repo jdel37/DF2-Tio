@@ -1,5 +1,8 @@
-const logo = "/images/logo-03-300 dpi.png";
+"use client";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
+
+const logo = "/images/logo-03-300 dpi.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -16,21 +19,23 @@ const Footer = () => {
           {/* LOGO + TEXTO */}
           <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-center md:text-left">
             {/* LOGO */}
-            <img
+            <Image
               src={logo}
-
-              alt="D2F Consulting Logo"
-              className="w-40 md:w-44 mx-auto md:mx-0"
+              alt="D2F Consulting - Consultoría Empresarial Colombia"
+              width={120}
+              height={45}
+              className="w-32 h-auto mx-auto md:mx-0"
+              style={{ width: 'auto' }}
             />
 
             {/* TEXTO BREVE */}
-            <p className="text-white/80 max-w-md leading-relaxed mt-4 md:mt-0">
+            <p className="text-white/80 text-sm max-w-md" suppressHydrationWarning>
               {t("footer.text")}
             </p>
           </div>
 
           {/* COPYRIGHT */}
-          <p className="text-sm text-white/70 text-center md:text-right">
+          <p className="text-white/60 text-sm" suppressHydrationWarning>
             {t("footer.copyright", { year: new Date().getFullYear() })}
           </p>
 

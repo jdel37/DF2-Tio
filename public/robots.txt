@@ -1,3 +1,18 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
+
+# Disallow admin/internal paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location (dynamic Next.js sitemap)
 Sitemap: https://www.d2fgestion.com/sitemap.xml
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot  
+Allow: /

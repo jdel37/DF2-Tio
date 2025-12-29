@@ -1,0 +1,25 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/_app": [
+      "static/chunks/52b1e_next_dist_compiled_ce1d9c45._.js",
+      "static/chunks/52b1e_next_dist_shared_lib_eeb66087._.js",
+      "static/chunks/52b1e_next_dist_client_2358a417._.js",
+      "static/chunks/52b1e_next_dist_99a8011e._.js",
+      "static/chunks/52b1e_next_app_8e60b07c.js",
+      "static/chunks/[next]_entry_page-loader_ts_6b66bcda._.js",
+      "static/chunks/52b1e_react_e2ee6403._.js",
+      "static/chunks/52b1e_react-dom_cjs_react-dom_development_58677154.js",
+      "static/chunks/52b1e_react-dom_116ac6fe._.js",
+      "static/chunks/52b1e_e547ddba._.js",
+      "static/chunks/[root-of-the-server]__3c26ce36._.js",
+      "static/chunks/DF2-Tio_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-DF2-Tio_pages__app_16b0bc77._.js"
+    ]
+  },
+  "ampFirstPages": []
+}

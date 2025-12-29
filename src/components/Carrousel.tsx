@@ -1,5 +1,7 @@
+"use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Academy4 = "/images/Academy 4.jpg";
 const Academy77 = "/images/Academy 77.jpg";
@@ -29,7 +31,7 @@ function Carousel() {
       x: 0,
       opacity: 1,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        x: { type: "spring" as const, stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 }
       }
     },
@@ -37,7 +39,7 @@ function Carousel() {
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
       transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
+        x: { type: "spring" as const, stiffness: 300, damping: 30 },
         opacity: { duration: 0.2 }
       }
     })
@@ -75,18 +77,13 @@ function Carousel() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
+        <motion.div
           key={currentIndex}
-          src={images[currentIndex]}
           custom={direction}
           variants={slideVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 }
-          }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={1}
@@ -99,9 +96,18 @@ function Carousel() {
               prevSlide();
             }
           }}
-          className="absolute w-full h-full object-cover"
-          alt={`Slide ${currentIndex + 1}`}
-        />
+          className="absolute w-full h-full"
+        >
+          <Image
+            src={images[currentIndex]}
+            alt={`D2F Consulting - Slide ${currentIndex + 1}`}
+            fill
+            sizes="100vw"
+            priority={currentIndex === 0}
+            quality={75}
+            className="object-cover"
+          />
+        </motion.div>
       </AnimatePresence>
 
       {/* Overlay - Optional dark gradient for text visibility if needed, 
