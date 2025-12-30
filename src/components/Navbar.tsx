@@ -1,14 +1,17 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
 import { useTranslation } from "react-i18next";
-const logo = "/images/logo-03-300 dpi.png";
+
+const logo = "/images/logo-03-300-dpi.webp"; // 🔥 conviértelo a webp
 
 export default function Navbar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const NAV_ITEMS = [
     { label: t("navbar.inicio"), id: "inicio" },
@@ -18,52 +21,34 @@ export default function Navbar() {
     { label: t("navbar.equipo"), id: "equipo" },
     { label: t("navbar.contacto"), id: "contacto" },
   ];
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
-  // Detectar si es móvil
+  // Scroll solo para desktop
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  // Comportamiento del scroll
-  useEffect(() => {
-    if (isMobile) {
-      setScrolled(true); // En móvil siempre blanco
-      return;
-    }
-
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile]);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const target = document.getElementById(id);
     const navbar = document.getElementById("navbar");
 
-    if (target) {
-      const navbarHeight = navbar?.offsetHeight || 0;
-      const targetY =
-        target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    if (!target) return;
 
-      animate(window.scrollY, targetY, {
-        duration: 0.7,
-        ease: "easeInOut",
-        onUpdate: (y) => window.scrollTo(0, y),
-      });
+    const offset = navbar?.offsetHeight || 0;
+    const y =
+      target.getBoundingClientRect().top + window.scrollY - offset;
 
-      setIsOpen(false);
-    }
+    animate(window.scrollY, y, {
+      duration: 0.6,
+      ease: "easeInOut",
+      onUpdate: (v) => window.scrollTo(0, v),
+    });
+
+    setIsOpen(false);
   };
 
   return (
@@ -71,39 +56,41 @@ export default function Navbar() {
       id="navbar"
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.5 }}
       className={`
-        fixed w-full z-50 transition-all duration-500 
+        fixed top-0 w-full z-50 transition-all
         ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}
-        ${isMobile ? "bg-white shadow-md py-2" : ""}
+       
       `}
     >
-      <div className="container mx-auto px-3 md:px-6 flex justify-between items-center">
+      <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
 
         {/* LOGO */}
         <button onClick={() => scrollToSection("inicio")}>
           <Image
             src={logo}
-            alt="D2F Consulting - Consultoría Empresarial Colombia"
+            alt="D2F Consulting"
             width={160}
             height={60}
-            className="w-28 md:w-40 h-auto"
-            style={{ width: 'auto' }}
             priority
+            sizes="(max-width: 768px) 120px, 160px"
+            className="h-auto w-[120px] md:w-[160px]"
           />
         </button>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden md:flex space-x-10 items-center">
+        <ul className="hidden md:flex gap-10 items-center">
           {NAV_ITEMS.map(({ label, id }) => (
             <li key={id}>
               <button
                 onClick={() => scrollToSection(id)}
-                className={`text-sm font-semibold tracking-wide transition-colors 
+                className={`
+                  text-sm font-semibold transition-colors
                   ${scrolled
                     ? "text-[#1E76B8] hover:text-[#DF1021]"
                     : "text-white hover:text-[#DF1021]"
-                  }`}
+                  }
+                `}
                 suppressHydrationWarning
               >
                 {label}
@@ -115,7 +102,8 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden transition-colors text-[#1E76B8]`}
+          className="md:hidden text-[#1E76B8]"
+          aria-label="Abrir menú"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -124,17 +112,16 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -15 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-white pb-4 shadow-lg"
+          className="md:hidden bg-white shadow-lg"
         >
-          <ul className="flex flex-col container mx-auto px-6 space-y-3 py-3">
+          <ul className="flex flex-col gap-3 px-6 py-4">
             {NAV_ITEMS.map(({ label, id }) => (
               <li key={id}>
                 <button
                   onClick={() => scrollToSection(id)}
-                  className="block text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021] py-2"
+                  className="text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]"
                   suppressHydrationWarning
                 >
                   {label}

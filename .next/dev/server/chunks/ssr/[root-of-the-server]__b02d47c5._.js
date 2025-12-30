@@ -28,10 +28,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2
 ;
 ;
 ;
-const logo = "/images/logo-03-300 dpi.png";
+const logo = "/images/logo-03-300-dpi.webp"; // 🔥 conviértelo a webp
 function Navbar() {
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTranslation"])();
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const NAV_ITEMS = [
         {
             label: t("navbar.inicio"),
@@ -58,44 +59,26 @@ function Navbar() {
             id: "contacto"
         }
     ];
-    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Detectar si es móvil
+    // Scroll solo para desktop
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const checkMobile = ()=>{
-            setIsMobile(window.innerWidth <= 768);
-        };
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-        return ()=>window.removeEventListener("resize", checkMobile);
-    }, []);
-    // Comportamiento del scroll
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (isMobile) {
-            setScrolled(true); // En móvil siempre blanco
-            return;
-        }
         const handleScroll = ()=>{
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 40);
         };
         window.addEventListener("scroll", handleScroll);
         return ()=>window.removeEventListener("scroll", handleScroll);
-    }, [
-        isMobile
-    ]);
+    }, []);
     const scrollToSection = (id)=>{
         const target = document.getElementById(id);
         const navbar = document.getElementById("navbar");
-        if (target) {
-            const navbarHeight = navbar?.offsetHeight || 0;
-            const targetY = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$animate$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["animate"])(window.scrollY, targetY, {
-                duration: 0.7,
-                ease: "easeInOut",
-                onUpdate: (y)=>window.scrollTo(0, y)
-            });
-            setIsOpen(false);
-        }
+        if (!target) return;
+        const offset = navbar?.offsetHeight || 0;
+        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$animation$2f$animate$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["animate"])(window.scrollY, y, {
+            duration: 0.6,
+            ease: "easeInOut",
+            onUpdate: (v)=>window.scrollTo(0, v)
+        });
+        setIsOpen(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].nav, {
         id: "navbar",
@@ -108,136 +91,133 @@ function Navbar() {
             opacity: 1
         },
         transition: {
-            duration: 0.6,
-            ease: "easeOut"
+            duration: 0.5
         },
         className: `
-        fixed w-full z-50 transition-all duration-500 
+        fixed top-0 w-full z-50 transition-all
         ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}
-        ${isMobile ? "bg-white shadow-md py-2" : ""}
+       
       `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "container mx-auto px-3 md:px-6 flex justify-between items-center",
+                className: "mx-auto max-w-7xl px-4 flex items-center justify-between",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>scrollToSection("inicio"),
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             src: logo,
-                            alt: "D2F Consulting - Consultoría Empresarial Colombia",
+                            alt: "D2F Consulting",
                             width: 160,
                             height: 60,
-                            className: "w-28 md:w-40 h-auto",
-                            style: {
-                                width: 'auto'
-                            },
-                            priority: true
+                            priority: true,
+                            sizes: "(max-width: 768px) 120px, 160px",
+                            className: "h-auto w-[120px] md:w-[160px]"
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 85,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 84,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "hidden md:flex space-x-10 items-center",
+                        className: "hidden md:flex gap-10 items-center",
                         children: NAV_ITEMS.map(({ label, id })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>scrollToSection(id),
-                                    className: `text-sm font-semibold tracking-wide transition-colors 
-                  ${scrolled ? "text-[#1E76B8] hover:text-[#DF1021]" : "text-white hover:text-[#DF1021]"}`,
+                                    className: `
+                  text-sm font-semibold transition-colors
+                  ${scrolled ? "text-[#1E76B8] hover:text-[#DF1021]" : "text-white hover:text-[#DF1021]"}
+                `,
                                     suppressHydrationWarning: true,
                                     children: label
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 85,
                                     columnNumber: 15
                                 }, this)
                             }, id, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                lineNumber: 99,
+                                lineNumber: 84,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 97,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>setIsOpen(!isOpen),
-                        className: `md:hidden transition-colors text-[#1E76B8]`,
+                        className: "md:hidden text-[#1E76B8]",
+                        "aria-label": "Abrir menú",
                         children: isOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 120,
+                            lineNumber: 108,
                             columnNumber: 21
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 120,
+                            lineNumber: 108,
                             columnNumber: 39
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 116,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                lineNumber: 81,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                 initial: {
                     opacity: 0,
-                    y: -15
+                    y: -10
                 },
                 animate: {
                     opacity: 1,
                     y: 0
                 },
-                transition: {
-                    duration: 0.3
-                },
-                className: "md:hidden bg-white pb-4 shadow-lg",
+                className: "md:hidden bg-white shadow-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "flex flex-col container mx-auto px-6 space-y-3 py-3",
+                    className: "flex flex-col gap-3 px-6 py-4",
                     children: NAV_ITEMS.map(({ label, id })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>scrollToSection(id),
-                                className: "block text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021] py-2",
+                                className: "text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]",
                                 suppressHydrationWarning: true,
                                 children: label
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                lineNumber: 135,
+                                lineNumber: 122,
                                 columnNumber: 17
                             }, this)
                         }, id, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 134,
+                            lineNumber: 121,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                    lineNumber: 132,
+                    lineNumber: 119,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                lineNumber: 126,
+                lineNumber: 114,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-        lineNumber: 70,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }

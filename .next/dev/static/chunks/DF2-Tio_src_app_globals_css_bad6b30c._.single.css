@@ -350,6 +350,10 @@ img, video {
   left: 1rem;
 }
 
+.top-0 {
+  top: 0;
+}
+
 .top-1\/2 {
   top: 50%;
 }
@@ -510,10 +514,6 @@ img, video {
   width: 3rem;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
 .w-3 {
   width: .75rem;
 }
@@ -542,6 +542,10 @@ img, video {
   width: 16rem;
 }
 
+.w-\[120px\] {
+  width: 120px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -560,6 +564,10 @@ img, video {
 
 .max-w-6xl {
   max-width: 72rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .max-w-md {
@@ -626,10 +634,6 @@ img, video {
   cursor: pointer;
 }
 
-.resize {
-  resize: both;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -692,12 +696,6 @@ img, video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.space-x-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -856,6 +854,10 @@ img, video {
   background-color: #ffffff80;
 }
 
+.bg-white\/80 {
+  background-color: #fffc;
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -924,11 +926,6 @@ img, video {
   padding-right: .5rem;
 }
 
-.px-3 {
-  padding-left: .75rem;
-  padding-right: .75rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -977,10 +974,6 @@ img, video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .pb-6 {
@@ -1057,10 +1050,6 @@ img, video {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.tracking-wide {
-  letter-spacing: .025em;
 }
 
 .text-\[\#1E76B8\] {
@@ -1191,6 +1180,12 @@ img, video {
 
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -1412,8 +1407,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 66.6667%;
   }
 
-  .md\:w-40 {
-    width: 10rem;
+  .md\:w-\[160px\] {
+    width: 160px;
   }
 
   .md\:grid-cols-2 {
@@ -1446,6 +1441,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .md\:whitespace-nowrap {
     white-space: nowrap;
+  }
+
+  .md\:bg-transparent {
+    background-color: #0000;
   }
 
   .md\:p-10 {
