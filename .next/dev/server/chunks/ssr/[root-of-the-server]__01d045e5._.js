@@ -48,7 +48,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2
 const viewport = {
     themeColor: '#000000',
     width: 'device-width',
-    initialScale: 1
+    initialScale: 1,
+    maximumScale: 1
 };
 const metadata = {
     metadataBase: new URL('https://www.d2fgestion.com'),
@@ -75,7 +76,6 @@ const metadata = {
     ],
     creator: 'D2F Consulting',
     publisher: 'D2F Consulting',
-    // ICONOS CORREGIDOS PARA GOOGLE SEARCH
     icons: {
         icon: [
             {
@@ -96,7 +96,6 @@ const metadata = {
             }
         ]
     },
-    // OPEN GRAPH (Redes Sociales)
     openGraph: {
         type: 'website',
         locale: 'es_CO',
@@ -113,7 +112,6 @@ const metadata = {
             }
         ]
     },
-    // ROBOTS
     robots: {
         index: true,
         follow: true,
@@ -126,7 +124,6 @@ const metadata = {
 };
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 function RootLayout({ children }) {
-    // SCHEMA ORG (SEO Local y de Organización)
     const jsonLd = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -158,9 +155,11 @@ function RootLayout({ children }) {
             }
         ]
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
+    return(/* ELIMINACIÓN DE SCROLL LATERAL:
+           Añadimos overflow-x-hidden tanto al html como al body.
+        */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "es",
-        className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_2fe1ab3d$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].variable,
+        className: `${__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_2fe1ab3d$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].variable} overflow-x-hidden`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("head", {
                 children: [
@@ -169,7 +168,7 @@ function RootLayout({ children }) {
                         href: "https://www.googletagmanager.com"
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 114,
+                        lineNumber: 112,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -179,17 +178,17 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 115,
+                        lineNumber: 113,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 112,
+                lineNumber: 111,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
-                className: "antialiased font-sans",
+                className: "antialiased font-sans overflow-x-hidden w-full relative",
                 children: [
                     GA_MEASUREMENT_ID && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
@@ -198,7 +197,7 @@ function RootLayout({ children }) {
                                 strategy: "afterInteractive"
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 124,
+                                lineNumber: 121,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -212,7 +211,7 @@ function RootLayout({ children }) {
                             `
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 128,
+                                lineNumber: 125,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -221,15 +220,15 @@ function RootLayout({ children }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 120,
+                lineNumber: 118,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-        lineNumber: 111,
+        lineNumber: 110,
         columnNumber: 9
-    }, this);
+    }, this));
 }
 }),
 "[project]/DF2-Tio/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {

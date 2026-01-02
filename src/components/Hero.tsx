@@ -64,14 +64,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <button
-        onClick={() => scrollTo("servicios")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce z-10"
-        aria-label="Scroll"
-      >
-        <ChevronDown size={32} />
-      </button>
+
     </section>
   );
 }

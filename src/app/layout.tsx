@@ -10,14 +10,14 @@ const inter = Inter({
     variable: '--font-inter',
 });
 
-// 2. CONFIGURACIÓN DE VIEWPORT (Mejora experiencia móvil)
+// 2. CONFIGURACIÓN DE VIEWPORT (Mejora experiencia móvil y previene zoom accidental)
 export const viewport: Viewport = {
     themeColor: '#000000',
     width: 'device-width',
     initialScale: 1,
+    maximumScale: 1, // Ayuda a evitar desajustes de layout en iOS
 };
 
-// 3. METADATOS Y SEO (Keywords estratégicas y Iconos corregidos)
 export const metadata: Metadata = {
     metadataBase: new URL('https://www.d2fgestion.com'),
     title: {
@@ -35,10 +35,9 @@ export const metadata: Metadata = {
     creator: 'D2F Consulting',
     publisher: 'D2F Consulting',
 
-    // ICONOS CORREGIDOS PARA GOOGLE SEARCH
     icons: {
         icon: [
-            { url: '/favicon.ico' }, // Archivo principal en /public/favicon.ico
+            { url: '/favicon.ico' },
             { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
         ],
         shortcut: '/favicon.ico',
@@ -47,7 +46,6 @@ export const metadata: Metadata = {
         ],
     },
 
-    // OPEN GRAPH (Redes Sociales)
     openGraph: {
         type: 'website',
         locale: 'es_CO',
@@ -58,7 +56,6 @@ export const metadata: Metadata = {
         images: [{ url: '/images/logo-web.webp', width: 1200, height: 630, alt: 'D2F Consulting' }],
     },
 
-    // ROBOTS
     robots: {
         index: true,
         follow: true,
@@ -74,7 +71,6 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
-    // SCHEMA ORG (SEO Local y de Organización)
     const jsonLd = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -108,17 +104,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     };
 
     return (
-        <html lang="es" className={inter.variable}>
+        /* ELIMINACIÓN DE SCROLL LATERAL:
+           Añadimos overflow-x-hidden tanto al html como al body.
+        */
+        <html lang="es" className={`${inter.variable} overflow-x-hidden`}>
             <head>
-                {/* Preconexión para reducir latencia de Google Analytics */}
                 <link rel="preconnect" href="https://www.googletagmanager.com" />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="antialiased font-sans">
-                {/* 4. GOOGLE ANALYTICS (Carga no bloqueante) */}
+            <body className="antialiased font-sans overflow-x-hidden w-full relative">
                 {GA_MEASUREMENT_ID && (
                     <>
                         <Script
