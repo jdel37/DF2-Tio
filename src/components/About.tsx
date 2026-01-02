@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-const Equipo = "/images/Equipo 1.jpg";
+const Equipo = "/images/equipo-1.webp";
 
 const About = () => {
   const { t } = useTranslation();

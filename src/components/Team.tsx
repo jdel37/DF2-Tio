@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const Ceo = '/images/1716174004243.jpg';
-const Gerente = '/images/amiga-tio.jpg';
+const Ceo = '/images/tio.webp';
+const Gerente = '/images/amiga-tio.webp';
 
 const Team = () => {
   const { t } = useTranslation();

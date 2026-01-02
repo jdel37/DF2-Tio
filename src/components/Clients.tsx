@@ -3,21 +3,21 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const kosha = '/images/kosha.jpg';
-const Dco = '/images/Dco.jpg';
-const creative = '/images/creative.jpg';
-const camiux = '/images/cami-ux.jpg';
-const shake2go = '/images/shake2go.jpg';
-const kailua = '/images/kailua.png';
-const opticalia = '/images/opticalia.png';
-const sabana = '/images/Logo-Universidad-de-La-Sabana.jpg';
-const deka = '/images/deka2.png';
-const gant = '/images/gandt.jpg';
-const ddg = '/images/ddg.jpg';
-const mpc = '/images/mpc.jpg';
-const snow = '/images/snow.jpg';
-const love = '/images/love.jpg';
-const city = '/images/city.jpg';
+const kosha = '/images/kosha.webp';
+const Dco = '/images/dco.webp';
+const creative = '/images/creative.webp';
+const camiux = '/images/cami-ux.webp';
+const shake2go = '/images/shake2go.webp';
+const kailua = '/images/kailua.webp';
+const opticalia = '/images/opticalia.webp';
+const sabana = '/images/logo-universidad-de-la-sabana.webp';
+const deka = '/images/deka2.webp';
+const gant = '/images/gandt.webp';
+const ddg = '/images/ddg.webp';
+const mpc = '/images/mpc.webp';
+const snow = '/images/snow.webp';
+const love = '/images/love.webp';
+const city = '/images/city.webp';
 
 const Clients = () => {
   const { t } = useTranslation();

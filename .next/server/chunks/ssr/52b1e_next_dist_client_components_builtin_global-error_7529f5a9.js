@@ -1,3 +1,0 @@
-module.exports=[77499,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(23868);a.n(d("[project]/DF2-Tio/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},66835,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(23868);a.n(d("[project]/DF2-Tio/node_modules/next/dist/client/components/builtin/global-error.js"))},57376,a=>{"use strict";a.i(77499);var b=a.i(66835);a.n(b)}];
-
-//# sourceMappingURL=52b1e_next_dist_client_components_builtin_global-error_7529f5a9.js.map

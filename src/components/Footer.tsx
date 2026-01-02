@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
-const logo = "/images/logo-03-300 dpi.png";
+const logo = "/images/logo-03-300-dpi.webp";
 
 const Footer = () => {
   const { t } = useTranslation();

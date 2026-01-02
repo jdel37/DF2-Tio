@@ -46,18 +46,40 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2
 const metadata = {
     metadataBase: new URL('https://www.d2fgestion.com'),
     title: {
-        default: 'D2F Consulting | Consultoría Empresarial Colombia',
+        default: 'D2F | Consultoría Bogotá, Colombia, Crecimiento Empresarial y Marketing Digital',
         template: '%s | D2F Consulting'
     },
-    description: 'Consultoría estratégica y transformación digital para empresas en Colombia. Expertos en gestión de proyectos, franquicias y crecimiento sostenible.',
+    description: 'D2F Consulting ofrece consultoría empresarial en Bogotá y Colombia, planeación estratégica, marketing digital, análisis de datos, franquicias y crecimiento empresarial sostenible.',
     keywords: [
-        'consultoría empresarial colombia',
-        'transformación digital',
-        'asesoría estratégica',
-        'gestión proyectos',
-        'desarrollo franquicias',
+        'D2F',
+        'D2F Consulting',
+        'consultoría Bogotá',
+        'consultoría Colombia',
+        'consultoría empresarial',
+        'consultoría estratégica',
+        'asesoría empresarial',
+        'planeación estratégica',
         'marketing digital',
-        'consultoría bogotá'
+        'marketing empresarial',
+        'gestión de proyectos',
+        'análisis de datos',
+        'business intelligence',
+        'franquicias Colombia',
+        'franquicias Bogotá',
+        'crecimiento empresarial',
+        'transformación digital',
+        'optimización de procesos',
+        'estrategia corporativa',
+        'desarrollo de negocios',
+        'consultoría en innovación',
+        'consultoría financiera',
+        'consultoría de operaciones',
+        'gestión de talento humano',
+        'mejora continua',
+        'sostenibilidad empresarial',
+        'expansión de empresas',
+        'emprendimiento corporativo',
+        'automatización de negocios'
     ],
     authors: [
         {
@@ -74,27 +96,24 @@ const metadata = {
     icons: {
         icon: [
             {
-                url: '/logo-web.jpg'
+                url: '/images/logo-web.webp',
+                sizes: '32x32',
+                type: 'image/webp'
             },
             {
-                url: '/images/logo-web.jpg',
-                sizes: 'any'
-            }
+                url: '/images/logo-web.webp',
+                sizes: '16x16',
+                type: 'image/webp'
+            },
+            {
+                url: '/images/logo-web.webp'
+            } // fallback
         ],
         apple: [
             {
-                url: '/logo-web.jpg'
-            },
-            {
-                url: '/images/logo-web.jpg',
+                url: '/images/logo-web.webp',
                 sizes: '180x180',
-                type: 'image/jpg'
-            }
-        ],
-        other: [
-            {
-                rel: 'apple-touch-icon-precomposed',
-                url: '/logo-web.jpg'
+                type: 'image/webp'
             }
         ]
     },
@@ -103,30 +122,30 @@ const metadata = {
         locale: 'es_CO',
         url: 'https://www.d2fgestion.com',
         siteName: 'D2F Consulting',
-        title: 'D2F Consulting | Consultoría Empresarial Colombia',
-        description: 'Transformamos empresas con consultoría estratégica y soluciones innovadoras. ¡Contáctanos hoy!',
+        title: 'D2F | Consultoría Bogotá, Colombia, Crecimiento Empresarial y Marketing Digital',
+        description: 'D2F Consulting transforma empresas con consultoría estratégica, marketing digital, análisis de datos, franquicias y crecimiento empresarial.',
         images: [
             {
-                url: '/images/logo-web.jpg',
+                url: '/images/logo-web.webp',
                 width: 1200,
                 height: 630,
-                alt: 'D2F Consulting - Consultoría Empresarial Colombia'
+                alt: 'D2F Consulting - Consultoría empresarial Colombia'
             }
         ]
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'D2F Consulting | Consultoría Empresarial Colombia',
-        description: 'Consultoría estratégica y transformación digital para empresas en Colombia',
+        title: 'D2F | Consultoría Bogotá, Colombia, Crecimiento Empresarial y Marketing Digital',
+        description: 'D2F Consulting ofrece soluciones estratégicas y digitales en Bogotá y Colombia para empresas y franquicias.',
         images: [
-            '/images/logo-web.jpg'
+            '/images/logo-web.webp'
         ]
     },
     alternates: {
         canonical: 'https://www.d2fgestion.com',
         languages: {
             'es-CO': 'https://www.d2fgestion.com',
-            'en': 'https://www.d2fgestion.com/en'
+            en: 'https://www.d2fgestion.com/en'
         }
     },
     robots: {
@@ -139,22 +158,18 @@ const metadata = {
             'max-image-preview': 'large',
             'max-snippet': -1
         }
-    },
-    verification: {
     }
 };
-// Google Analytics 4 Measurement ID (reemplazar con tu ID real)
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 function RootLayout({ children }) {
-    // JSON-LD: Organization Schema
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'D2F Consulting',
         alternateName: 'D2F Gestión',
         url: 'https://www.d2fgestion.com',
-        logo: 'https://www.d2fgestion.com/images/logo-web.jpg',
-        description: 'Consultoría empresarial especializada en transformación digital y gestión estratégica en Colombia',
+        logo: 'https://www.d2fgestion.com/images/logo-web.webp',
+        description: 'D2F Consulting | Consultoría empresarial, marketing digital, análisis de datos y crecimiento empresarial en Bogotá y Colombia',
         address: {
             '@type': 'PostalAddress',
             addressCountry: 'CO',
@@ -180,13 +195,12 @@ function RootLayout({ children }) {
             'https://www.instagram.com/d2f_consulting_agency/'
         ]
     };
-    // JSON-LD: LocalBusiness Schema (para SEO local)
     const localBusinessSchema = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         '@id': 'https://www.d2fgestion.com/#localbusiness',
         name: 'D2F Consulting',
-        image: 'https://www.d2fgestion.com/images/logo-web.jpg',
+        image: 'https://www.d2fgestion.com/images/logo-web.webp',
         url: 'https://www.d2fgestion.com',
         telephone: '+57-322-362-4554',
         email: 'contacto@d2fgestion.com',
@@ -200,7 +214,7 @@ function RootLayout({ children }) {
         },
         geo: {
             '@type': 'GeoCoordinates',
-            latitude: 4.7110,
+            latitude: 4.711,
             longitude: -74.0721
         },
         openingHoursSpecification: {
@@ -222,6 +236,59 @@ function RootLayout({ children }) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("head", {
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        rel: "icon",
+                        type: "image/webp",
+                        sizes: "32x32",
+                        href: "/images/logo-web.webp"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 172,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        rel: "icon",
+                        type: "image/webp",
+                        sizes: "16x16",
+                        href: "/images/logo-web.webp"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 173,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        rel: "shortcut icon",
+                        href: "/images/logo-web.webp"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 174,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
+                        rel: "apple-touch-icon",
+                        sizes: "180x180",
+                        href: "/images/logo-web.webp"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 177,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
+                        name: "apple-mobile-web-app-title",
+                        content: "D2F Consulting"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 178,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
+                        name: "apple-mobile-web-app-capable",
+                        content: "yes"
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
+                        lineNumber: 179,
+                        columnNumber: 17
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
                         type: "application/ld+json",
                         dangerouslySetInnerHTML: {
@@ -229,7 +296,7 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 165,
+                        lineNumber: 182,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -239,13 +306,13 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 169,
+                        lineNumber: 183,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 163,
+                lineNumber: 170,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -258,7 +325,7 @@ function RootLayout({ children }) {
                                 strategy: "afterInteractive"
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 178,
+                                lineNumber: 188,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -272,7 +339,7 @@ function RootLayout({ children }) {
                             `
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 182,
+                                lineNumber: 189,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -281,13 +348,13 @@ function RootLayout({ children }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 174,
+                lineNumber: 185,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-        lineNumber: 162,
+        lineNumber: 169,
         columnNumber: 9
     }, this);
 }

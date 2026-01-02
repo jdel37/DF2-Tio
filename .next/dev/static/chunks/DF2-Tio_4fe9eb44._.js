@@ -18,8 +18,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const Ceo = '/images/1716174004243.jpg';
-const Gerente = '/images/amiga-tio.jpg';
+const Ceo = '/images/tio.webp';
+const Gerente = '/images/amiga-tio.webp';
 const Team = ()=>{
     _s();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();

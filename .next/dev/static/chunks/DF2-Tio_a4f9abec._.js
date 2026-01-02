@@ -21,12 +21,12 @@ var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-const Gestion = '/images/Strategic planing.jpg';
-const Digital = '/images/Equipo 2.jpg';
-const Proyectos = '/images/Project Management 45.jpg';
-const Marketing = '/images/Marketing Digital 9.jpg';
-const Franquicias = '/images/Franchise 8.jpg';
-const Academia = '/images/shutterstock_225208390.jpg';
+const Gestion = '/images/strategic-planing.webp';
+const Digital = '/images/equipo-2.webp';
+const Proyectos = '/images/project-management-45.webp';
+const Marketing = '/images/marketing-digital-9.webp';
+const Franquicias = '/images/franchise-8.webp';
+const Academia = '/images/shutterstock_225208390.webp';
 ;
 ;
 const BusinessLines = ()=>{
