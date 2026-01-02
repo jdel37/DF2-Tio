@@ -68,18 +68,7 @@ const metadata = {
         'franquicias Bogotá',
         'crecimiento empresarial',
         'transformación digital',
-        'optimización de procesos',
-        'estrategia corporativa',
-        'desarrollo de negocios',
-        'consultoría en innovación',
-        'consultoría financiera',
-        'consultoría de operaciones',
-        'gestión de talento humano',
-        'mejora continua',
-        'sostenibilidad empresarial',
-        'expansión de empresas',
-        'emprendimiento corporativo',
-        'automatización de negocios'
+        'optimización de procesos'
     ],
     authors: [
         {
@@ -93,22 +82,19 @@ const metadata = {
         address: false,
         telephone: false
     },
+    // CONFIGURACIÓN DE ICONOS CORREGIDA
     icons: {
         icon: [
             {
-                url: '/images/logo-web.webp',
+                url: '/favicon.ico'
+            },
+            {
+                url: '/favicon.ico',
                 sizes: '32x32',
-                type: 'image/webp'
-            },
-            {
-                url: '/images/logo-web.webp',
-                sizes: '16x16',
-                type: 'image/webp'
-            },
-            {
-                url: '/images/logo-web.webp'
-            } // fallback
+                type: 'image/x-icon'
+            }
         ],
+        shortcut: '/favicon.ico',
         apple: [
             {
                 url: '/images/logo-web.webp',
@@ -141,13 +127,6 @@ const metadata = {
             '/images/logo-web.webp'
         ]
     },
-    alternates: {
-        canonical: 'https://www.d2fgestion.com',
-        languages: {
-            'es-CO': 'https://www.d2fgestion.com',
-            en: 'https://www.d2fgestion.com/en'
-        }
-    },
     robots: {
         index: true,
         follow: true,
@@ -162,32 +141,18 @@ const metadata = {
 };
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 function RootLayout({ children }) {
+    // Estructura de datos para Google (Schema)
     const organizationSchema = {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'D2F Consulting',
         alternateName: 'D2F Gestión',
         url: 'https://www.d2fgestion.com',
-        logo: 'https://www.d2fgestion.com/images/logo-web.webp',
-        description: 'D2F Consulting | Consultoría empresarial, marketing digital, análisis de datos y crecimiento empresarial en Bogotá y Colombia',
-        address: {
-            '@type': 'PostalAddress',
-            addressCountry: 'CO',
-            addressRegion: 'Cundinamarca',
-            addressLocality: 'Bogotá'
-        },
+        logo: 'https://www.d2fgestion.com/favicon.ico',
         contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+57-322-362-4554',
-            contactType: 'customer service',
-            areaServed: [
-                'CO',
-                'LATAM'
-            ],
-            availableLanguage: [
-                'es',
-                'en'
-            ]
+            contactType: 'customer service'
         },
         sameAs: [
             'https://www.linkedin.com/company/10602504',
@@ -203,92 +168,19 @@ function RootLayout({ children }) {
         image: 'https://www.d2fgestion.com/images/logo-web.webp',
         url: 'https://www.d2fgestion.com',
         telephone: '+57-322-362-4554',
-        email: 'contacto@d2fgestion.com',
         address: {
             '@type': 'PostalAddress',
             streetAddress: 'Bogotá',
             addressLocality: 'Bogotá',
             addressRegion: 'Cundinamarca',
-            postalCode: '110111',
             addressCountry: 'CO'
-        },
-        geo: {
-            '@type': 'GeoCoordinates',
-            latitude: 4.711,
-            longitude: -74.0721
-        },
-        openingHoursSpecification: {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: [
-                'Monday',
-                'Tuesday',
-                'Wednesday',
-                'Thursday',
-                'Friday'
-            ],
-            opens: '08:00',
-            closes: '18:00'
-        },
-        priceRange: '$$'
+        }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "es",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("head", {
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
-                        rel: "icon",
-                        type: "image/webp",
-                        sizes: "32x32",
-                        href: "/images/logo-web.webp"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 172,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
-                        rel: "icon",
-                        type: "image/webp",
-                        sizes: "16x16",
-                        href: "/images/logo-web.webp"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 173,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
-                        rel: "shortcut icon",
-                        href: "/images/logo-web.webp"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 174,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
-                        rel: "apple-touch-icon",
-                        sizes: "180x180",
-                        href: "/images/logo-web.webp"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 177,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
-                        name: "apple-mobile-web-app-title",
-                        content: "D2F Consulting"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 178,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("meta", {
-                        name: "apple-mobile-web-app-capable",
-                        content: "yes"
-                    }, void 0, false, {
-                        fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 179,
-                        columnNumber: 17
-                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
                         type: "application/ld+json",
                         dangerouslySetInnerHTML: {
@@ -296,7 +188,7 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 182,
+                        lineNumber: 129,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
@@ -306,13 +198,13 @@ function RootLayout({ children }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                        lineNumber: 183,
+                        lineNumber: 133,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 170,
+                lineNumber: 125,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -325,7 +217,7 @@ function RootLayout({ children }) {
                                 strategy: "afterInteractive"
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 188,
+                                lineNumber: 141,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$script$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -339,7 +231,7 @@ function RootLayout({ children }) {
                             `
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                                lineNumber: 189,
+                                lineNumber: 142,
                                 columnNumber: 25
                             }, this)
                         ]
@@ -348,13 +240,13 @@ function RootLayout({ children }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-                lineNumber: 185,
+                lineNumber: 138,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/app/layout.tsx",
-        lineNumber: 169,
+        lineNumber: 124,
         columnNumber: 9
     }, this);
 }

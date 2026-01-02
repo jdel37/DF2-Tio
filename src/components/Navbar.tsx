@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { motion, animate } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const logo = "/images/logo-03-300-dpi.webp"; // 🔥 conviértelo a webp
+const logo = "/images/logo-03-300-dpi.webp";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -24,10 +24,7 @@ export default function Navbar() {
 
   // Scroll solo para desktop
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -39,8 +36,7 @@ export default function Navbar() {
     if (!target) return;
 
     const offset = navbar?.offsetHeight || 0;
-    const y =
-      target.getBoundingClientRect().top + window.scrollY - offset;
+    const y = target.getBoundingClientRect().top + window.scrollY - offset;
 
     animate(window.scrollY, y, {
       duration: 0.6,
@@ -60,32 +56,31 @@ export default function Navbar() {
       className={`
         fixed top-0 w-full z-50 transition-all
         ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}
-       
       `}
     >
       <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
 
         {/* LOGO */}
-        <button onClick={() => scrollToSection("inicio")}>
+        <button onClick={() => scrollToSection("inicio")} className="flex-shrink-0">
           <Image
             src={logo}
             alt="D2F Consulting"
             width={160}
             height={60}
             priority
-            sizes="(max-width: 768px) 120px, 160px"
-            className="h-auto w-[120px] md:w-[160px]"
+            sizes="(max-width: 640px) 100px, (max-width: 768px) 120px, 160px"
+            className="h-auto w-[100px] sm:w-[120px] md:w-[160px]"
           />
         </button>
 
         {/* DESKTOP NAV */}
-        <ul className="hidden md:flex gap-10 items-center">
+        <ul className="hidden md:flex gap-6 lg:gap-10 items-center text-sm md:text-base">
           {NAV_ITEMS.map(({ label, id }) => (
             <li key={id}>
               <button
                 onClick={() => scrollToSection(id)}
                 className={`
-                  text-sm font-semibold transition-colors
+                  font-semibold transition-colors
                   ${scrolled
                     ? "text-[#1E76B8] hover:text-[#DF1021]"
                     : "text-white hover:text-[#DF1021]"
@@ -116,12 +111,12 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white shadow-lg"
         >
-          <ul className="flex flex-col gap-3 px-6 py-4">
+          <ul className="flex flex-col gap-2 sm:gap-3 px-6 py-4">
             {NAV_ITEMS.map(({ label, id }) => (
               <li key={id}>
                 <button
                   onClick={() => scrollToSection(id)}
-                  className="text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]"
+                  className="text-base sm:text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]"
                   suppressHydrationWarning
                 >
                   {label}

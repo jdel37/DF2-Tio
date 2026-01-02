@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Evita scroll lateral */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 /* Custom animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -38,11 +52,14 @@
 
 /* Utility to hide scrollbar explicitly */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
+
 .scrollbar-hide {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Smooth scrolling */
@@ -62,6 +79,11 @@ body {
   color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
 }

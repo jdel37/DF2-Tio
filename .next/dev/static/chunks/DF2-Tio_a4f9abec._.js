@@ -10,15 +10,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bar$2d$chart$2d$3$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/bar-chart-3.js [app-client] (ecmascript) <export default as BarChart3>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lightbulb$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Lightbulb$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/lightbulb.js [app-client] (ecmascript) <export default as Lightbulb>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$line$2d$chart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LineChart$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/line-chart.js [app-client] (ecmascript) <export default as LineChart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/users.js [app-client] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/globe.js [app-client] (ecmascript) <export default as Globe>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
+;
 ;
 ;
 const Gestion = '/images/strategic-planing.webp';
@@ -27,8 +29,6 @@ const Proyectos = '/images/project-management-45.webp';
 const Marketing = '/images/marketing-digital-9.webp';
 const Franquicias = '/images/franchise-8.webp';
 const Academia = '/images/shutterstock_225208390.webp';
-;
-;
 const BusinessLines = ()=>{
     _s();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
@@ -42,7 +42,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 30,
+                lineNumber: 22,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Gestion,
@@ -63,7 +63,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 44,
+                lineNumber: 36,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Digital,
@@ -84,7 +84,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 58,
+                lineNumber: 50,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Proyectos,
@@ -105,7 +105,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 72,
+                lineNumber: 64,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Marketing,
@@ -126,7 +126,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 86,
+                lineNumber: 78,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Franquicias,
@@ -147,7 +147,7 @@ const BusinessLines = ()=>{
                 className: "text-[#DF1021]"
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                lineNumber: 100,
+                lineNumber: 92,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             image: Academia,
@@ -161,13 +161,12 @@ const BusinessLines = ()=>{
             ]
         }
     ];
-    // ... (keep constants and data same, just adding imports and motion wrappers)
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "servicios",
         "aria-label": "Líneas de negocio de D2F Consulting",
-        className: "py-20 bg-gray-50",
+        className: "py-16 sm:py-20 bg-gray-50",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container mx-auto px-4 md:px-6",
+            className: "container mx-auto px-4 sm:px-6 lg:px-8",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
@@ -187,25 +186,25 @@ const BusinessLines = ()=>{
                     className: "text-center mb-12",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4",
                             children: t('businessLines.title')
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                            lineNumber: 132,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-lg text-gray-600 max-w-3xl mx-auto",
+                            className: "text-base sm:text-lg text-gray-600 max-w-3xl mx-auto",
                             children: t('businessLines.description')
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                            lineNumber: 135,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                    lineNumber: 125,
+                    lineNumber: 114,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -227,50 +226,50 @@ const BusinessLines = ()=>{
                                 delay: idx * 0.1
                             },
                             onClick: ()=>setActiveTab(line.id),
-                            className: `px-4 py-3 rounded-md transition-all duration-300 flex items-center gap-2 
+                            className: `px-3 sm:px-4 py-2 sm:py-3 rounded-md transition-all duration-300 flex items-center gap-2 
                 ${activeTab === line.id ? 'bg-[#1E76B8] text-white shadow-md' : 'bg-white text-[#1E76B8] hover:bg-gray-100'}`,
                             "aria-expanded": activeTab === line.id,
                             children: [
                                 line.icon,
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "hidden md:inline font-medium",
+                                    className: "hidden sm:inline font-medium text-sm sm:text-base",
                                     children: line.title
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 147,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, line.id, true, {
                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                            lineNumber: 143,
+                            lineNumber: 132,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                    lineNumber: 141,
+                    lineNumber: 130,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
                         opacity: 0,
-                        x: 20
+                        y: 20
                     },
                     animate: {
                         opacity: 1,
-                        x: 0
+                        y: 0
                     },
                     transition: {
                         duration: 0.5
                     },
                     className: "bg-white rounded-lg shadow-lg overflow-hidden",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-6 md:p-8",
+                        className: "p-4 sm:p-6 md:p-8",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col items-center md:flex-row gap-5",
+                            className: "flex flex-col md:flex-row items-center gap-6 md:gap-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex-shrink-0 w-40 h-40 rounded-full shadow-[7px_11px_28px_6px_rgba(0,_0,_0,_0.1)] overflow-hidden flex items-center justify-center",
+                                    className: "flex-shrink-0 w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 rounded-full overflow-hidden shadow-md flex items-center justify-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                         src: businessLines[activeTab].image,
                                         alt: businessLines[activeTab].alt,
@@ -278,34 +277,73 @@ const BusinessLines = ()=>{
                                         className: "w-full h-full object-cover"
                                     }, void 0, false, {
                                         fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 165,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                    lineNumber: 175,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "md:w-1/3",
+                                    className: "w-full md:w-1/3 text-center md:text-left",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-2xl font-bold text-[#1E76B8] mb-4 flex items-center gap-2",
+                                            className: "text-xl sm:text-2xl md:text-2xl font-bold text-[#1E76B8] mb-3 flex items-center justify-center md:justify-start gap-2",
                                             children: [
                                                 businessLines[activeTab].icon,
                                                 businessLines[activeTab].title
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                            lineNumber: 186,
+                                            lineNumber: 175,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-600 mb-6",
+                                            className: "text-gray-600 text-sm sm:text-base md:text-base",
                                             children: businessLines[activeTab].description
                                         }, void 0, false, {
                                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 179,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
+                                    lineNumber: 174,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-full md:w-2/3 bg-gray-50 rounded-lg p-4 sm:p-6 mt-4 md:mt-0",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            className: "font-semibold text-base sm:text-lg text-[#1E76B8] mb-3",
+                                            children: t('businessLines.servicesTitle')
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
+                                            lineNumber: 186,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4",
+                                            children: businessLines[activeTab].services.map((service, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "bg-white py-3 px-2 sm:py-4 sm:px-3 rounded-md shadow-sm border-l-4 border-[#DF1021]",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-800 text-sm sm:text-base",
+                                                        children: service
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
+                                                        lineNumber: 195,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, idx, false, {
+                                                    fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
+                                                    lineNumber: 191,
+                                                    columnNumber: 21
+                                                }, ("TURBOPACK compile-time value", void 0)))
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
+                                            lineNumber: 189,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
@@ -313,71 +351,32 @@ const BusinessLines = ()=>{
                                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
                                     lineNumber: 185,
                                     columnNumber: 15
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "md:w-2/3 bg-gray-50 rounded-lg p-6",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                            className: "font-semibold text-lg text-[#1E76B8] mb-4",
-                                            children: t('businessLines.servicesTitle')
-                                        }, void 0, false, {
-                                            fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                            lineNumber: 197,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "grid grid-cols-1 md:grid-cols-2 gap-4",
-                                            children: businessLines[activeTab].services.map((service, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "bg-white py-4 px-2 rounded-md shadow-sm border-l-4 border-[#DF1021]",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "font-medium text-gray-800",
-                                                        children: service
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                                        lineNumber: 206,
-                                                        columnNumber: 23
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                }, idx, false, {
-                                                    fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                                    lineNumber: 202,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0)))
-                                        }, void 0, false, {
-                                            fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                            lineNumber: 200,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0))
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                                    lineNumber: 196,
-                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                            lineNumber: 172,
+                            lineNumber: 161,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                        lineNumber: 171,
+                        lineNumber: 160,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, activeTab, false, {
                     fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-                    lineNumber: 164,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-            lineNumber: 122,
+            lineNumber: 111,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/DF2-Tio/src/components/BusinessLines.tsx",
-        lineNumber: 117,
+        lineNumber: 106,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -23,7 +23,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-const logo = "/images/logo-03-300-dpi.webp"; // 🔥 conviértelo a webp
+const logo = "/images/logo-03-300-dpi.webp";
 function Navbar() {
     _s();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
@@ -59,9 +59,7 @@ function Navbar() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navbar.useEffect": ()=>{
             const handleScroll = {
-                "Navbar.useEffect.handleScroll": ()=>{
-                    setScrolled(window.scrollY > 40);
-                }
+                "Navbar.useEffect.handleScroll": ()=>setScrolled(window.scrollY > 40)
             }["Navbar.useEffect.handleScroll"];
             window.addEventListener("scroll", handleScroll);
             return ({
@@ -98,7 +96,6 @@ function Navbar() {
         className: `
         fixed top-0 w-full z-50 transition-all
         ${scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"}
-       
       `,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -106,48 +103,49 @@ function Navbar() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>scrollToSection("inicio"),
+                        className: "flex-shrink-0",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             src: logo,
                             alt: "D2F Consulting",
                             width: 160,
                             height: 60,
                             priority: true,
-                            sizes: "(max-width: 768px) 120px, 160px",
-                            className: "h-auto w-[120px] md:w-[160px]"
+                            sizes: "(max-width: 640px) 100px, (max-width: 768px) 120px, 160px",
+                            className: "h-auto w-[100px] sm:w-[120px] md:w-[160px]"
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 70,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 69,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "hidden md:flex gap-10 items-center",
+                        className: "hidden md:flex gap-6 lg:gap-10 items-center text-sm md:text-base",
                         children: NAV_ITEMS.map(({ label, id })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>scrollToSection(id),
                                     className: `
-                  text-sm font-semibold transition-colors
+                  font-semibold transition-colors
                   ${scrolled ? "text-[#1E76B8] hover:text-[#DF1021]" : "text-white hover:text-[#DF1021]"}
                 `,
                                     suppressHydrationWarning: true,
                                     children: label
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 80,
                                     columnNumber: 15
                                 }, this)
                             }, id, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                lineNumber: 84,
+                                lineNumber: 79,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 82,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -158,24 +156,24 @@ function Navbar() {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 108,
+                            lineNumber: 103,
                             columnNumber: 21
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             size: 28
                         }, void 0, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 108,
+                            lineNumber: 103,
                             columnNumber: 39
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                        lineNumber: 103,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                lineNumber: 66,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -189,37 +187,37 @@ function Navbar() {
                 },
                 className: "md:hidden bg-white shadow-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: "flex flex-col gap-3 px-6 py-4",
+                    className: "flex flex-col gap-2 sm:gap-3 px-6 py-4",
                     children: NAV_ITEMS.map(({ label, id })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: ()=>scrollToSection(id),
-                                className: "text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]",
+                                className: "text-base sm:text-lg font-semibold text-[#1E76B8] hover:text-[#DF1021]",
                                 suppressHydrationWarning: true,
                                 children: label
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                                lineNumber: 122,
+                                lineNumber: 117,
                                 columnNumber: 17
                             }, this)
                         }, id, false, {
                             fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                            lineNumber: 121,
+                            lineNumber: 116,
                             columnNumber: 15
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                    lineNumber: 119,
+                    lineNumber: 114,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-                lineNumber: 114,
+                lineNumber: 109,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/components/Navbar.tsx",
-        lineNumber: 55,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }
@@ -996,9 +994,9 @@ const About = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "conócenos",
         "aria-label": "Acerca de D2F Consulting",
-        className: "py-20 bg-white",
+        className: "py-16 sm:py-20 bg-white",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container mx-auto px-4 md:px-6",
+            className: "container mx-auto px-4 sm:px-6 lg:px-8",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col lg:flex-row gap-12 items-center",
                 children: [
@@ -1019,41 +1017,41 @@ const About = ()=>{
                             duration: 0.8,
                             ease: "easeOut"
                         },
-                        className: "lg:w-1/2 relative",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "relative z-10 rounded-lg overflow-hidden shadow-xl",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                        className: "lg:w-1/2 w-full flex justify-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative w-full max-w-md sm:max-w-lg lg:max-w-full rounded-lg overflow-hidden shadow-xl",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: Equipo,
                                     loading: "lazy",
                                     alt: "Equipo de consultores de D2F Consulting en reunión",
-                                    className: "w-full h-auto object-cover"
+                                    className: "w-full h-auto object-cover rounded-lg"
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/About.tsx",
                                     lineNumber: 35,
                                     columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "absolute -bottom-6 -right-6 w-32 sm:w-40 md:w-64 h-32 sm:h-40 md:h-64 bg-[#DF1021] rounded-lg -z-10"
+                                }, void 0, false, {
+                                    fileName: "[project]/DF2-Tio/src/components/About.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "absolute -top-6 -left-6 w-20 sm:w-28 md:w-32 h-20 sm:h-28 md:h-32 bg-[#1E76B8] rounded-lg -z-10"
+                                }, void 0, false, {
+                                    fileName: "[project]/DF2-Tio/src/components/About.tsx",
+                                    lineNumber: 43,
+                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
-                            }, void 0, false, {
-                                fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 34,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute -bottom-6 -right-6 w-64 h-64 bg-[#DF1021] rounded-lg -z-10"
-                            }, void 0, false, {
-                                fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 42,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute -top-6 -left-6 w-32 h-32 bg-[#1E76B8] rounded-lg -z-10"
-                            }, void 0, false, {
-                                fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        ]
-                    }, void 0, true, {
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/DF2-Tio/src/components/About.tsx",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
                         lineNumber: 27,
                         columnNumber: 11
@@ -1076,33 +1074,33 @@ const About = ()=>{
                             ease: "easeOut",
                             delay: 0.2
                         },
-                        className: "lg:w-1/2",
+                        className: "lg:w-1/2 w-full",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-3xl md:text-4xl font-bold text-[#1E76B8] mb-6",
+                                className: "text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E76B8] mb-6",
                                 children: t('about.title')
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 54,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-700 mb-6 text-lg",
+                                className: "text-gray-700 mb-6 text-base sm:text-lg md:text-lg leading-relaxed",
                                 children: t('about.description')
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-8",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-semibold text-[#1E76B8] mb-4",
+                                        className: "text-lg sm:text-xl md:text-2xl font-semibold text-[#1E76B8] mb-4",
                                         children: t('about.whyChooseUs')
                                     }, void 0, false, {
                                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1120,70 +1118,70 @@ const About = ()=>{
                                                         className: "text-[#DF1021] mt-1 flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                                        lineNumber: 72,
+                                                        lineNumber: 75,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-gray-700",
+                                                        className: "text-gray-700 text-sm sm:text-base md:text-base",
                                                         children: item
                                                     }, void 0, false, {
                                                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                                        lineNumber: 76,
+                                                        lineNumber: 79,
                                                         columnNumber: 21
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, idx, true, {
                                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                                lineNumber: 71,
+                                                lineNumber: 74,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 67,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid grid-cols-2 md:grid-cols-4 gap-4",
+                                className: "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4",
                                 children: stats.map((stat, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "text-center p-4 bg-gray-50 rounded-lg",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-2xl md:text-3xl font-bold text-[#DF1021]",
+                                                className: "text-xl sm:text-2xl md:text-3xl font-bold text-[#DF1021]",
                                                 children: stat.value
                                             }, void 0, false, {
                                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-sm text-gray-600",
+                                                className: "text-xs sm:text-sm md:text-sm text-gray-600",
                                                 children: stat.label
                                             }, void 0, false, {
                                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                                lineNumber: 89,
+                                                lineNumber: 92,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 88,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                                lineNumber: 83,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/DF2-Tio/src/components/About.tsx",
-                        lineNumber: 47,
+                        lineNumber: 48,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
