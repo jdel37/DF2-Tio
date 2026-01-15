@@ -23,8 +23,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Carousel />
         {/* Dark overlay for better readability */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/70 z-20" />
+        <div className="absolute inset-0 bg-[#1E76B8]/30 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E76B8]/60 via-[#1E76B8]/20 to-[#1E76B8]/60 z-20" />
       </div>
 
       <div className="relative z-30 flex flex-col items-center justify-center h-full text-center px-4 max-w-5xl mx-auto">
