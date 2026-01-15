@@ -439,14 +439,14 @@ function Hero() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-[#1E76B8]/30 z-10"
+                        className: "absolute inset-0 bg-[#1E76B8]/20 z-10"
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Hero.tsx",
                         lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-gradient-to-b from-[#1E76B8]/60 via-[#1E76B8]/20 to-[#1E76B8]/60 z-20"
+                        className: "absolute inset-0 bg-gradient-to-b from-[#1E76B8]/40 via-[#1E76B8]/10 to-[#1E76B8]/40 z-20"
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Hero.tsx",
                         lineNumber: 27,
