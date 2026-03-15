@@ -33,10 +33,15 @@ export default function Home() {
     useEffect(() => {
         if (window.location.hash) {
             const id = window.location.hash.substring(1);
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
+            setTimeout(() => {
+                const target = document.getElementById(id);
+                const navbar = document.getElementById("navbar");
+                if (target) {
+                    const navbarHeight = navbar?.offsetHeight || 80;
+                    const y = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 10;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }, 100);
         }
     }, []);
 

@@ -6,7 +6,16 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx}", // Verify app dir is included coverage
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        primary: '#1E76B8',
+        secondary: '#DF1021',
+      }
+    },
   },
   plugins: [],
 };

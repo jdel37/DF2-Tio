@@ -1,16 +1,29 @@
 "use client";
 
 import { useCallback } from "react";
-import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Carousel from "./Carousel";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.18, delayChildren: 0.3 } },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 36 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } },
+};
 
 export default function Hero() {
   const { t } = useTranslation();
 
   const scrollTo = useCallback((id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   }, []);
 
   return (
@@ -22,49 +35,75 @@ export default function Hero() {
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Carousel />
-        {/* Dark overlay for better readability */}
-        <div className="absolute inset-0 bg-[#1E76B8]/20 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1E76B8]/40 via-[#1E76B8]/10 to-[#1E76B8]/40 z-20" />
+        {/* Multi-layer overlay for drama and readability matched to brand color */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#10497a]/90 via-[#1E76B8]/60 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
       </div>
 
-      <div className="relative z-30 flex flex-col items-center justify-center h-full text-center px-4 max-w-5xl mx-auto">
+      {/* Decorative shapes */}
+      <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full z-10 opacity-10"
+        style={{ background: "radial-gradient(circle, #1E76B8, transparent)" }} />
+      <div className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full z-10 opacity-10"
+        style={{ background: "radial-gradient(circle, #DF1021, transparent)" }} />
+
+      {/* Content */}
+      <div className="relative z-30 w-full px-4 sm:px-6 max-w-7xl mx-auto pt-20 sm:pt-28 pb-12 sm:pb-16">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-3xl"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          {/* Badge */}
+          
+          {/* Title */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mb-4"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
             {t("hero.title")}
-          </h1>
+          </motion.h1>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-[#DF1021] mb-6">
+          {/* Subtitle */}
+          <motion.h2
+            variants={itemVariants}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight"
+            style={{ color: "#DF1021", fontFamily: "Poppins, sans-serif" }}
+          >
             {t("hero.subtitle")}
-          </h2>
+          </motion.h2>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-sm sm:text-lg md:text-xl text-white/85 max-w-xl mb-8 sm:mb-10 leading-relaxed"
+          >
             {t("hero.description")}
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CTAs */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => scrollTo("servicios")}
-              className="bg-[#DF1021] text-white px-8 py-3 rounded-md font-semibold hover:bg-red-700 transition"
+              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #DF1021, #b80d1a)",
+                boxShadow: "0 4px 24px rgba(223,16,33,0.4)"
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(223,16,33,0.55)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px rgba(223,16,33,0.4)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
             >
               {t("hero.servicesBtn")}
+              <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
             </button>
+          </motion.div>
 
-            <button
-              onClick={() => scrollTo("contacto")}
-              className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white/10 transition"
-            >
-              {t("hero.contactBtn")}
-            </button>
-          </div>
+          
         </motion.div>
       </div>
 
-
+      {/* Scroll indicator removed as requested */}
     </section>
   );
 }

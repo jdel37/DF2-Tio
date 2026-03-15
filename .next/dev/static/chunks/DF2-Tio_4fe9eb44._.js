@@ -12,9 +12,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/DF2-Tio/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -47,42 +49,39 @@ const Team = ()=>{
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "equipo",
-        className: "bg-gray-50 flex flex-col items-center justify-center min-h-screen px-6 py-10",
+        className: "relative flex flex-col items-center justify-center py-12 sm:py-16 bg-white",
         "aria-labelledby": "equipo-title",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "text-center mb-12",
+                className: "absolute inset-0 overflow-hidden pointer-events-none",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-3xl md:text-4xl font-bold text-[#1E76B8] mb-4 text-center",
-                        suppressHydrationWarning: true,
-                        children: t("team.title")
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                        lineNumber: 42,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-gray-600 text-center max-w-2xl mx-auto mb-12",
-                        suppressHydrationWarning: true,
-                        children: t("team.description")
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute bottom-0 left-0 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"
                     }, void 0, false, {
                         fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                        lineNumber: 45,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: " flex  flex-wrap  justify-center  items-center  gap-10  w-full  max-w-6xl ",
-                children: team.map((member, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                className: "container relative z-10 mx-auto px-4 sm:px-6 lg:px-8",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                         initial: {
                             opacity: 0,
-                            y: 50
+                            y: 20
                         },
                         whileInView: {
                             opacity: 1,
@@ -92,127 +91,198 @@ const Team = ()=>{
                             once: true
                         },
                         transition: {
-                            duration: 0.5,
-                            delay: idx * 0.2
+                            duration: 0.6
                         },
-                        className: "bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col items-center text-center w-full max-w-xs",
-                        "aria-label": `Perfil profesional de ${member.name}`,
+                        className: "text-center mb-16",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex justify-center mt-6",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-48 h-48 overflow-hidden rounded-full border-4 border-[#1E76B8]",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: member.image,
-                                        alt: `Fotografía profesional de ${member.name}, ${member.title}`,
-                                        className: "w-full h-full object-cover transition-transform duration-500 hover:scale-110",
-                                        loading: "lazy"
-                                    }, void 0, false, {
-                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                        lineNumber: 75,
-                                        columnNumber: 17
-                                    }, ("TURBOPACK compile-time value", void 0))
+                                className: "flex items-center justify-center gap-3 mb-4",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-[#DF1021] font-medium text-sm tracking-[0.2em] uppercase",
+                                    children: "Nuestro Talento"
                                 }, void 0, false, {
                                     fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                    lineNumber: 74,
-                                    columnNumber: 15
+                                    lineNumber: 57,
+                                    columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                lineNumber: 73,
-                                columnNumber: 13
+                                lineNumber: 56,
+                                columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "p-6",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xl font-bold text-[#1E76B8]",
-                                        children: member.name
-                                    }, void 0, false, {
-                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                        lineNumber: 86,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-[#DF1021] font-medium mb-3",
-                                        children: member.title
-                                    }, void 0, false, {
-                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                        lineNumber: 87,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 mb-4 text-sm",
-                                        children: member.bio
-                                    }, void 0, false, {
-                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                        lineNumber: 88,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex justify-center space-x-4",
-                                        children: [
-                                            member.socials.linkedin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: member.socials.linkedin,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                                className: "text-gray-500 hover:text-[#1E76B8] transition-colors",
-                                                "aria-label": `Perfil de LinkedIn de ${member.name}`,
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
-                                                    size: 20
-                                                }, void 0, false, {
-                                                    fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                                    lineNumber: 100,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            }, void 0, false, {
-                                                fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                                lineNumber: 93,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            member.socials.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: member.socials.email,
-                                                className: "text-gray-500 hover:text-[#DF1021] transition-colors",
-                                                "aria-label": `Enviar correo electrónico a ${member.name}`,
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
-                                                    size: 20
-                                                }, void 0, false, {
-                                                    fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                                    lineNumber: 109,
-                                                    columnNumber: 21
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            }, void 0, false, {
-                                                fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                                lineNumber: 104,
-                                                columnNumber: 19
-                                            }, ("TURBOPACK compile-time value", void 0))
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                        lineNumber: 91,
-                                        columnNumber: 15
-                                    }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900",
+                                style: {
+                                    fontFamily: "Poppins, sans-serif"
+                                },
+                                suppressHydrationWarning: true,
+                                children: t("team.title")
+                            }, void 0, false, {
                                 fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                                lineNumber: 85,
-                                columnNumber: 13
+                                lineNumber: 59,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-gray-600 text-base sm:text-lg max-w-2xl mx-auto",
+                                suppressHydrationWarning: true,
+                                children: t("team.description")
+                            }, void 0, false, {
+                                fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                lineNumber: 62,
+                                columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
-                    }, idx, true, {
+                    }, void 0, true, {
                         fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                        lineNumber: 63,
-                        columnNumber: 11
-                    }, ("TURBOPACK compile-time value", void 0)))
-            }, void 0, false, {
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap justify-center items-stretch gap-6 lg:gap-8 w-full max-w-5xl mx-auto mt-8 sm:mt-12",
+                        children: team.map((member, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 30
+                                },
+                                whileInView: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                viewport: {
+                                    once: true
+                                },
+                                transition: {
+                                    duration: 0.6,
+                                    delay: idx * 0.15
+                                },
+                                className: "group w-full sm:w-[340px] md:w-[380px] bg-white rounded-3xl border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(30,118,184,0.12)] flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 overflow-hidden",
+                                "aria-label": `Perfil profesional de ${member.name}`,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex flex-col flex-1 p-6 sm:p-8 w-full",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full overflow-hidden bg-gray-50 mb-6 relative border-4 border-gray-50 group-hover:border-[#1E76B8]/20 transition-colors duration-300",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                src: member.image,
+                                                alt: `Fotografía profesional de ${member.name}`,
+                                                fill: true,
+                                                sizes: "(max-width: 640px) 128px, 160px",
+                                                className: "object-cover object-top"
+                                            }, void 0, false, {
+                                                fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                                lineNumber: 82,
+                                                columnNumber: 19
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 81,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-xl sm:text-2xl font-bold text-gray-900 mb-1",
+                                            style: {
+                                                fontFamily: "Poppins, sans-serif"
+                                            },
+                                            children: member.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 92,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-[#DF1021] font-medium text-xs sm:text-sm uppercase tracking-widest mb-5",
+                                            children: member.title
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-10 h-0.5 bg-gray-200 mx-auto mb-5"
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 99,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-gray-600 text-sm leading-relaxed mb-auto pb-6",
+                                            children: member.bio
+                                        }, void 0, false, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center justify-center gap-4 mt-auto pt-6 border-t border-gray-100",
+                                            children: [
+                                                member.socials.linkedin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: member.socials.linkedin,
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "w-11 h-11 rounded-full flex items-center justify-center bg-blue-50 text-[#1E76B8] hover:bg-[#1E76B8] hover:text-white transition-all duration-300",
+                                                    "aria-label": `Perfil de LinkedIn de ${member.name}`,
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                                        lineNumber: 115,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                                    lineNumber: 108,
+                                                    columnNumber: 21
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                member.socials.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: member.socials.email,
+                                                    target: "_blank",
+                                                    rel: "noopener noreferrer",
+                                                    className: "w-11 h-11 rounded-full flex items-center justify-center bg-red-50 text-[#DF1021] hover:bg-[#DF1021] hover:text-white transition-all duration-300",
+                                                    "aria-label": `Enviar correo electrónico a ${member.name}`,
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
+                                                        size: 20
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                                        lineNumber: 126,
+                                                        columnNumber: 23
+                                                    }, ("TURBOPACK compile-time value", void 0))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                                    lineNumber: 119,
+                                                    columnNumber: 21
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                            lineNumber: 106,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                    lineNumber: 78,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, idx, false, {
+                                fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                                lineNumber: 69,
+                                columnNumber: 13
+                            }, ("TURBOPACK compile-time value", void 0)))
+                    }, void 0, false, {
+                        fileName: "[project]/DF2-Tio/src/components/Team.tsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-                lineNumber: 51,
+                lineNumber: 47,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/DF2-Tio/src/components/Team.tsx",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 
 // 1. OPTIMIZACIÓN DE FUENTES (Evita render-blocking)
@@ -134,6 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 )}
 
                 {children}
+                <SpeedInsights />
             </body>
         </html>
     );

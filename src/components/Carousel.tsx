@@ -3,100 +3,47 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-const Academy4 = "/images/academy-4.webp";
-const Academy77 = "/images/academy-77.webp";
-const Equipo10 = "/images/equipo-10.webp";
-
-const Equipo2 = "/images/equipo-2.webp";
-
 const images = [
-  Academy4,
-  Academy77,
-  Equipo10,
-
-  Equipo2
+  "/images/academy-4.webp",
+  "/images/academy-77.webp",
+  "/images/equipo-10.webp",
+  "/images/equipo-2.webp",
 ];
 
 function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const slideVariants = {
-    hidden: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0
-    }),
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        x: { type: "spring" as const, stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 }
-      }
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-      transition: {
-        x: { type: "spring" as const, stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 }
-      }
-    })
-  };
-
-  const nextSlide = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
 
   useEffect(() => {
-    if (!isHovered) {
-      const timer = setInterval(() => {
-        nextSlide();
-      }, 5000);
-      return () => clearInterval(timer);
-    }
-  }, [currentIndex, isHovered]);
-
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div
-      className="relative w-full h-full overflow-hidden bg-black"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <AnimatePresence initial={false} custom={direction}>
+    <div className="relative w-full h-full overflow-hidden bg-black">
+      <AnimatePresence mode="sync">
         <motion.div
           key={currentIndex}
-          custom={direction}
-          variants={slideVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
+          dragElastic={0.2}
           onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              nextSlide();
-            } else if (swipe > swipeConfidenceThreshold) {
-              prevSlide();
+            const swipe = Math.abs(offset.x) * velocity.x;
+            if (swipe < -1000 || offset.x < -40) {
+              setCurrentIndex((prev) => (prev + 1) % images.length);
+            } else if (swipe > 1000 || offset.x > 40) {
+              setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
             }
           }}
-          className="absolute w-full h-full"
+          initial={{ opacity: 0, scale: 1.15 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ 
+            opacity: { duration: 1.5, ease: "easeInOut" },
+            scale: { duration: 8, ease: "easeOut" }
+          }}
+          className="absolute inset-0 cursor-grab active:cursor-grabbing"
         >
           <Image
             src={images[currentIndex]}
@@ -104,18 +51,13 @@ function Carousel() {
             fill
             sizes="100vw"
             priority={currentIndex === 0}
-            quality={75}
-            className="object-cover"
+            quality={80}
+            className="object-cover pointer-events-none"
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay - Optional dark gradient for text visibility if needed, 
-          but Hero.tsx already has one. Keeping it clean here. 
-      */}
-
-      {/* Navigation Arrows */}
-
+      {/* Dots removed as requested */}
     </div>
   );
 }

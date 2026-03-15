@@ -1,7 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const kosha = '/images/kosha.webp';
 const Dco = '/images/dco.webp';
@@ -21,228 +23,155 @@ const city = '/images/city.webp';
 
 const Clients = () => {
   const { t } = useTranslation();
+  
   const clients = [
-    { name: "Kosha", logo: kosha, industry: t("clients.industries.cosmetica") },
-    { name: "Dco", logo: Dco, industry: t("clients.industries.talento") },
-    { name: "Ideas", logo: creative, industry: t("clients.industries.servicios") },
-    { name: "Cami", logo: camiux, industry: t("clients.industries.diseno") },
-    { name: "Shake2Go", logo: shake2go, industry: t("clients.industries.alimentos") },
-    { name: "KaiLua", logo: kailua, industry: t("clients.industries.eventos") },
-    { name: "Opticalia", logo: opticalia, industry: t("clients.industries.salud") },
-    { name: "Universidad de La Sabana", logo: sabana, industry: t("clients.industries.educacion") },
-    { name: "CityKidz", logo: city, industry: t("clients.industries.entretenimiento") },
-    { name: "Deka", logo: deka, industry: t("clients.industries.diseno") },
-    { name: "G&T", logo: gant, industry: t("clients.industries.consultoria") },
-    { name: "SnowTotal", logo: snow, industry: t("clients.industries.entretenimiento") },
-    { name: "MPC", logo: mpc, industry: t("clients.industries.talento") },
-    { name: "DDG", logo: ddg, industry: t("clients.industries.entretenimiento") },
-    { name: "Love Trendy", logo: love, industry: t("clients.industries.ropa") },
+    { name: "Kosha", logo: kosha, industry: t("clients.industries.cosmetica"), since: "2019" },
+    { name: "Dco", logo: Dco, industry: t("clients.industries.talento"), since: "2020" },
+    { name: "Ideas Creativas", logo: creative, industry: t("clients.industries.servicios"), since: "2021" },
+    { name: "Cami UX", logo: camiux, industry: t("clients.industries.diseno"), since: "2022" },
+    { name: "Shake2Go", logo: shake2go, industry: t("clients.industries.alimentos"), since: "2018" },
+    { name: "KaiLua", logo: kailua, industry: t("clients.industries.eventos"), since: "2023" },
+    { name: "Opticalia", logo: opticalia, industry: t("clients.industries.salud"), since: "2019" },
+    { name: "Universidad de La Sabana", logo: sabana, industry: t("clients.industries.educacion"), since: "2017" },
+    { name: "CityKidz", logo: city, industry: t("clients.industries.entretenimiento"), since: "2020" },
+    { name: "Deka", logo: deka, industry: t("clients.industries.diseno"), since: "2021" },
+    { name: "G&T", logo: gant, industry: t("clients.industries.consultoria"), since: "2022" },
+    { name: "SnowTotal", logo: snow, industry: t("clients.industries.entretenimiento"), since: "2018" },
+    { name: "MPC", logo: mpc, industry: t("clients.industries.talento"), since: "2023" },
+    { name: "DDG", logo: ddg, industry: t("clients.industries.entretenimiento"), since: "2019" },
+    { name: "Love Trendy", logo: love, industry: t("clients.industries.ropa"), since: "2021" },
   ];
 
-  // Triplicate for infinite scroll simulation
-  const logos = [...clients, ...clients, ...clients];
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Refs for synchronous loop control (prevents race conditions with smooth scroll)
-  const isHoveredRef = useRef(false);
-  const isInteractingRef = useRef(false);
-
-  // Initial scroll position to the middle set
+  // Auto-scroll logic
   useEffect(() => {
-    if (scrollRef.current) {
-      const singleSetWidth = scrollRef.current.scrollWidth / 3;
-      scrollRef.current.scrollLeft = singleSetWidth;
-    }
-  }, []);
-
-  const handleMouseEnter = () => {
-    isHoveredRef.current = true;
-  };
-
-  const handleMouseLeave = () => {
-    isHoveredRef.current = false;
-  };
-
-  const handleTouchStart = () => {
-    isInteractingRef.current = true;
-  };
-
-  const handleTouchEnd = () => {
-    setTimeout(() => {
-      isInteractingRef.current = false;
-    }, 2000);
-  };
-
-  useEffect(() => {
-    let animationFrame: number;
-    const scrollSpeed = 0.5;
-
-    const step = () => {
-      // Synchronous check: Stop immediately if executing this frame but user interacted
-      // We check REFS, not state, so it's instant.
-      if (isHoveredRef.current || isInteractingRef.current) {
-        animationFrame = requestAnimationFrame(step);
-        return;
-      }
-
-      if (scrollRef.current) {
-        scrollRef.current.scrollLeft += scrollSpeed;
-
-        // Infinite Scroll Logic (Silent Jump)
-        const scrollWidth = scrollRef.current.scrollWidth;
-        const singleSetWidth = scrollWidth / 3;
-
-        if (scrollRef.current.scrollLeft >= singleSetWidth * 2) {
-          scrollRef.current.scrollLeft = singleSetWidth;
-        }
-        else if (scrollRef.current.scrollLeft <= 0) {
-          scrollRef.current.scrollLeft = singleSetWidth;
+    if (isHovered) return;
+    
+    const interval = setInterval(() => {
+      if (sliderRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+        // If reached the end, snap back to start (smoothly if possible, or instantly)
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          sliderRef.current.scrollTo({ left: 0, behavior: 'auto' });
+        } else {
+          sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
         }
       }
+    }, 3000); // Scrolls every 3 seconds
 
-      animationFrame = requestAnimationFrame(step);
-    };
+    return () => clearInterval(interval);
+  }, [isHovered]);
 
-    animationFrame = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(animationFrame);
-  }, []); // Empty dependency array as we use Refs for control
-
-  const scrollBy = (distance: number) => {
-    if (scrollRef.current) {
-      // Immediate synchronous pause via Ref
-      isInteractingRef.current = true;
-
-      scrollRef.current.scrollBy({ left: distance, behavior: 'smooth' });
-
-      // Release after animation mostly completes
-      setTimeout(() => {
-        isInteractingRef.current = false;
-      }, 1000);
+  const scroll = (direction: 'left' | 'right') => {
+    if (sliderRef.current) {
+      const scrollAmount = direction === 'left' ? -350 : 350;
+      sliderRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
-
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1E76B8] mb-3" suppressHydrationWarning>
+    <section className="relative py-16 sm:py-24 bg-white overflow-hidden z-0">
+      
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
+        
+        {/* Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="text-[#1E76B8] font-semibold text-sm tracking-widest uppercase">Nuestros Aliados</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: "Poppins, sans-serif" }} suppressHydrationWarning>
             {t("clients.title")}
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto" suppressHydrationWarning>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto" suppressHydrationWarning>
             {t("clients.description")}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="relative flex items-center gap-2 group/carousel">
-
-          {/* Left Arrow */}
-          <button
-            className="hidden md:flex p-2 bg-white rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2"
-            onClick={() => scrollBy(-300)}
+        {/* Interactive Slider Area */}
+        <div className="relative group">
+          
+          {/* Navigation Arrows (visible on hover or mobile) */}
+          <button 
+            onClick={() => scroll('left')}
+            className="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 text-[#1E76B8] hover:bg-[#1E76B8] hover:text-white transition-all duration-300 opacity-90 lg:opacity-0 lg:group-hover:opacity-100"
             aria-label="Anterior"
           >
-            <ChevronLeft size={24} className="text-[#1E76B8]" />
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button 
+            onClick={() => scroll('right')}
+            className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-100 text-[#1E76B8] hover:bg-[#1E76B8] hover:text-white transition-all duration-300 opacity-90 lg:opacity-0 lg:group-hover:opacity-100"
+            aria-label="Siguiente"
+          >
+            <ChevronRight size={24} />
           </button>
 
-          {/* Scroll Container */}
-          <div
-            ref={scrollRef}
-            className="
-                flex 
-                gap-6 
-                overflow-x-auto 
-                scroll-smooth 
-                scrollbar-hide 
-                py-4
-                cursor-grab 
-                active:cursor-grabbing
-                w-full
-            "
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none'
-            }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
+          {/* Gradients on edges for fade effect */}
+          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+          {/* Slider Container */}
+          <div 
+            ref={sliderRef}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
+            className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide py-6 px-4 sm:px-8 snap-x snap-mandatory"
+            style={{ scrollBehavior: 'smooth' }}
           >
-            {logos.map((client, idx) => (
+            {clients.map((client, idx) => (
               <div
                 key={idx}
-                className="
-                    flex-shrink-0 
-                    relative 
-                    group 
-                    bg-white 
-                    rounded-lg 
-                    p-4
-                    flex 
-                    items-center 
-                    justify-center
-                    transition-all
-                    duration-300
-                    hover:shadow-lg
-                    border border-transparent
-                    hover:border-gray-100
-                "
-                style={{ width: '180px', height: '140px' }}
+                className="flex-shrink-0 snap-center relative group/card w-[160px] h-[120px] sm:w-[200px] sm:h-[140px] flex items-center justify-center bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer"
               >
-                {/* Image: Removed grayscale and opacity filters */}
-                <img
+                {/* Logo */}
+                <Image
                   src={client.logo}
                   alt={`Logo de ${client.name}`}
-                  className="w-full h-full object-contain transition-all duration-300"
+                  fill
+                  sizes="(max-width: 640px) 140px, 180px"
+                  className="object-contain p-6 transition-transform duration-500 group-hover/card:scale-110"
                 />
-
-                {/* Hover Details Overlay */}
-                <div className="
-                    absolute 
-                    inset-0 
-                    bg-[#1E76B8]/90 
-                    opacity-0 
-                    group-hover:opacity-100 
-                    transition-opacity 
-                    duration-300 
-                    flex 
-                    flex-col 
-                    items-center 
-                    justify-center 
-                    text-white 
-                    text-center 
-                    p-2 
-                    rounded-lg
-                ">
-                  <p className="font-bold text-sm mb-1 line-clamp-2" suppressHydrationWarning>{client.name}</p>
-                  <p className="text-xs font-light line-clamp-2" suppressHydrationWarning>{client.industry}</p>
+                
+                {/* Hover Mask Overlay */}
+                <div className="absolute inset-0 bg-[#10497a]/90 backdrop-blur-sm opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                  <span className="text-white font-bold text-lg mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>{client.name}</span>
+                  <span className="text-white/80 text-xs font-medium tracking-wide uppercase">{client.industry}</span>
+                  <div className="w-6 h-px bg-[#DF1021] my-2" />
+                  <span className="text-white/60 text-[10px] uppercase tracking-widest">Desde {client.since}</span>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* Right Arrow */}
-          <button
-            className="hidden md:flex p-2 bg-white rounded-full shadow-md hover:bg-gray-100 z-10 transition-opacity absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2"
-            onClick={() => scrollBy(300)}
-            aria-label="Siguiente"
-          >
-            <ChevronRight size={24} className="text-[#1E76B8]" />
-          </button>
-
         </div>
 
-        <div className="mt-12 text-center">
+        {/* Global CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-14 sm:mt-20 text-center relative z-10"
+        >
           <button
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-block px-8 py-4 bg-[#DF1021] text-white rounded-md text-lg 
-            font-semibold transition-all duration-300 hover:bg-red-700 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#DF1021] text-white rounded-full text-base sm:text-lg font-semibold transition-all duration-300 shadow-[0_4px_20px_rgba(223,16,33,0.3)] hover:shadow-[0_8px_30px_rgba(223,16,33,0.45)] hover:-translate-y-1"
             suppressHydrationWarning
           >
             {t("clients.cta")}
           </button>
-        </div>
-
+        </motion.div>
+        
       </div>
     </section>
   );
