@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, Lightbulb, LineChart, Users, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { BarChart3, Lightbulb, LineChart, Users, Globe, ArrowRight, CheckCircle, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 
 const Gestion = '/images/strategic-planing.webp';
@@ -90,7 +90,7 @@ const BusinessLines = () => {
     {
       id: 5,
       title: t('businessLines.lines.5.title'),
-      icon: BarChart3,
+      icon: GraduationCap,
       image: Academia,
       alt: "Capacitación y formación empresarial",
       description: t('businessLines.lines.5.description'),

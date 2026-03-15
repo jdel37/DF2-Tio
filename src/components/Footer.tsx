@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { Instagram, Linkedin, Facebook, MapPin, Mail, Phone, ChevronRight } from 'lucide-react';
 
-const logo = "/images/logo-03-300-dpi.webp";
+const logo = "/images/logo-web.webp";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#10497a] text-white pt-20 pb-8 relative overflow-hidden z-0">
+    <footer className="bg-[#10497a] text-white pt-10 pb-6 relative overflow-hidden z-0">
       
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1E76B8]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
@@ -39,21 +39,11 @@ const Footer = () => {
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 mb-8">
           
           {/* Col 1: Brand & About (4 cols) */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <div className="bg-white p-4 rounded-xl mb-6 inline-block shadow-lg">
-              <Image
-                src={logo}
-                alt="D2F Consulting - Consultoría Empresarial Colombia"
-                width={160}
-                height={60}
-                className="w-36 h-auto"
-                style={{ width: 'auto' }}
-              />
-            </div>
-            <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-sm" suppressHydrationWarning>
+            <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm" suppressHydrationWarning>
               {t("footer.text")}
             </p>
             
@@ -110,7 +100,7 @@ const Footer = () => {
         </div>
 
         {/* Separator Line */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" />
 
         {/* Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">

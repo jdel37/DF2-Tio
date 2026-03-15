@@ -3,7 +3,7 @@
 
 __turbopack_context__.v((parentImport) => {
     return Promise.all([
-  "static/chunks/DF2-Tio_20164254._.js",
+  "static/chunks/DF2-Tio_367c8ba8._.js",
   "static/chunks/DF2-Tio_src_components_BusinessLines_tsx_a5ae271e._.js"
 ].map((chunk) => __turbopack_context__.l(chunk))).then(() => {
         return parentImport("[project]/DF2-Tio/src/components/BusinessLines.tsx [app-client] (ecmascript, next/dynamic entry)");

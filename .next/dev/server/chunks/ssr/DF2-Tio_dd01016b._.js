@@ -110,7 +110,7 @@ const BusinessLines = ()=>{
         {
             id: 5,
             title: t('businessLines.lines.5.title'),
-            icon: __TURBOPACK__imported__module__$5b$project$5d2f$DF2$2d$Tio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$bar$2d$chart$2d$3$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart3$3e$__["BarChart3"],
+            icon: GraduationCap,
             image: Academia,
             alt: "Capacitación y formación empresarial",
             description: t('businessLines.lines.5.description'),
