@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { motion, Variants } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Carousel from "./Carousel";
 
@@ -21,9 +21,7 @@ export default function Hero() {
 
   const scrollTo = useCallback((id: string) => {
     const target = document.getElementById(id);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   return (
@@ -35,19 +33,27 @@ export default function Hero() {
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Carousel />
-        {/* Multi-layer overlay for drama and readability matched to brand color */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#10497a]/90 via-[#1E76B8]/60 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a2e4e]/95 via-[#10497a]/75 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 z-10" />
       </div>
 
-      {/* Decorative shapes */}
-      <div className="absolute top-1/4 right-10 w-64 h-64 rounded-full z-10 opacity-10"
+      {/* Decorative grid overlay */}
+      <div
+        className="absolute inset-0 z-10 opacity-[0.03]"
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* Glow orbs */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full z-10 opacity-20 blur-3xl"
         style={{ background: "radial-gradient(circle, #1E76B8, transparent)" }} />
-      <div className="absolute bottom-1/3 left-1/4 w-40 h-40 rounded-full z-10 opacity-10"
+      <div className="absolute bottom-1/3 left-1/3 w-64 h-64 rounded-full z-10 opacity-15 blur-3xl"
         style={{ background: "radial-gradient(circle, #DF1021, transparent)" }} />
 
       {/* Content */}
-      <div className="relative z-30 w-full px-4 sm:px-6 max-w-7xl mx-auto pt-20 sm:pt-28 pb-12 sm:pb-16">
+      <div className="relative z-30 w-full px-4 sm:px-6 max-w-7xl mx-auto pt-24 sm:pt-32 pb-16 sm:pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -55,12 +61,21 @@ export default function Hero() {
           className="max-w-3xl"
         >
           {/* Badge */}
-          
+          <motion.div variants={itemVariants} className="mb-6">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest border border-white/20 backdrop-blur-sm"
+              style={{ background: "rgba(30,118,184,0.25)", color: "#fff" }}
+            >
+              <Sparkles size={12} className="text-[#DF1021]" />
+              Consultoría Empresarial · Bogotá, Colombia
+            </span>
+          </motion.div>
+
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mb-4"
-            style={{ fontFamily: "Poppins, sans-serif" }}
+            className="text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-4"
+            style={{ fontFamily: "Poppins, sans-serif", textShadow: "0 2px 40px rgba(0,0,0,0.3)" }}
           >
             {t("hero.title")}
           </motion.h1>
@@ -68,16 +83,22 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 leading-tight"
-            style={{ color: "#DF1021", fontFamily: "Poppins, sans-serif" }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-7 leading-tight"
+            style={{ color: "#FF3346", fontFamily: "Poppins, sans-serif", textShadow: "0 2px 20px rgba(223,16,33,0.4)" }}
           >
             {t("hero.subtitle")}
           </motion.h2>
 
+          {/* Divider */}
+          <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-0.5 rounded-full bg-[#DF1021]" />
+            <div className="w-3 h-0.5 rounded-full bg-white/40" />
+          </motion.div>
+
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-lg md:text-xl text-white/85 max-w-xl mb-8 sm:mb-10 leading-relaxed"
+            className="text-sm sm:text-lg md:text-xl text-white/80 max-w-xl mb-10 sm:mb-12 leading-relaxed"
           >
             {t("hero.description")}
           </motion.p>
@@ -86,24 +107,71 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => scrollTo("servicios")}
-              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300"
+              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-white transition-all duration-300 text-base"
               style={{
                 background: "linear-gradient(135deg, #DF1021, #b80d1a)",
-                boxShadow: "0 4px 24px rgba(223,16,33,0.4)"
+                boxShadow: "0 4px 30px rgba(223,16,33,0.5)",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(223,16,33,0.55)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px rgba(223,16,33,0.4)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 40px rgba(223,16,33,0.65)";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 30px rgba(223,16,33,0.5)";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
+              }}
             >
               {t("hero.servicesBtn")}
               <ArrowRight size={18} className="transition-transform duration-200 group-hover:translate-x-1" />
             </button>
+
+            <button
+              onClick={() => scrollTo("contacto")}
+              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 text-base border border-white/30 backdrop-blur-sm hover:bg-white/15 hover:border-white/50"
+              style={{ background: "rgba(255,255,255,0.08)" }}
+            >
+              {t("hero.contactBtn")}
+              <ArrowRight size={18} className="opacity-60 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-1" />
+            </button>
           </motion.div>
 
-          
+          {/* Stats strip */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-14 flex flex-wrap gap-6 sm:gap-10"
+          >
+            {[
+              { value: "20+", label: "Años de experiencia" },
+              { value: "25+", label: "Clientes atendidos" },
+              { value: "100%", label: "Satisfacción garantizada" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex flex-col">
+                <span className="text-2xl sm:text-3xl font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
+                  {stat.value}
+                </span>
+                <span className="text-white/60 text-xs sm:text-sm mt-0.5">{stat.label}</span>
+              </div>
+            ))}
+          </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator removed as requested */}
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer"
+        onClick={() => scrollTo("conócenos")}
+      >
+        <span className="text-white/50 text-[10px] uppercase tracking-[0.2em]">Descubrir</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown size={22} className="text-white/50" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

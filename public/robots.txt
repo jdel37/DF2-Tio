@@ -1,18 +1,22 @@
-# Allow all crawlers
+# D2F Consulting — d2fgestion.com
 User-agent: *
 Allow: /
-
-# Disallow admin/internal paths
+Allow: /_next/static/
 Disallow: /api/
-Disallow: /_next/
 Disallow: /admin/
 
-# Sitemap location (dynamic Next.js sitemap)
-Sitemap: https://www.d2fgestion.com/sitemap.xml
+# Crawl-delay for non-Google bots
+User-agent: *
+Crawl-delay: 1
 
-# Specific bot instructions
+# Google — sin restricciones
 User-agent: Googlebot
 Allow: /
+Allow: /_next/static/
 
-User-agent: Bingbot  
+# Bing
+User-agent: Bingbot
 Allow: /
+
+# Sitemap
+Sitemap: https://www.d2fgestion.com/sitemap.xml
