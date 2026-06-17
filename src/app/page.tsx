@@ -29,6 +29,9 @@ const Testimonials = dynamic(() => import('@/components/Testimonials'), {
 const BlogTeaser = dynamic(() => import('@/components/BlogTeaser'), {
     loading: () => <SectionSkeleton />,
 });
+const Faq = dynamic(() => import('@/components/Faq'), {
+    loading: () => <SectionSkeleton />,
+});
 const Contact = dynamic(() => import('@/components/Contact'), {
     loading: () => <SectionSkeleton />,
 });
@@ -85,6 +88,7 @@ export default function Home() {
             <Clients />
             <Testimonials />
             <BlogTeaser />
+            <Faq />
             <Contact />
             <Footer />
 
