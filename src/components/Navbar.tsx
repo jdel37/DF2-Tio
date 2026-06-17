@@ -20,6 +20,7 @@ export default function Navbar() {
     { label: t("navbar.conocenos"), id: "conócenos" },
     { label: t("navbar.testimonios"), id: "testimonios" },
     { label: t("navbar.equipo"), id: "equipo" },
+    { label: "Blog", id: "blog" },
   ];
 
   useEffect(() => {

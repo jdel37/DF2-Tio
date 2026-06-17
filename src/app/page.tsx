@@ -26,6 +26,9 @@ const Team = dynamic(() => import('@/components/Team'), {
 const Testimonials = dynamic(() => import('@/components/Testimonials'), {
     loading: () => <SectionSkeleton height="py-16" />,
 });
+const BlogTeaser = dynamic(() => import('@/components/BlogTeaser'), {
+    loading: () => <SectionSkeleton />,
+});
 const Contact = dynamic(() => import('@/components/Contact'), {
     loading: () => <SectionSkeleton />,
 });
@@ -81,6 +84,7 @@ export default function Home() {
             <Team />
             <Clients />
             <Testimonials />
+            <BlogTeaser />
             <Contact />
             <Footer />
 
