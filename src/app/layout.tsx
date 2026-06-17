@@ -26,11 +26,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     metadataBase: new URL('https://www.d2fgestion.com'),
     title: {
-        default: 'Consultoría Empresarial en Colombia | D2F Consulting — Bogotá y Medellín',
+        default: 'Consultoría Empresarial en Colombia | D2F Consulting',
         template: '%s | D2F Consulting Colombia',
     },
     description:
-        'D2F Consulting: firma líder en consultoría empresarial, gestión estratégica y transformación digital en Colombia. Más de 20 años ayudando empresas en Bogotá y Medellín a crecer con resultados reales. ¡Agenda tu consulta hoy!',
+        'Consultoría empresarial, gestión estratégica y transformación digital en Colombia. +20 años en Bogotá y Medellín. Agenda tu consulta gratis hoy.',
     keywords: [
         // Primary — exact match target
         'consultoría empresarial Colombia',
@@ -66,8 +66,11 @@ export const metadata: Metadata = {
         languages: {
             'es-CO': 'https://www.d2fgestion.com',
             'en-US': 'https://www.d2fgestion.com',
+            'x-default': 'https://www.d2fgestion.com',
         },
     },
+
+    manifest: '/site.webmanifest',
 
     icons: {
         icon: [{ url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' }],
@@ -84,7 +87,7 @@ export const metadata: Metadata = {
         title: 'Consultoría Empresarial en Colombia | D2F Consulting',
         description: 'Firma líder en consultoría empresarial, gestión estratégica y transformación digital en Colombia. +20 años de experiencia. Bogotá · Medellín.',
         images: [{
-            url: '/images/logo-web.webp',
+            url: '/images/og-image.webp',
             width: 1200,
             height: 630,
             alt: 'D2F Consulting - Consultoría Empresarial y Gestión Estratégica en Colombia',
@@ -98,7 +101,7 @@ export const metadata: Metadata = {
         creator: '@d2f_consulting',
         title: 'Consultoría Empresarial en Colombia | D2F Consulting',
         description: 'Firma líder en consultoría empresarial y gestión estratégica. +20 años de experiencia en Colombia.',
-        images: ['/images/logo-web.webp'],
+        images: ['/images/og-image.webp'],
     },
 
     robots: {
@@ -133,8 +136,8 @@ const jsonLd = {
             logo: {
                 '@type': 'ImageObject',
                 url: 'https://www.d2fgestion.com/images/logo-web.webp',
-                width: 300,
-                height: 100,
+                width: 636,
+                height: 621,
             },
             foundingDate: '2015',
             numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 5, maxValue: 50 },
@@ -252,6 +255,13 @@ const jsonLd = {
             itemReviewed: { '@id': 'https://www.d2fgestion.com/#localbusiness' },
             reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
             reviewBody: 'Excelentes habilidades de organización, planeación, liderazgo y negociación. Siempre han tenido un compromiso profesional de entrega total a sus proyectos.',
+        },
+        {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Yamel Ramos' },
+            itemReviewed: { '@id': 'https://www.d2fgestion.com/#localbusiness' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'Diego has built a strong reputation as someone with vision, diligence and honour — someone who gets things done. A pragmatic leader and realist; I have no hesitation in recommending him.',
         },
         // ── FAQ ────────────────────────────────────────────────────────
         {
