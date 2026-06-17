@@ -1,8 +1,17 @@
 import { MetadataRoute } from 'next';
+import { posts } from '@/content/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.d2fgestion.com';
     const now = new Date().toISOString();
+
+    const blogPosts: MetadataRoute.Sitemap = posts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: post.dateModified,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        images: [`${baseUrl}${post.image}`],
+    }));
 
     return [
         {
@@ -17,5 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 `${baseUrl}/images/tio.webp`,
             ],
         },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: now,
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        ...blogPosts,
     ];
 }

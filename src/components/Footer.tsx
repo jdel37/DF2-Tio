@@ -101,6 +101,15 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/blog"
+                  className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm font-medium"
+                >
+                  <ChevronRight size={13} className="text-[#DF1021] opacity-0 -ml-3 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0" />
+                  <span>Blog</span>
+                </a>
+              </li>
             </ul>
           </div>
 
