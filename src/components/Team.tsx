@@ -4,7 +4,7 @@ import { Linkedin, Mail, Award } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-const Ceo = '/images/tio.webp';
+const Ceo = '/images/tio.png';
 const Gerente = '/images/amiga-tio.webp';
 
 const Team = () => {
