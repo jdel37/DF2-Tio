@@ -182,6 +182,110 @@ export const posts: Post[] = [
             { type: 'cta', text: '¿Quieres convertir tu negocio en una franquicia rentable? D2F Consulting diseña y estructura modelos de franquicia en Colombia. Agenda una consulta gratuita.' },
         ],
     },
+    {
+        slug: 'd2f-consulting-quienes-somos',
+        title: 'D2F Consulting: quiénes somos, qué hacemos y por qué confían en nosotros',
+        description:
+            'Conoce a D2F Consulting (D2F Gestión): firma de consultoría empresarial en Colombia desde 2015. Historia, equipo, servicios y filosofía de trabajo.',
+        keywords: [
+            'D2F',
+            'D2F Consulting',
+            'D2F Gestión',
+            'D2F Colombia',
+            'quiénes somos D2F',
+        ],
+        datePublished: '2026-06-20',
+        dateModified: '2026-06-20',
+        image: '/images/equipo-1.webp',
+        imageAlt: 'Equipo de D2F Consulting, firma de consultoría empresarial en Colombia',
+        readingTime: '6 min',
+        excerpt:
+            'Quién es D2F Consulting, de dónde venimos y por qué empresas de Colombia y Latinoamérica confían en nosotros para crecer con estrategia y resultados.',
+        body: [
+            { type: 'p', text: 'D2F Consulting —también conocida como D2F Gestión, o simplemente D2F— es una firma colombiana de consultoría empresarial y gestión estratégica fundada en 2015, con sedes en Bogotá y Medellín. En este artículo te contamos quiénes somos, qué hacemos y por qué más de 25 empresas en Colombia y Latinoamérica han confiado en nosotros para transformar sus organizaciones.' },
+
+            { type: 'h2', text: 'Qué es D2F Consulting' },
+            { type: 'p', text: 'D2F nace de la unión de tres pilares que dan nombre a la marca: Gestión, Desarrollo y Comunicación. Somos una firma de consultoría empresarial que acompaña a empresas de todos los tamaños —pymes, startups y multinacionales— a definir su estrategia, profesionalizar su operación, digitalizarse y crecer de forma sostenible. No entregamos diagnósticos de escritorio: acompañamos la implementación hasta que los resultados aparecen.' },
+
+            { type: 'h2', text: 'Nuestra historia' },
+            { type: 'p', text: 'Desde 2015, D2F ha trabajado con organizaciones de sectores tan diversos como cosmética, educación, entretenimiento, alimentos, salud y servicios. El liderazgo de la firma suma más de 20 años de experiencia en consultoría, innovación corporativa y gestión estratégica en Colombia y la región, lo que nos permite combinar conocimiento profundo del mercado local con metodologías de clase mundial.' },
+
+            { type: 'h2', text: 'Qué hacemos: seis líneas de servicio' },
+            { type: 'ul', items: [
+                'Gestión Estratégica: planeación corporativa, expansión de mercado y estrategia de crecimiento.',
+                'Transformación Digital: automatización, data analytics e implementación tecnológica.',
+                'Gestión de Proyectos: metodologías ágiles y tradicionales (Scrum, PMI).',
+                'Marketing y Comunicación: estrategia digital, marca y campañas de performance.',
+                'Desarrollo de Franquicias: diseño y expansión de modelos de franquicia.',
+                'Academia Empresarial: formación en liderazgo, innovación y gestión.',
+            ] },
+
+            { type: 'h2', text: 'Quiénes lideran D2F' },
+            { type: 'h3', text: 'Diego Forero — CEO' },
+            { type: 'p', text: 'Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias de Colombia y Latinoamérica.' },
+            { type: 'h3', text: 'Alejandra Rivera — CSO' },
+            { type: 'p', text: 'Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de empresas colombianas, con foco en transformación digital y gestión organizacional.' },
+
+            { type: 'h2', text: 'Por qué confían en D2F' },
+            { type: 'p', text: 'Nuestros clientes destacan tres cosas: el compromiso real con sus proyectos, la capacidad de convertir la estrategia en ejecución y los resultados medibles. Más de 20 años de trayectoria, más de 25 clientes atendidos y una satisfacción del 100% respaldan la forma en que trabajamos.' },
+
+            { type: 'h2', text: 'Cómo contactar a D2F Consulting' },
+            { type: 'p', text: 'Puedes escribirnos a d2fgestion@gmail.com, llamarnos o escribirnos por WhatsApp al +57 310 235 3201, o usar el formulario de contacto en nuestra web. Respondemos en menos de 24 horas y la primera consulta es gratuita.' },
+            { type: 'cta', text: '¿Quieres trabajar con D2F Consulting? Agenda una consulta inicial gratuita y descubre cómo podemos ayudar a crecer tu empresa.' },
+        ],
+    },
+    {
+        slug: 'planeacion-estrategica-empresas-colombia',
+        title: 'Planeación estratégica para empresas en Colombia: guía y método de D2F',
+        description:
+            'Qué es la planeación estratégica, por qué tu empresa la necesita y cómo D2F Consulting la implementa paso a paso en Colombia para lograr resultados.',
+        keywords: [
+            'planeación estratégica Colombia',
+            'plan estratégico empresa',
+            'D2F planeación estratégica',
+            'consultoría estratégica Bogotá',
+        ],
+        datePublished: '2026-06-20',
+        dateModified: '2026-06-20',
+        image: '/images/strategic-planing.webp',
+        imageAlt: 'Sesión de planeación estratégica empresarial de D2F Consulting en Colombia',
+        readingTime: '7 min',
+        excerpt:
+            'La planeación estratégica convierte la visión en acción. Te explicamos qué es, sus etapas y cómo D2F la aplica para que tu empresa crezca con rumbo.',
+        body: [
+            { type: 'p', text: 'Muchas empresas en Colombia trabajan duro pero sin rumbo claro: reaccionan al día a día en vez de avanzar hacia objetivos definidos. La planeación estratégica resuelve eso. En esta guía explicamos qué es, cuáles son sus etapas y cómo el equipo de D2F Consulting la implementa para convertir la estrategia en resultados concretos.' },
+
+            { type: 'h2', text: '¿Qué es la planeación estratégica?' },
+            { type: 'p', text: 'Es el proceso mediante el cual una empresa define a dónde quiere llegar (visión y objetivos) y diseña el camino para lograrlo (estrategia y plan de acción). Una buena planeación estratégica alinea a todo el equipo, prioriza recursos y permite medir el avance con indicadores claros.' },
+
+            { type: 'h2', text: 'Por qué tu empresa la necesita' },
+            { type: 'ul', items: [
+                'Da rumbo: todos saben hacia dónde va la empresa y por qué.',
+                'Prioriza: enfoca recursos en lo que realmente mueve el negocio.',
+                'Anticipa: identifica riesgos y oportunidades antes que la competencia.',
+                'Mide: convierte objetivos en indicadores (KPIs) para tomar decisiones con datos.',
+            ] },
+
+            { type: 'h2', text: 'Las etapas de un plan estratégico' },
+            { type: 'h3', text: '1. Diagnóstico' },
+            { type: 'p', text: 'Analizamos la situación actual: mercado, competencia, capacidades internas y resultados. Aquí usamos herramientas como el análisis DOFA y el estudio del entorno competitivo.' },
+            { type: 'h3', text: '2. Definición de rumbo' },
+            { type: 'p', text: 'Definimos o ajustamos la misión, la visión y los objetivos estratégicos a 1, 3 y 5 años. Los objetivos deben ser específicos y medibles.' },
+            { type: 'h3', text: '3. Formulación de la estrategia' },
+            { type: 'p', text: 'Diseñamos las estrategias y proyectos que cerrarán la brecha entre dónde está la empresa y dónde quiere llegar: crecimiento, eficiencia, nuevos mercados, innovación.' },
+            { type: 'h3', text: '4. Plan de acción e indicadores' },
+            { type: 'p', text: 'Traducimos la estrategia en iniciativas concretas con responsables, plazos, presupuesto e indicadores. Sin esto, la estrategia se queda en el papel.' },
+            { type: 'h3', text: '5. Ejecución y seguimiento' },
+            { type: 'p', text: 'Acompañamos la implementación con tableros de control y revisiones periódicas para corregir el rumbo a tiempo. Esta es la etapa donde D2F marca la diferencia: no dejamos a la empresa sola con un documento.' },
+
+            { type: 'h2', text: 'El método de D2F' },
+            { type: 'p', text: 'En D2F Consulting combinamos metodologías probadas con un conocimiento profundo del mercado colombiano. Trabajamos de la mano del equipo directivo, transferimos capacidades y medimos resultados en cada etapa, para que la planeación estratégica se convierta en crecimiento real y sostenible.' },
+
+            { type: 'h2', text: 'Conclusión' },
+            { type: 'p', text: 'La planeación estratégica no es un lujo de grandes corporaciones: es la herramienta que permite a cualquier empresa colombiana crecer con rumbo, priorizar bien y tomar decisiones con datos. Con el acompañamiento adecuado, se convierte en una de las inversiones de mayor retorno.' },
+            { type: 'cta', text: '¿Quieres un plan estratégico que sí se ejecute? D2F Consulting te acompaña desde el diagnóstico hasta los resultados. Agenda una consulta gratuita.' },
+        ],
+    },
 ];
 
 export function getPost(slug: string): Post | undefined {
