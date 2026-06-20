@@ -6,7 +6,14 @@ import { ArrowRight, BookOpen, Clock } from "lucide-react";
 import { posts } from "@/content/posts";
 
 export default function BlogTeaser() {
-    const latest = posts.slice(0, 3);
+    // Feature the brand page first so it gets homepage link equity (helps "D2F" brand search),
+    // then fill with the most recent posts.
+    const featuredSlug = "d2f-consulting-quienes-somos";
+    const featured = posts.find((p) => p.slug === featuredSlug);
+    const latest = [
+        ...(featured ? [featured] : []),
+        ...posts.filter((p) => p.slug !== featuredSlug),
+    ].slice(0, 3);
 
     return (
         <section
