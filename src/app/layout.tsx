@@ -131,7 +131,10 @@ const jsonLd = {
             '@type': 'Organization',
             '@id': 'https://www.d2fgestion.com/#organization',
             name: 'D2F Consulting',
-            alternateName: 'D2F Gestión',
+            alternateName: ['D2F Gestión', 'D2F', 'D2F Consulting Agency'],
+            legalName: 'D2F Consulting',
+            slogan: 'Consultoría empresarial y gestión estratégica en Colombia',
+            description: 'D2F Consulting es una firma de consultoría empresarial y gestión estratégica en Colombia, con sedes en Bogotá y Medellín. Más de 20 años de experiencia.',
             url: 'https://www.d2fgestion.com',
             logo: {
                 '@type': 'ImageObject',
@@ -140,6 +143,15 @@ const jsonLd = {
                 height: 621,
             },
             foundingDate: '2015',
+            foundingLocation: { '@type': 'Place', name: 'Bogotá, Colombia' },
+            knowsAbout: [
+                'Consultoría empresarial',
+                'Gestión estratégica',
+                'Transformación digital',
+                'Gestión de proyectos',
+                'Desarrollo de franquicias',
+                'Marketing digital',
+            ],
             numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 5, maxValue: 50 },
             sameAs: [
                 'https://www.linkedin.com/company/10602504',
