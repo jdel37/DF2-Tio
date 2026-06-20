@@ -26,8 +26,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     metadataBase: new URL('https://www.d2fgestion.com'),
     title: {
-        default: 'Consultoría Empresarial en Colombia | D2F Consulting',
-        template: '%s | D2F Consulting Colombia',
+        default: 'D2F Consulting | Consultoría Empresarial en Colombia',
+        template: '%s | D2F Consulting',
     },
     description:
         'Consultoría empresarial, gestión estratégica y transformación digital en Colombia. +20 años en Bogotá y Medellín. Agenda tu consulta gratis hoy.',
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
         alternateLocale: ['en_US'],
         url: 'https://www.d2fgestion.com',
         siteName: 'D2F Consulting',
-        title: 'Consultoría Empresarial en Colombia | D2F Consulting',
+        title: 'D2F Consulting | Consultoría Empresarial en Colombia',
         description: 'Firma líder en consultoría empresarial, gestión estratégica y transformación digital en Colombia. +20 años de experiencia. Bogotá · Medellín.',
         images: [{
             url: '/images/og-image.webp',
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         site: '@d2f_consulting',
         creator: '@d2f_consulting',
-        title: 'Consultoría Empresarial en Colombia | D2F Consulting',
+        title: 'D2F Consulting | Consultoría Empresarial en Colombia',
         description: 'Firma líder en consultoría empresarial y gestión estratégica. +20 años de experiencia en Colombia.',
         images: ['/images/og-image.webp'],
     },

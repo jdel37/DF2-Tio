@@ -67,7 +67,7 @@ export default function Hero() {
               style={{ background: "rgba(30,118,184,0.25)", color: "#fff" }}
             >
               <Sparkles size={12} className="text-[#DF1021]" />
-              Consultoría Empresarial · Bogotá, Colombia
+              D2F Consulting · Consultoría Empresarial · Bogotá
             </span>
           </motion.div>
 
