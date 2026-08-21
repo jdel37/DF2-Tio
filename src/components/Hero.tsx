@@ -61,15 +61,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <span
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest border border-white/20 backdrop-blur-sm"
-              style={{ background: "rgba(30,118,184,0.25)", color: "#fff" }}
-            >
-              <Sparkles size={12} className="text-[#DF1021]" />
-              D2F Consulting · Consultoría Empresarial · Global
-            </span>
-          </motion.div>
+         
 
           {/* Title */}
           <motion.h1
