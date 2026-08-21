@@ -67,7 +67,6 @@ export default function Hero() {
           <motion.h1
             variants={itemVariants}
             className="text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-4"
-            style={{ fontFamily: "Poppins, sans-serif", textShadow: "0 2px 40px rgba(0,0,0,0.3)" }}
           >
             {t("hero.title")}
           </motion.h1>
@@ -76,7 +75,7 @@ export default function Hero() {
           <motion.h2
             variants={itemVariants}
             className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-7 leading-tight"
-            style={{ color: "#FF3346", fontFamily: "Poppins, sans-serif", textShadow: "0 2px 20px rgba(223,16,33,0.4)" }}
+            style={{ color: "#FF3346" }}
           >
             {t("hero.subtitle")}
           </motion.h2>
