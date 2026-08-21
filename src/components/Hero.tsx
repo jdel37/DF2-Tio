@@ -33,23 +33,22 @@ export default function Hero() {
       {/* Background Carousel */}
       <div className="absolute inset-0 z-0">
         <Carousel />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a2e4e]/95 via-[#10497a]/75 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 z-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(30,118,184,0.32),_transparent_38%),linear-gradient(90deg,_rgba(5,20,32,0.9)_0%,_rgba(7,29,48,0.78)_36%,_rgba(9,32,52,0.32)_100%)] z-10" />
       </div>
 
-      {/* Decorative grid overlay */}
+      {/* Subtle grid overlay */}
       <div
-        className="absolute inset-0 z-10 opacity-[0.03]"
+        className="absolute inset-0 z-10 opacity-[0.025]"
         style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
 
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full z-10 opacity-20 blur-3xl"
+      {/* Soft glow accents */}
+      <div className="absolute top-1/4 right-1/4 w-72 h-72 rounded-full z-10 opacity-15 blur-3xl"
         style={{ background: "radial-gradient(circle, #1E76B8, transparent)" }} />
-      <div className="absolute bottom-1/3 left-1/3 w-64 h-64 rounded-full z-10 opacity-15 blur-3xl"
+      <div className="absolute bottom-1/4 left-1/4 w-52 h-52 rounded-full z-10 opacity-10 blur-3xl"
         style={{ background: "radial-gradient(circle, #DF1021, transparent)" }} />
 
       {/* Content */}
@@ -58,15 +57,15 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-3xl"
+          className="max-w-2xl"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div variants={itemVariants} className="mb-5">
             <span
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest border border-white/20 backdrop-blur-sm"
-              style={{ background: "rgba(30,118,184,0.25)", color: "#fff" }}
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] border border-white/15 backdrop-blur-sm"
+              style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.92)" }}
             >
-              <Sparkles size={12} className="text-[#DF1021]" />
+              <Sparkles size={11} className="text-[#DF1021]" />
               {t("hero.badge")}
             </span>
           </motion.div>
@@ -74,8 +73,8 @@ export default function Hero() {
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-4"
-            style={{ fontFamily: "Poppins, sans-serif", textShadow: "0 2px 40px rgba(0,0,0,0.3)" }}
+            className="text-4xl tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] mb-4"
+            style={{ fontFamily: "Poppins, sans-serif", textShadow: "0 2px 20px rgba(0,0,0,0.28)" }}
           >
             {t("hero.title")}
           </motion.h1>
@@ -83,41 +82,35 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-5 sm:mb-7 leading-tight"
-            style={{ color: "#FF3346", fontFamily: "Poppins, sans-serif", textShadow: "0 2px 20px rgba(223,16,33,0.4)" }}
+            className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight"
+            style={{ color: "#F4A8B0", fontFamily: "Poppins, sans-serif" }}
           >
             {t("hero.subtitle")}
           </motion.h2>
 
-          {/* Divider */}
-          <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-0.5 rounded-full bg-[#DF1021]" />
-            <div className="w-3 h-0.5 rounded-full bg-white/40" />
-          </motion.div>
-
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-lg md:text-xl text-white/80 max-w-xl mb-10 sm:mb-12 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-white/75 max-w-xl mb-8 sm:mb-10 leading-relaxed"
           >
             {t("hero.description")}
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               onClick={() => scrollTo("servicios")}
-              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-white transition-all duration-300 text-base"
+              className="group flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-white transition-all duration-300 text-sm sm:text-base border border-[#DF1021]/60"
               style={{
-                background: "linear-gradient(135deg, #DF1021, #b80d1a)",
-                boxShadow: "0 4px 30px rgba(223,16,33,0.5)",
+                background: "linear-gradient(135deg, #DF1021, #bf0e1a)",
+                boxShadow: "0 10px 24px rgba(223,16,33,0.25)",
               }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 40px rgba(223,16,33,0.65)";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 14px 28px rgba(223,16,33,0.35)";
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
               }}
               onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 30px rgba(223,16,33,0.5)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 10px 24px rgba(223,16,33,0.25)";
                 (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
               }}
             >
@@ -127,8 +120,7 @@ export default function Hero() {
 
             <button
               onClick={() => scrollTo("contacto")}
-              className="group flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 text-base border border-white/30 backdrop-blur-sm hover:bg-white/15 hover:border-white/50"
-              style={{ background: "rgba(255,255,255,0.08)" }}
+              className="group flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-white transition-all duration-300 text-sm sm:text-base border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/30"
             >
               {t("hero.contactBtn")}
               <ArrowRight size={18} className="opacity-60 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-1" />
@@ -138,18 +130,21 @@ export default function Hero() {
           {/* Stats strip */}
           <motion.div
             variants={itemVariants}
-            className="mt-14 flex flex-wrap gap-6 sm:gap-10"
+            className="mt-10 flex flex-wrap gap-3 sm:gap-4"
           >
             {[
               { value: "20+", label: t("hero.stats.0") },
               { value: "25+", label: t("hero.stats.1") },
               { value: "100%", label: t("hero.stats.2") },
             ].map((stat) => (
-              <div key={stat.label} className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-white/10 bg-white/5 px-3.5 py-2.5 backdrop-blur-[2px]"
+              >
+                <div className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
                   {stat.value}
-                </span>
-                <span className="text-white/60 text-xs sm:text-sm mt-0.5">{stat.label}</span>
+                </div>
+                <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.14em] text-white/65 mt-1">{stat.label}</div>
               </div>
             ))}
           </motion.div>
