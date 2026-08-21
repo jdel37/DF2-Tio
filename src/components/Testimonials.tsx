@@ -153,7 +153,7 @@ export default function Testimonials() {
               {/* Quote */}
               <p
                 className="text-base sm:text-lg md:text-xl text-white/90 font-light leading-relaxed italic mb-8 relative z-10"
-                style={{ fontFamily: "ui-serif, Georgia, serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 "{current.quote}"
               </p>
