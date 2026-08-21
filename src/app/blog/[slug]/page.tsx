@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,13 +8,23 @@ import { posts, getLocalizedPost, getLocalizedPosts, type Block, type SupportedL
 
 const baseUrl = 'https://www.d2fgestion.com';
 
+async function getServerLocale(): Promise<SupportedLocale> {
+    const cookieLocale = (await cookies()).get('i18nextLng')?.value as SupportedLocale | undefined;
+    if (cookieLocale === 'en' || cookieLocale === 'es') {
+        return cookieLocale;
+    }
+
+    const acceptLanguage = (await headers()).get('accept-language') ?? '';
+    return acceptLanguage.toLowerCase().startsWith('en') ? 'en' : 'es';
+}
+
 export function generateStaticParams() {
     return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const locale = await getServerLocale();
     const post = getLocalizedPost(slug, locale);
     if (!post) return {};
 
@@ -91,7 +101,7 @@ function renderBlock(block: Block, i: number, locale: SupportedLocale) {
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const locale = await getServerLocale();
     const post = getLocalizedPost(slug, locale);
     if (!post) notFound();
 

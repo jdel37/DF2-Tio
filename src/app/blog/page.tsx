@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
@@ -7,8 +7,18 @@ import { getLocalizedPosts, type SupportedLocale } from '@/content/posts';
 
 const baseUrl = 'https://www.d2fgestion.com';
 
+async function getServerLocale(): Promise<SupportedLocale> {
+    const cookieLocale = (await cookies()).get('i18nextLng')?.value as SupportedLocale | undefined;
+    if (cookieLocale === 'en' || cookieLocale === 'es') {
+        return cookieLocale;
+    }
+
+    const acceptLanguage = (await headers()).get('accept-language') ?? '';
+    return acceptLanguage.toLowerCase().startsWith('en') ? 'en' : 'es';
+}
+
 export async function generateMetadata(): Promise<Metadata> {
-    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const locale = await getServerLocale();
     const isEnglish = locale === 'en';
 
     return {
@@ -29,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function BlogIndex() {
-    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const locale = await getServerLocale();
     const posts = getLocalizedPosts(locale);
     const isEnglish = locale === 'en';
 

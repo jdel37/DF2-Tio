@@ -4,36 +4,66 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, HelpCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const faqs = [
-    {
-        q: "¿Qué es D2F Consulting y dónde opera?",
-        a: "D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. Acompañamos organizaciones en su crecimiento, transformación digital y ejecución estratégica con una mirada global y resultados medibles.",
-    },
-    {
-        q: "¿Qué servicios de consultoría empresarial ofrece D2F Consulting?",
-        a: "Ofrecemos seis líneas de servicio: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y academia empresarial.",
-    },
-    {
-        q: "¿Por qué elegir una consultoría empresarial global?",
-        a: "Una consultora con visión global aporta estructura, rigor analítico y acompañamiento práctico para resolver retos complejos. D2F combina experiencia real, metodologías probadas y ejecución enfocada en resultados para empresas en crecimiento.",
-    },
-    {
-        q: "¿Cómo puedo contratar los servicios de consultoría empresarial de D2F?",
-        a: "Puede contactarnos a través del formulario en esta página web, por email a d2fgestion@gmail.com o por teléfono al +57 310 235 3201. Respondemos en menos de 24 horas y ofrecemos una consulta inicial sin costo.",
-    },
-    {
-        q: "¿D2F Consulting trabaja con empresas de todos los tamaños?",
-        a: "Sí. Atendemos desde startups y pymes hasta grandes corporaciones. Nuestras soluciones se diseñan a la medida de cada organización, adaptando metodologías y alcance según el tamaño, sector y etapa de crecimiento.",
-    },
-    {
-        q: "¿Cuánto cuesta una consultoría empresarial con D2F?",
-        a: "El costo depende del alcance, la duración y la línea de servicio. Por eso ofrecemos una consulta inicial gratuita en la que entendemos su necesidad y le presentamos una propuesta a la medida, con entregables e indicadores claros antes de iniciar cualquier proyecto.",
-    },
-];
+const faqsByLocale = {
+    es: [
+        {
+            q: "¿Qué es D2F Consulting y dónde opera?",
+            a: "D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. Acompañamos organizaciones en su crecimiento, transformación digital y ejecución estratégica con una mirada global y resultados medibles.",
+        },
+        {
+            q: "¿Qué servicios de consultoría empresarial ofrece D2F Consulting?",
+            a: "Ofrecemos seis líneas de servicio: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y academia empresarial.",
+        },
+        {
+            q: "¿Por qué elegir una consultoría empresarial global?",
+            a: "Una consultora con visión global aporta estructura, rigor analítico y acompañamiento práctico para resolver retos complejos. D2F combina experiencia real, metodologías probadas y ejecución enfocada en resultados para empresas en crecimiento.",
+        },
+        {
+            q: "¿Cómo puedo contratar los servicios de consultoría empresarial de D2F?",
+            a: "Puede contactarnos a través del formulario en esta página web, por email a d2fgestion@gmail.com o por teléfono al +57 310 235 3201. Respondemos en menos de 24 horas y ofrecemos una consulta inicial sin costo.",
+        },
+        {
+            q: "¿D2F Consulting trabaja con empresas de todos los tamaños?",
+            a: "Sí. Atendemos desde startups y pymes hasta grandes corporaciones. Nuestras soluciones se diseñan a la medida de cada organización, adaptando metodologías y alcance según el tamaño, sector y etapa de crecimiento.",
+        },
+        {
+            q: "¿Cuánto cuesta una consultoría empresarial con D2F?",
+            a: "El costo depende del alcance, la duración y la línea de servicio. Por eso ofrecemos una consulta inicial gratuita en la que entendemos su necesidad y le presentamos una propuesta a la medida, con entregables e indicadores claros antes de iniciar cualquier proyecto.",
+        },
+    ],
+    en: [
+        {
+            q: "What is D2F Consulting and where does it operate?",
+            a: "D2F Consulting is an international business consulting and strategic management firm founded in 2015. We support organizations in their growth, digital transformation and strategic execution with a global perspective and measurable results.",
+        },
+        {
+            q: "What business consulting services does D2F Consulting offer?",
+            a: "We offer six service lines: strategic management, digital transformation, project management, marketing and communication, franchise development and business academy.",
+        },
+        {
+            q: "Why choose a global business consulting firm?",
+            a: "A consulting firm with a global perspective brings structure, analytical rigor and practical support to solve complex challenges. D2F combines real experience, proven methodologies and execution focused on measurable results for growing companies.",
+        },
+        {
+            q: "How can I hire D2F's business consulting services?",
+            a: "You can contact us through the form on this website, by email at d2fgestion@gmail.com or by phone at +57 310 235 3201. We respond within 24 hours and offer an initial consultation at no cost.",
+        },
+        {
+            q: "Does D2F Consulting work with companies of all sizes?",
+            a: "Yes. We work with startups, SMEs and large corporations. Our solutions are tailored to each organization, adapting methodologies and scope based on size, sector and growth stage.",
+        },
+        {
+            q: "How much does a business consulting engagement with D2F cost?",
+            a: "The cost depends on the scope, duration and service line. That is why we offer a free initial consultation to understand your needs and present a tailored proposal with clear deliverables and indicators before any project begins.",
+        },
+    ],
+} as const;
 
 export default function Faq() {
     const [open, setOpen] = useState<number | null>(0);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const locale = i18n.language?.startsWith("en") ? "en" : "es";
+    const faqs = faqsByLocale[locale];
 
     return (
         <section
