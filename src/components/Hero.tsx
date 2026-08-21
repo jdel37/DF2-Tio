@@ -18,6 +18,30 @@ const itemVariants: Variants = {
 
 export default function Hero() {
   const { t } = useTranslation();
+  const subtitle = t("hero.subtitle");
+
+  const renderSubtitle = () => {
+    if (subtitle.includes("Growth")) {
+      return (
+        <>
+          <span className="text-white">Transforming</span>{" "}
+          <span className="text-[#DF1021]">Growth</span>
+        </>
+      );
+    }
+
+    if (subtitle.includes("Crecimiento")) {
+      return (
+        <>
+          <span className="text-white">Gestión Estratégica y </span>
+          <span className="text-[#DF1021]">Crecimiento</span>
+          <span className="text-white"> Real</span>
+        </>
+      );
+    }
+
+    return <span className="text-white">{subtitle}</span>;
+  };
 
   const scrollTo = useCallback((id: string) => {
     const target = document.getElementById(id);
@@ -57,12 +81,12 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-2xl"
+          className="max-w-[720px] min-h-[520px] flex flex-col justify-center"
         >
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] mb-4"
+            className="text-[2.7rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] tracking-[-0.06em] font-black text-white leading-[0.9] mb-4"
             style={{ fontFamily: "Poppins, sans-serif", textShadow: "0 2px 20px rgba(0,0,0,0.28)" }}
           >
             {t("hero.title")}
@@ -71,16 +95,16 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.h2
             variants={itemVariants}
-            className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight"
-            style={{ color: "#EAF3FF", fontFamily: "Poppins, sans-serif" }}
+            className="text-2xl sm:text-3xl md:text-[2.6rem] font-semibold mb-4 leading-[1.05]"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
-            {t("hero.subtitle")}
+            {renderSubtitle()}
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-sm sm:text-base md:text-lg text-white/75 max-w-xl mb-8 sm:mb-10 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-white/75 max-w-xl mb-8 sm:mb-10 leading-relaxed"
           >
             {t("hero.description")}
           </motion.p>
