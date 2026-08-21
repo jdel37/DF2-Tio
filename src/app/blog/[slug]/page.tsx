@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
-import { posts, getPost, type Block } from '@/content/posts';
+import { posts, getLocalizedPost, getLocalizedPosts, type Block, type SupportedLocale } from '@/content/posts';
 
 const baseUrl = 'https://www.d2fgestion.com';
 
@@ -13,7 +14,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
-    const post = getPost(slug);
+    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const post = getLocalizedPost(slug, locale);
     if (!post) return {};
 
     const url = `${baseUrl}/blog/${post.slug}`;
@@ -41,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
 }
 
-function renderBlock(block: Block, i: number) {
+function renderBlock(block: Block, i: number, locale: SupportedLocale) {
     switch (block.type) {
         case 'h2':
             return (
@@ -74,7 +76,7 @@ function renderBlock(block: Block, i: number) {
                         href="/#contacto"
                         className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-[#1E76B8] bg-white text-sm transition-transform hover:-translate-y-0.5"
                     >
-                        Agenda tu consulta gratuita <ArrowRight size={16} />
+                        {locale === 'en' ? 'Book your free consultation' : 'Agenda tu consulta gratuita'} <ArrowRight size={16} />
                     </Link>
                 </div>
             );
@@ -89,10 +91,12 @@ function renderBlock(block: Block, i: number) {
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;
-    const post = getPost(slug);
+    const locale = ((await cookies()).get('i18nextLng')?.value as SupportedLocale) === 'en' ? 'en' : 'es';
+    const post = getLocalizedPost(slug, locale);
     if (!post) notFound();
 
     const url = `${baseUrl}/blog/${post.slug}`;
+    const related = getLocalizedPosts(locale).filter((p) => p.slug !== post.slug).slice(0, 2);
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -105,7 +109,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 image: `${baseUrl}${post.image}`,
                 datePublished: post.datePublished,
                 dateModified: post.dateModified,
-                inLanguage: 'es-ES',
+                inLanguage: locale === 'en' ? 'en-US' : 'es-ES',
                 mainEntityOfPage: { '@type': 'WebPage', '@id': url },
                 author: { '@id': `${baseUrl}/#organization` },
                 publisher: { '@id': `${baseUrl}/#organization` },
@@ -122,8 +126,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         ],
     };
 
-    const related = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
-
     return (
         <main className="min-h-screen bg-white">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -132,12 +134,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <header className="relative pt-14 pb-10 sm:pt-20 sm:pb-12" style={{ background: 'linear-gradient(160deg, #071d30 0%, #10497a 100%)' }}>
                 <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
                     <nav aria-label="Breadcrumb" className="mb-6 text-sm text-white/60">
-                        <Link href="/" className="hover:text-white transition-colors">Inicio</Link>
+                        <Link href="/" className="hover:text-white transition-colors">{locale === 'en' ? 'Home' : 'Inicio'}</Link>
                         <span className="mx-2">/</span>
                         <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
                     </nav>
                     <div className="flex items-center gap-2 text-xs text-white/60 mb-4">
-                        <Clock size={13} /> {post.readingTime} de lectura
+                        <Clock size={13} /> {post.readingTime} {locale === 'en' ? 'read' : 'de lectura'}
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-[2.75rem] font-black text-white leading-[1.12]" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         {post.title}
@@ -162,11 +164,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
             {/* Body */}
             <article className="container mx-auto px-4 sm:px-6 max-w-3xl py-12">
-                {post.body.map(renderBlock)}
+                {post.body.map((block, index) => renderBlock(block, index, locale))}
 
                 <div className="mt-12 pt-8 border-t border-gray-100">
                     <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-[#1E76B8] hover:gap-3 transition-all">
-                        <ArrowLeft size={16} /> Ver todos los artículos
+                        <ArrowLeft size={16} /> {locale === 'en' ? 'See all articles' : 'Ver todos los artículos'}
                     </Link>
                 </div>
             </article>
@@ -176,7 +178,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <section className="py-14" style={{ background: 'linear-gradient(160deg, #f8faff, #f0f4fa)' }} aria-label="Artículos relacionados">
                     <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
                         <h2 className="text-xl font-black text-gray-900 mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                            Sigue leyendo
+                            {locale === 'en' ? 'Keep reading' : 'Sigue leyendo'}
                         </h2>
                         <div className="grid gap-5 sm:grid-cols-2">
                             {related.map((r) => (

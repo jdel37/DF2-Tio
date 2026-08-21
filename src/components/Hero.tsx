@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Carousel from "./Carousel";
 
@@ -59,17 +59,6 @@ export default function Hero() {
           animate="visible"
           className="max-w-2xl"
         >
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-5">
-            <span
-              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] border border-white/15 backdrop-blur-sm"
-              style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.92)" }}
-            >
-              <Sparkles size={11} className="text-[#DF1021]" />
-              {t("hero.badge")}
-            </span>
-          </motion.div>
-
           {/* Title */}
           <motion.h1
             variants={itemVariants}
@@ -83,7 +72,7 @@ export default function Hero() {
           <motion.h2
             variants={itemVariants}
             className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 leading-tight"
-            style={{ color: "#F4A8B0", fontFamily: "Poppins, sans-serif" }}
+            style={{ color: "#EAF3FF", fontFamily: "Poppins, sans-serif" }}
           >
             {t("hero.subtitle")}
           </motion.h2>
@@ -128,26 +117,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Stats strip */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-10 flex flex-wrap gap-3 sm:gap-4"
-          >
-            {[
-              { value: "20+", label: t("hero.stats.0") },
-              { value: "25+", label: t("hero.stats.1") },
-              { value: "100%", label: t("hero.stats.2") },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 px-3.5 py-2.5 backdrop-blur-[2px]"
-              >
-                <div className="text-lg sm:text-xl font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
-                  {stat.value}
-                </div>
-                <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.14em] text-white/65 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+         
         </motion.div>
       </div>
 

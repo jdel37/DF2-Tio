@@ -8,6 +8,10 @@ export type Block =
     | { type: 'ul'; items: string[] }
     | { type: 'cta'; text: string };
 
+export type SupportedLocale = 'es' | 'en';
+
+export type PostTranslation = Partial<Pick<Post, 'title' | 'description' | 'keywords' | 'excerpt' | 'body'>>;
+
 export interface Post {
     slug: string;
     title: string; // H1 + SEO title
@@ -20,6 +24,9 @@ export interface Post {
     readingTime: string;
     excerpt: string;
     body: Block[];
+    translations?: {
+        en?: PostTranslation;
+    };
 }
 
 export const posts: Post[] = [
@@ -131,6 +138,51 @@ export const posts: Post[] = [
             { type: 'p', text: 'Una pyme puede transformarse digitalmente sin grandes presupuestos si lo hace por etapas, partiendo de un diagnóstico, priorizando por impacto y cuidando a las personas. El resultado: menos trabajo manual, mejores decisiones y más capacidad de crecer.' },
             { type: 'cta', text: '¿Tu pyme está lista para digitalizarse con estrategia? D2F Consulting te acompaña desde el diagnóstico hasta la implementación. Agenda una consulta gratuita.' },
         ],
+        translations: {
+            en: {
+                title: 'Digital transformation for SMEs: practical guide 2026',
+                description: 'How to approach digital transformation in an SME: where to start, common mistakes and steps to digitize processes with results.',
+                keywords: [
+                    'digital transformation for SMEs',
+                    'process digitization for companies',
+                    'business digital transformation',
+                    'technology for SMEs',
+                ],
+                excerpt: 'Digital transformation without jargon: where to start, what to automate first and how to avoid the mistakes that make digitization fail in SMEs.',
+                body: [
+                    { type: 'p', text: 'Digital transformation is a priority for most companies, but many SMEs approach it by buying software without a strategy and end up with tools that nobody uses. Transforming digitally is not just buying technology: it means redesigning how the business operates using data and automation to grow faster and with less friction. This guide explains how to do it well.' },
+                    { type: 'h2', text: 'What digital transformation really is' },
+                    { type: 'p', text: 'It is the process of integrating technology into all areas of the company to change how it operates and delivers value to the customer. It includes automating manual tasks, centralizing information, making decisions with data and, in many cases, creating new digital business models.' },
+                    { type: 'h2', text: 'Where to start without wasting money' },
+                    { type: 'h3', text: '1. Diagnose before buying software' },
+                    { type: 'p', text: 'Map your current processes and identify bottlenecks: where is time lost, which tasks are repeated and where do errors happen? Technology comes later, to solve concrete problems, not before.' },
+                    { type: 'h3', text: '2. Prioritize by impact and effort' },
+                    { type: 'p', text: 'Start with what gives the biggest return with the least effort: electronic invoicing, customer management (CRM), quote automation or dashboards. Early wins build confidence in the team.' },
+                    { type: 'h3', text: '3. Centralized data' },
+                    { type: 'p', text: 'If your information lives in scattered spreadsheets and in the heads of people, you cannot make quick decisions. Centralizing data is the basis of any transformation.' },
+                    { type: 'h2', text: 'What to automate first in an SME' },
+                    { type: 'ul', items: [
+                        'Customer service: automatic responses, WhatsApp Business and chatbots.',
+                        'Sales: CRM to avoid losing opportunities and keep follow-up consistent.',
+                        'Billing and collections: electronic invoicing and automatic reminders.',
+                        'Marketing: measurable and segmented digital campaigns.',
+                        'Reports: dashboards that show the business in real time.',
+                    ] },
+                    { type: 'h2', text: 'Common mistakes that make digitization fail' },
+                    { type: 'ul', items: [
+                        'Buying technology without strategy or clear objectives.',
+                        'Not training the team: the best tool is useless if nobody knows how to use it.',
+                        'Trying to change everything at once instead of moving in stages.',
+                        'Not measuring results, so nobody knows whether it worked.',
+                    ] },
+                    { type: 'h2', text: 'The human factor' },
+                    { type: 'p', text: 'Digital transformation is 30% technology and 70% people and processes. The biggest obstacle is usually not the software, but resistance to change. That is why support, training and clear communication are as important as the tool itself.' },
+                    { type: 'h2', text: 'Conclusion' },
+                    { type: 'p', text: 'An SME can transform digitally without large budgets if it does it in stages, starting with a diagnosis, prioritizing by impact and taking care of people. The result is less manual work, better decisions and more capacity to grow.' },
+                    { type: 'cta', text: 'Is your SME ready to digitize with strategy? D2F Consulting supports you from diagnosis to implementation. Book a free consultation.' },
+                ],
+            },
+        },
     },
     {
         slug: 'como-desarrollar-franquicia-global',
@@ -181,6 +233,46 @@ export const posts: Post[] = [
             { type: 'p', text: 'Desarrollar una franquicia es un proyecto estratégico que exige sistematizar la operación, diseñar un modelo económico justo, blindar lo legal y seleccionar bien a los franquiciados. Hecho con método, es una de las rutas más escalables para crecer de forma sostenida.' },
             { type: 'cta', text: '¿Quieres convertir tu negocio en una franquicia rentable? D2F Consulting diseña y estructura modelos de franquicia para crecimiento sostenible. Agenda una consulta gratuita.' },
         ],
+        translations: {
+            en: {
+                title: 'How to develop a franchise: key steps to expand your business',
+                description: 'Guide to turning your business into a franchise: requirements, steps, costs and mistakes to avoid for a scalable and profitable expansion.',
+                keywords: [
+                    'franchise development',
+                    'how to franchise my business',
+                    'franchise model',
+                    'business expansion',
+                ],
+                excerpt: 'Franchising your business step by step: when you are ready, what documents you need, how to set the investment and the mistakes that ruin a network.',
+                body: [
+                    { type: 'p', text: 'Franchising is one of the most efficient ways to expand a business: you grow by using capital and management from third parties (franchisees) instead of opening each location with your own resources. But franchising badly destroys the brand. This guide explains how to develop a franchise in an orderly and profitable way.' },
+                    { type: 'h2', text: 'Is your business ready to franchise?' },
+                    { type: 'p', text: 'Before thinking about expansion, your model must meet three conditions: it must be profitable and proven in at least one company-owned location, it must be replicable through documented processes (not dependent on the owner), and it must have a brand with value that someone wants to buy. If your business depends on your daily presence, you need to systematize it first.' },
+                    { type: 'h2', text: 'Steps to develop a franchise' },
+                    { type: 'h3', text: '1. Standardize and document the operation' },
+                    { type: 'p', text: 'Everything that makes the business successful must be written down: operating manuals, processes, suppliers, recipes or service protocols. The franchisee buys exactly that ready-to-execute know-how.' },
+                    { type: 'h3', text: '2. Design the economic model' },
+                    { type: 'p', text: 'Define the initial investment, the entry fee, periodic royalties and the expected return for the franchisee. The numbers must work for both sides; if the franchisee does not make money, the network will fail.' },
+                    { type: 'h3', text: '3. Legal structure and contracts' },
+                    { type: 'p', text: 'The franchise is structured through franchise agreements and trademark licenses. The brand must be registered and intellectual property protected. A solid contract protects the brand and defines obligations, territory and termination clauses.' },
+                    { type: 'h3', text: '4. Create the franchise package' },
+                    { type: 'p', text: 'Include the brand manual, operating manual, training plan, opening support and ongoing support. This is what you really sell.' },
+                    { type: 'h3', text: '5. Select franchisees (do not sell to anyone)' },
+                    { type: 'p', text: 'The most expensive mistake is selling franchises only for the entry fee revenue. A franchisee who does not operate well damages the reputation of the whole network. Define a profile and a rigorous selection process.' },
+                    { type: 'h2', text: 'Mistakes that ruin a franchise' },
+                    { type: 'ul', items: [
+                        'Franchising a business that is not yet profitable or replicable.',
+                        'Not documenting the operation: the franchisee cannot replicate what is not written down.',
+                        'Setting royalties that choke the franchisee.',
+                        'Selling without filtering franchisees.',
+                        'Leaving the franchisee after opening, without continuous support.',
+                    ] },
+                    { type: 'h2', text: 'Conclusion' },
+                    { type: 'p', text: 'Developing a franchise is a strategic project that requires systematizing the operation, designing a fair economic model, protecting the legal structure and selecting franchisees well. Done with method, it is one of the most scalable paths to grow sustainably.' },
+                    { type: 'cta', text: 'Want to turn your business into a profitable franchise? D2F Consulting designs and structures franchise models for sustainable growth. Book a free consultation.' },
+                ],
+            },
+        },
     },
     {
         slug: 'd2f-consulting-quienes-somos',
@@ -232,6 +324,45 @@ export const posts: Post[] = [
             { type: 'p', text: 'Puedes escribirnos a d2fgestion@gmail.com, llamarnos o escribirnos por WhatsApp al +57 310 235 3201, o usar el formulario de contacto en nuestra web. Respondemos en menos de 24 horas y la primera consulta es gratuita.' },
             { type: 'cta', text: '¿Quieres trabajar con D2F Consulting? Agenda una consulta inicial gratuita y descubre cómo podemos ayudar a crecer tu empresa.' },
         ],
+        translations: {
+            en: {
+                title: 'D2F Consulting: who we are, what we do and why companies trust us',
+                description: 'Learn about D2F Consulting: international business consulting firm since 2015. History, team, services and working philosophy.',
+                keywords: [
+                    'D2F',
+                    'D2F Consulting',
+                    'international business consulting',
+                    'who we are at D2F',
+                ],
+                excerpt: 'Who D2F Consulting is, where we come from and why organizations in different markets trust us to grow with strategy and measurable results.',
+                body: [
+                    { type: 'p', text: 'D2F is an international business consulting and strategic management firm founded in 2015. In this article we tell you who we are, what we do and why more than 25 organizations have trusted us to transform their businesses.' },
+                    { type: 'h2', text: 'What is D2F Consulting' },
+                    { type: 'p', text: 'D2F combines management, development and communication to support companies of all sizes, from SMEs and startups to multinationals. We help define strategy, professionalize operations, digitize processes and grow sustainably. We do not just deliver diagnoses: we support implementation until results appear.' },
+                    { type: 'h2', text: 'Our story' },
+                    { type: 'p', text: 'Since 2015, D2F has worked with organizations in sectors as diverse as cosmetics, education, entertainment, food, health and services. The leadership team brings more than 20 years of experience in consulting, corporate innovation and strategic management, allowing us to combine deep market insight with world-class methodologies.' },
+                    { type: 'h2', text: 'What we do: six service lines' },
+                    { type: 'ul', items: [
+                        'Strategic Management: corporate planning, market expansion and growth strategy.',
+                        'Digital Transformation: automation, data analytics and technological implementation.',
+                        'Project Management: agile and traditional methodologies (Scrum, PMI).',
+                        'Marketing and Communication: digital strategy, branding and performance campaigns.',
+                        'Franchise Development: design and expansion of franchise models.',
+                        'Business Academy: training in leadership, innovation and management.',
+                    ] },
+                    { type: 'h2', text: 'Who leads D2F' },
+                    { type: 'h3', text: 'Diego Forero, CEO' },
+                    { type: 'p', text: 'Business consultant with more than 20 years of experience in strategic management, corporate innovation and senior leadership across multiple international industries.' },
+                    { type: 'h3', text: 'Alejandra Rivera, CSO' },
+                    { type: 'p', text: 'Specialist in data analysis, business intelligence and strategic optimization for growth in expanding organizations, with a focus on digital transformation and organizational management.' },
+                    { type: 'h2', text: 'Why companies trust D2F' },
+                    { type: 'p', text: 'Our clients highlight three things: real commitment to their projects, the ability to turn strategy into execution and measurable results. More than 20 years of track record, more than 25 clients served and 100% satisfaction support the way we work.' },
+                    { type: 'h2', text: 'How to contact D2F Consulting' },
+                    { type: 'p', text: 'You can write to us at d2fgestion@gmail.com, call us or message us on WhatsApp at +57 310 235 3201, or use the contact form on our website. We respond in less than 24 hours and the first consultation is free.' },
+                    { type: 'cta', text: 'Want to work with D2F Consulting? Book a free initial consultation and discover how we can help your company grow.' },
+                ],
+            },
+        },
     },
     {
         slug: 'planeacion-estrategica-empresas-global',
@@ -284,8 +415,68 @@ export const posts: Post[] = [
             { type: 'p', text: 'La planeación estratégica no es un lujo de grandes corporaciones: es la herramienta que permite a cualquier empresa crecer con rumbo, priorizar bien y tomar decisiones con datos. Con el acompañamiento adecuado, se convierte en una de las inversiones de mayor retorno.' },
             { type: 'cta', text: '¿Quieres un plan estratégico que sí se ejecute? D2F Consulting te acompaña desde el diagnóstico hasta los resultados. Agenda una consulta gratuita.' },
         ],
+        translations: {
+            en: {
+                title: 'Strategic planning for companies: guide and method from D2F',
+                description: 'What strategic planning is, why your company needs it and how D2F Consulting implements it step by step to achieve results.',
+                keywords: [
+                    'business strategic planning',
+                    'strategic plan for companies',
+                    'D2F strategic planning',
+                    'strategic consulting',
+                ],
+                excerpt: 'Strategic planning turns vision into action. We explain what it is, its stages and how D2F applies it so your company grows with direction.',
+                body: [
+                    { type: 'p', text: 'Many companies work hard but without a clear direction: they react to the day-to-day instead of moving toward defined objectives. Strategic planning solves that. In this guide we explain what it is, which stages it involves and how the D2F Consulting team implements it to turn strategy into concrete results.' },
+                    { type: 'h2', text: 'What is strategic planning?' },
+                    { type: 'p', text: 'It is the process by which a company defines where it wants to go (vision and objectives) and designs the path to get there (strategy and action plan). Good strategic planning aligns the whole team, prioritizes resources and allows progress to be measured with clear indicators.' },
+                    { type: 'h2', text: 'Why your company needs it' },
+                    { type: 'ul', items: [
+                        'Provides direction: everyone knows where the company is headed and why.',
+                        'Prioritizes: focuses resources on what really moves the business.',
+                        'Anticipates: identifies risks and opportunities before the competition does.',
+                        'Measures: turns objectives into indicators (KPIs) so decisions are based on data.',
+                    ] },
+                    { type: 'h2', text: 'The stages of a strategic plan' },
+                    { type: 'h3', text: '1. Diagnosis' },
+                    { type: 'p', text: 'We analyze the current situation: market, competition, internal capabilities and results. Here we use tools such as SWOT analysis and competitive environment studies.' },
+                    { type: 'h3', text: '2. Defining direction' },
+                    { type: 'p', text: 'We define or adjust the mission, vision and strategic objectives for 1, 3 and 5 years. Objectives must be specific and measurable.' },
+                    { type: 'h3', text: '3. Strategy formulation' },
+                    { type: 'p', text: 'We design the strategies and projects that close the gap between where the company is and where it wants to go: growth, efficiency, new markets, innovation.' },
+                    { type: 'h3', text: '4. Action plan and indicators' },
+                    { type: 'p', text: 'We translate strategy into concrete initiatives with owners, deadlines, budget and indicators. Without this, strategy stays on paper.' },
+                    { type: 'h3', text: '5. Execution and monitoring' },
+                    { type: 'p', text: 'We support implementation with dashboards and periodic reviews to correct course in time. This is the stage where D2F makes the difference: we do not leave the company alone with a document.' },
+                    { type: 'h2', text: 'The D2F method' },
+                    { type: 'p', text: 'At D2F Consulting we combine proven methodologies with deep knowledge of the market and operations. We work side by side with the management team, transfer capabilities and measure results at every stage so strategic planning becomes real and sustainable growth.' },
+                    { type: 'h2', text: 'Conclusion' },
+                    { type: 'p', text: 'Strategic planning is not a luxury for large corporations: it is the tool that allows any company to grow with direction, prioritize better and make decisions based on data. With the right support, it becomes one of the highest-return investments.' },
+                    { type: 'cta', text: 'Want a strategic plan that actually gets executed? D2F Consulting supports you from diagnosis to results. Book a free consultation.' },
+                ],
+            },
+        },
     },
 ];
+
+export function getLocalizedPost(slug: string, locale: SupportedLocale = 'es'): Post | undefined {
+    const post = posts.find((p) => p.slug === slug);
+    if (!post) return undefined;
+    if (locale !== 'en' || !post.translations?.en) return post;
+
+    return {
+        ...post,
+        title: post.translations.en.title ?? post.title,
+        description: post.translations.en.description ?? post.description,
+        keywords: post.translations.en.keywords ?? post.keywords,
+        excerpt: post.translations.en.excerpt ?? post.excerpt,
+        body: post.translations.en.body ?? post.body,
+    };
+}
+
+export function getLocalizedPosts(locale: SupportedLocale = 'es'): Post[] {
+    return posts.map((post) => getLocalizedPost(post.slug, locale) ?? post);
+}
 
 export function getPost(slug: string): Post | undefined {
     return posts.find((p) => p.slug === slug);

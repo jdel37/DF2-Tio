@@ -25,6 +25,7 @@ export default function ClientI18nProvider({ children }: { children: React.React
 
             await i18n.changeLanguage(targetLang);
             localStorage.setItem('i18nextLng', targetLang);
+            document.cookie = `i18nextLng=${targetLang}; path=/; max-age=31536000; SameSite=Lax`;
 
             setIsInitialized(true);
         };
