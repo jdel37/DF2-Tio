@@ -3,9 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { posts } from "@/content/posts";
 
 export default function BlogTeaser() {
+    const { t } = useTranslation();
     // Feature the brand page first so it gets homepage link equity (helps "D2F" brand search),
     // then fill with the most recent posts.
     const featuredSlug = "d2f-consulting-quienes-somos";
@@ -32,17 +34,17 @@ export default function BlogTeaser() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="w-8 h-px bg-[#DF1021]" />
-                        <span className="text-[#DF1021] font-bold text-xs tracking-widest uppercase">Recursos</span>
+                        <span className="text-[#DF1021] font-bold text-xs tracking-widest uppercase">{t("blog.eyebrow")}</span>
                         <div className="w-8 h-px bg-[#DF1021]" />
                     </div>
                     <h2
                         className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4"
                         style={{ fontFamily: "Poppins, sans-serif" }}
                     >
-                        Blog de Consultoría Empresarial Global
+                        {t("blog.title")}
                     </h2>
                     <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Guías prácticas sobre gestión estratégica, transformación digital y crecimiento empresarial para organizaciones con visión internacional.
+                        {t("blog.description")}
                     </p>
                 </motion.div>
 
@@ -96,7 +98,7 @@ export default function BlogTeaser() {
                         href="/blog"
                         className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm text-[#1E76B8] border-2 border-[#1E76B8]/20 hover:border-[#1E76B8] hover:bg-[#1E76B8]/5 transition-all"
                     >
-                        <BookOpen size={16} /> Ver todos los artículos
+                        <BookOpen size={16} /> {t("blog.cta")}
                     </Link>
                 </div>
             </div>

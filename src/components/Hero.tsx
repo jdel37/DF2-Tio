@@ -67,7 +67,7 @@ export default function Hero() {
               style={{ background: "rgba(30,118,184,0.25)", color: "#fff" }}
             >
               <Sparkles size={12} className="text-[#DF1021]" />
-              D2F Consulting · Consultoría Empresarial · Global
+              {t("hero.badge")}
             </span>
           </motion.div>
 
@@ -141,9 +141,9 @@ export default function Hero() {
             className="mt-14 flex flex-wrap gap-6 sm:gap-10"
           >
             {[
-              { value: "20+", label: "Años de experiencia" },
-              { value: "25+", label: "Clientes atendidos" },
-              { value: "100%", label: "Satisfacción garantizada" },
+              { value: "20+", label: t("hero.stats.0") },
+              { value: "25+", label: t("hero.stats.1") },
+              { value: "100%", label: t("hero.stats.2") },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col">
                 <span className="text-2xl sm:text-3xl font-bold text-white" style={{ fontFamily: "Poppins, sans-serif" }}>
@@ -164,7 +164,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 cursor-pointer"
         onClick={() => scrollTo("conócenos")}
       >
-        <span className="text-white/50 text-[10px] uppercase tracking-[0.2em]">Descubrir</span>
+        <span className="text-white/50 text-[10px] uppercase tracking-[0.2em]">{t("hero.discover")}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}

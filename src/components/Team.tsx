@@ -102,7 +102,7 @@ const Team = () => {
                 {/* Top accent bar */}
                 <div className="h-1.5 w-full bg-gradient-to-r from-[#1E76B8] via-[#DF1021] to-[#1E76B8]" />
 
-                {/* Photo — full width editorial */}
+                {/* Foto de equipo */}
                 <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 group">
                   <Image
                     src={member.image}

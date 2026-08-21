@@ -42,11 +42,11 @@ export const posts: Post[] = [
         excerpt:
             'Qué es la consultoría empresarial, por qué las organizaciones la contratan y los criterios clave para elegir una firma que entregue resultados medibles.',
         body: [
-            { type: 'p', text: 'La consultoría empresarial global ha dejado de ser un lujo reservado a grandes corporaciones. Hoy, pymes, startups y multinacionales recurren a consultores externos para resolver problemas que el equipo interno no puede abordar con objetividad: definir una estrategia de crecimiento, profesionalizar procesos, entrar a nuevos mercados o ejecutar una transformación digital. En esta guía explicamos qué es realmente una consultora, qué beneficios entrega y cómo elegir la firma correcta.' },
+            { type: 'p', text: 'La consultoría empresarial ya no es solo para grandes corporaciones. Hoy, pymes, startups y multinacionales recurren a consultores externos para resolver problemas que el equipo interno no puede ver con la misma distancia: definir una estrategia de crecimiento, profesionalizar procesos, entrar a nuevos mercados o ejecutar una transformación digital. En esta guía explicamos qué hace una consultora, qué beneficios entrega y cómo elegir la firma adecuada.' },
 
             { type: 'h2', text: '¿Qué es la consultoría empresarial?' },
-            { type: 'p', text: 'La consultoría empresarial es un servicio profesional en el que expertos externos analizan una organización, identifican oportunidades y riesgos, y diseñan e implementan soluciones para mejorar su desempeño. A diferencia de un empleado, el consultor aporta una mirada independiente, experiencia acumulada en múltiples empresas y metodologías probadas que aceleran resultados.' },
-            { type: 'p', text: 'En la práctica, una firma de consultoría como D2F Consulting acompaña a la empresa en seis frentes habituales: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y formación de equipos.' },
+            { type: 'p', text: 'La consultoría empresarial es un servicio profesional en el que expertos externos analizan la organización, identifican oportunidades y riesgos, y diseñan soluciones para mejorar su desempeño. No reemplaza al equipo interno; aporta una mirada distinta, experiencia en distintos negocios y metodologías que ayudan a actuar con más rapidez.' },
+            { type: 'p', text: 'D2F Consulting acompaña a empresas en seis frentes habituales: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y formación de equipos.' },
 
             { type: 'h2', text: 'Beneficios de contratar una consultoría empresarial' },
             { type: 'ul', items: [
@@ -58,20 +58,20 @@ export const posts: Post[] = [
             ] },
 
             { type: 'h2', text: '¿Cuándo conviene contratar una consultora?' },
-            { type: 'p', text: 'Hay señales claras: las ventas se estancaron y no sabes por qué; los procesos dependen de personas y no de sistemas; quieres expandirte a un nuevo mercado o país pero no tienes un plan; la tecnología que usas ya no soporta la operación; o el equipo trabaja mucho pero los resultados no aparecen. En todos estos casos, una consultoría empresarial acorta el camino.' },
+            { type: 'p', text: 'Hay señales claras: las ventas se estancan y no sabes por qué, los procesos dependen de personas y no de sistemas, quieres expandirte a un nuevo mercado sin plan claro, la tecnología ya no responde a la operación o el equipo trabaja mucho pero los resultados no aparecen. En esos casos, una consultoría empresarial ayuda a acortar el camino.' },
 
             { type: 'h2', text: 'Cómo elegir la firma de consultoría correcta' },
             { type: 'h3', text: '1. Experiencia comprobable' },
-            { type: 'p', text: 'Pide casos reales y resultados concretos. Una firma seria muestra clientes, sectores y los cambios que logró. D2F Consulting acumula más de 20 años de experiencia y más de 25 clientes en distintos mercados.' },
+            { type: 'p', text: 'Pide casos reales y resultados concretos. Una firma seria muestra clientes, sectores y los cambios que logró. D2F tiene más de 20 años de experiencia y ha trabajado con más de 25 organizaciones en distintos mercados.' },
             { type: 'h3', text: '2. Conocimiento del mercado y del entorno' },
             { type: 'p', text: 'La teoría global no basta. Elige consultores que entiendan la realidad del negocio: regulación, competencia, talento y dinámica del mercado en el que operas.' },
             { type: 'h3', text: '3. Metodología y entregables claros' },
-            { type: 'p', text: 'Antes de firmar, exige saber qué metodología usarán, qué entregables recibirás y con qué indicadores medirán el éxito. Si no pueden explicarlo con claridad, es una señal de alerta.' },
+            { type: 'p', text: 'Antes de firmar, pide saber qué metodología usarán, qué entregables recibirás y con qué indicadores medirán el éxito. Si no pueden explicarlo con claridad, es una señal de alerta.' },
             { type: 'h3', text: '4. Acompañamiento en la implementación' },
-            { type: 'p', text: 'Una estrategia en PDF no cambia nada. La mejor consultoría no solo recomienda: acompaña la ejecución hasta que los resultados se materializan.' },
+            { type: 'p', text: 'Una estrategia en PDF no cambia nada. La mejor consultoría no se queda en recomendaciones: acompaña la ejecución hasta que los resultados aparecen.' },
 
             { type: 'h2', text: 'Conclusión' },
-            { type: 'p', text: 'La consultoría empresarial es una de las inversiones con mayor retorno cuando se elige bien. Busca experiencia real, conocimiento del entorno, metodología clara y acompañamiento en la implementación. Si tu empresa está lista para crecer con estrategia y resultados medibles, una firma especializada marcará la diferencia.' },
+            { type: 'p', text: 'La consultoría empresarial puede ser una buena inversión cuando se elige bien. Busca experiencia real, conocimiento del entorno, metodología clara y acompañamiento en la implementación. Si tu empresa está lista para crecer con estrategia y resultados medibles, una firma especializada puede marcar la diferencia.' },
             { type: 'cta', text: '¿Quieres una consultoría empresarial con resultados medibles? Agenda una consulta inicial gratuita con D2F Consulting.' },
         ],
     },
@@ -190,7 +190,6 @@ export const posts: Post[] = [
         keywords: [
             'D2F',
             'D2F Consulting',
-            'D2F Gestión',
             'consultoría empresarial internacional',
             'quiénes somos D2F',
         ],
@@ -202,10 +201,10 @@ export const posts: Post[] = [
         excerpt:
             'Quién es D2F Consulting, de dónde venimos y por qué organizaciones en distintos mercados confían en nosotros para crecer con estrategia y resultados.',
         body: [
-            { type: 'p', text: 'D2F Consulting —también conocida como D2F Gestión, o simplemente D2F— es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. En este artículo te contamos quiénes somos, qué hacemos y por qué más de 25 organizaciones han confiado en nosotros para transformar sus empresas.' },
+            { type: 'p', text: 'D2F es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. En este artículo te contamos quiénes somos, qué hacemos y por qué más de 25 organizaciones han confiado en nosotros para transformar sus empresas.' },
 
             { type: 'h2', text: 'Qué es D2F Consulting' },
-            { type: 'p', text: 'D2F nace de la unión de tres pilares que dan nombre a la marca: Gestión, Desarrollo y Comunicación. Somos una firma de consultoría empresarial que acompaña a empresas de todos los tamaños —pymes, startups y multinacionales— a definir su estrategia, profesionalizar su operación, digitalizarse y crecer de forma sostenible. No entregamos diagnósticos de escritorio: acompañamos la implementación hasta que los resultados aparecen.' },
+            { type: 'p', text: 'D2F combina gestión, desarrollo y comunicación para acompañar a empresas de todos los tamaños, desde pymes y startups hasta multinacionales. Ayudamos a definir estrategia, profesionalizar la operación, digitalizar procesos y crecer de forma sostenible. No solo entregamos diagnósticos: acompañamos la implementación hasta que aparecen los resultados.' },
 
             { type: 'h2', text: 'Nuestra historia' },
             { type: 'p', text: 'Desde 2015, D2F ha trabajado con organizaciones de sectores tan diversos como cosmética, educación, entretenimiento, alimentos, salud y servicios. El liderazgo de la firma suma más de 20 años de experiencia en consultoría, innovación corporativa y gestión estratégica, lo que nos permite combinar profundidad de mercado con metodologías de clase mundial.' },
@@ -221,9 +220,9 @@ export const posts: Post[] = [
             ] },
 
             { type: 'h2', text: 'Quiénes lideran D2F' },
-            { type: 'h3', text: 'Diego Forero — CEO' },
+            { type: 'h3', text: 'Diego Forero, CEO' },
             { type: 'p', text: 'Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias internacionales.' },
-            { type: 'h3', text: 'Alejandra Rivera — CSO' },
+            { type: 'h3', text: 'Alejandra Rivera, CSO' },
             { type: 'p', text: 'Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de organizaciones en expansión, con foco en transformación digital y gestión organizacional.' },
 
             { type: 'h2', text: 'Por qué confían en D2F' },

@@ -162,7 +162,7 @@ const Contact = () => {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-px bg-[#1E76B8]" />
-            <span className="text-[#1E76B8] font-bold text-xs tracking-widest uppercase">Escríbenos</span>
+            <span className="text-[#1E76B8] font-bold text-xs tracking-widest uppercase">{t("contact.eyebrow")}</span>
             <div className="w-8 h-px bg-[#1E76B8]" />
           </div>
           <h2
@@ -290,7 +290,7 @@ const Contact = () => {
                   {/* Service chips */}
                   <div className="mb-6">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                      ¿Qué servicio te interesa?<span className="text-[#DF1021] ml-0.5">*</span>
+                      {t("contact.serviceQuestion")}<span className="text-[#DF1021] ml-0.5">*</span>
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {[0, 1, 2, 3, 4, 5].map((idx) => {

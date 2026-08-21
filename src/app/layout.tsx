@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         'implementación de proyectos empresariales',
         'liderazgo y desarrollo organizacional',
         'D2F Consulting',
-        'D2F gestión',
+        'D2F',
     ],
     authors: [{ name: 'D2F Consulting', url: 'https://www.d2fgestion.com' }],
     creator: 'D2F Consulting',
@@ -119,7 +119,7 @@ const jsonLd = {
             '@type': 'Organization',
             '@id': 'https://www.d2fgestion.com/#organization',
             name: 'D2F Consulting',
-            alternateName: ['D2F Gestión', 'D2F', 'D2F Consulting Agency'],
+            alternateName: ['D2F', 'D2F Consulting'],
             legalName: 'D2F Consulting',
             slogan: 'Consultoría empresarial con visión global',
             description: 'D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica con enfoque global en crecimiento, transformación digital y ejecución sostenible.',
@@ -204,7 +204,7 @@ const jsonLd = {
             '@type': 'WebSite',
             '@id': 'https://www.d2fgestion.com/#website',
             url: 'https://www.d2fgestion.com',
-            name: 'D2F Consulting — Consultoría Empresarial Global',
+            name: 'D2F Consulting Consultoría Empresarial Global',
             inLanguage: ['es-ES', 'en-US'],
             publisher: { '@id': 'https://www.d2fgestion.com/#organization' },
             potentialAction: {
@@ -254,7 +254,7 @@ const jsonLd = {
             author: { '@type': 'Person', name: 'Yamel Ramos' },
             itemReviewed: { '@id': 'https://www.d2fgestion.com/#localbusiness' },
             reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-            reviewBody: 'Diego has built a strong reputation as someone with vision, diligence and honour — someone who gets things done. A pragmatic leader and realist; I have no hesitation in recommending him.',
+            reviewBody: 'Diego has built a strong reputation as someone with vision, diligence and honour. He gets things done, is pragmatic and realistic, and I have no hesitation in recommending him.',
         },
         // ── FAQ ────────────────────────────────────────────────────────
         {
@@ -274,7 +274,7 @@ const jsonLd = {
                     name: '¿Qué servicios de consultoría empresarial ofrece D2F Consulting?',
                     acceptedAnswer: {
                         '@type': 'Answer',
-                        text: 'D2F Consulting ofrece seis líneas de servicio: (1) Gestión Estratégica — planeación y desarrollo corporativo; (2) Transformación Digital — automatización y data analytics; (3) Gestión de Proyectos — metodologías ágiles y tradicionales; (4) Marketing y Comunicación — estrategia digital y gestión de marca; (5) Desarrollo de Franquicias — expansión y escalabilidad; (6) Academia Empresarial — formación en liderazgo e innovación.',
+                        text: 'D2F Consulting ofrece seis líneas de servicio: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y academia empresarial.',
                     },
                 },
                 {

@@ -63,13 +63,13 @@ export default function Home() {
         <main className="min-h-screen bg-white">
             <Navbar />
             <Hero />
-            {/* SEO: breadcrumb + context semántico — visualmente oculto, indexable */}
+            {/* SEO: breadcrumb + contexto semántico para buscadores */}
             <div className="sr-only" aria-hidden="false">
                 <nav aria-label="Breadcrumb">
                     <ol itemScope itemType="https://schema.org/BreadcrumbList">
                         <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
                             <a itemProp="item" href="https://www.d2fgestion.com">
-                                <span itemProp="name">D2F Consulting — Consultoría Empresarial Global</span>
+                                <span itemProp="name">D2F Consulting Consultoría Empresarial Global</span>
                             </a>
                             <meta itemProp="position" content="1" />
                         </li>

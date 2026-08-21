@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, HelpCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-// Spanish content mirrors the FAQPage JSON-LD in layout.tsx (schema ↔ visible content parity).
 const faqs = [
     {
         q: "¿Qué es D2F Consulting y dónde opera?",
@@ -11,7 +11,7 @@ const faqs = [
     },
     {
         q: "¿Qué servicios de consultoría empresarial ofrece D2F Consulting?",
-        a: "Ofrecemos seis líneas de servicio: (1) Gestión Estratégica — planeación y desarrollo corporativo; (2) Transformación Digital — automatización y data analytics; (3) Gestión de Proyectos — metodologías ágiles y tradicionales; (4) Marketing y Comunicación — estrategia digital y gestión de marca; (5) Desarrollo de Franquicias — expansión y escalabilidad; (6) Academia Empresarial — formación en liderazgo e innovación.",
+        a: "Ofrecemos seis líneas de servicio: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y academia empresarial.",
     },
     {
         q: "¿Por qué elegir una consultoría empresarial global?",
@@ -33,6 +33,7 @@ const faqs = [
 
 export default function Faq() {
     const [open, setOpen] = useState<number | null>(0);
+    const { t } = useTranslation();
 
     return (
         <section
@@ -52,17 +53,17 @@ export default function Faq() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="w-8 h-px bg-[#DF1021]" />
-                        <span className="text-[#DF1021] font-bold text-xs tracking-widest uppercase">FAQ</span>
+                        <span className="text-[#DF1021] font-bold text-xs tracking-widest uppercase">{t("faq.eyebrow")}</span>
                         <div className="w-8 h-px bg-[#DF1021]" />
                     </div>
                     <h2
                         className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4"
                         style={{ fontFamily: "Poppins, sans-serif" }}
                     >
-                        Preguntas frecuentes
+                        {t("faq.title")}
                     </h2>
                     <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Resolvemos las dudas más comunes sobre nuestros servicios de consultoría empresarial con enfoque internacional.
+                        {t("faq.description")}
                     </p>
                 </motion.div>
 

@@ -24,9 +24,9 @@ function useCountUp(target: number, inView: boolean, duration = 1800) {
 }
 
 const stats = [
-  { value: 20, suffix: '+', label: 'Años de experiencia', color: '#1E76B8' },
-  { value: 25, suffix: '+', label: 'Clientes atendidos', color: '#DF1021' },
-  { value: 100, suffix: '%', label: 'Clientes satisfechos', color: '#1E76B8' },
+  { value: 20, suffix: '+', label: 'experience', color: '#1E76B8' },
+  { value: 25, suffix: '+', label: 'clients', color: '#DF1021' },
+  { value: 100, suffix: '%', label: 'satisfied', color: '#1E76B8' },
 ];
 
 function StatCard({ stat, inView, index }: { stat: typeof stats[0]; inView: boolean; index: number }) {
@@ -143,7 +143,7 @@ const About = () => {
             {/* Label */}
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-1 rounded-full bg-[#DF1021]" />
-              <span className="text-[#DF1021] font-bold text-xs uppercase tracking-widest">Quiénes somos</span>
+              <span className="text-[#DF1021] font-bold text-xs uppercase tracking-widest">{t('about.badge')}</span>
             </div>
 
             <h2
@@ -184,9 +184,15 @@ const About = () => {
 
             {/* Stats */}
             <div ref={statsRef} className="grid grid-cols-3 gap-3 sm:gap-4">
-              {stats.map((stat, idx) => (
-                <StatCard key={idx} stat={stat} inView={!!inView} index={idx} />
-              ))}
+              {stats.map((stat, idx) => {
+                const labelMap = {
+                  experience: t('about.stats.experience'),
+                  clients: t('about.stats.clients'),
+                  satisfied: t('about.stats.satisfied'),
+                };
+                const translatedStat = { ...stat, label: labelMap[stat.label as keyof typeof labelMap] ?? stat.label };
+                return <StatCard key={idx} stat={translatedStat} inView={!!inView} index={idx} />;
+              })}
             </div>
           </motion.div>
         </div>

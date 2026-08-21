@@ -86,7 +86,7 @@ const Footer = () => {
               className="text-sm font-black mb-6 text-white uppercase tracking-wider"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Explorar
+              {t("footer.explore")}
             </h4>
             <ul className="space-y-3">
               {navLinks.map((link, idx) => (
@@ -119,12 +119,12 @@ const Footer = () => {
               className="text-sm font-black mb-6 text-white uppercase tracking-wider"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Contacto
+              {t("footer.contact")}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin size={16} className="text-[#DF1021] shrink-0 mt-0.5" />
-                <span>Atención global · modalidad remota</span>
+                <span>{t("footer.remote")}</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Mail size={16} className="text-[#DF1021] shrink-0" />
@@ -148,10 +148,10 @@ const Footer = () => {
         {/* Copyright */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40">
           <p suppressHydrationWarning>
-            &copy; {new Date().getFullYear()} D2F Consulting Agency · Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} D2F. Todos los derechos reservados.
           </p>
           <p className="flex items-center gap-1.5">
-            Hecho con <span className="text-[#DF1021] text-base">&hearts;</span> para crecer sin fronteras
+            {t("footer.madeWith").replace("❤️", "")} <span className="text-[#DF1021] text-base">&hearts;</span> {t("footer.madeWith").includes("❤️") ? "" : ""}
           </p>
         </div>
       </div>

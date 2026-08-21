@@ -8,13 +8,21 @@
         "contacto": "Contacto"
     },
     "hero": {
+        "badge": "D2F Consulting · Consultoría Empresarial · Global",
         "title": "Consultoría Empresarial Global",
         "subtitle": "Gestión Estratégica y Crecimiento Real",
         "description": "Firma de consultoría empresarial con más de 20 años de experiencia acompañando organizaciones a escalar con estrategia, tecnología y resultados medibles.",
         "servicesBtn": "Nuestros Servicios",
-        "contactBtn": "Agenda tu Consulta"
+        "contactBtn": "Agenda tu Consulta",
+        "discover": "Descubrir",
+        "stats": {
+            "0": "Años de experiencia",
+            "1": "Clientes atendidos",
+            "2": "Satisfacción garantizada"
+        }
     },
     "about": {
+        "badge": "Quiénes somos",
         "title": "Consultoría empresarial con resultados desde 2015",
         "description": "D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica. Llevamos más de 20 años ayudando a organizaciones a alcanzar crecimiento sostenible, eficiencia operativa y ventaja competitiva en mercados complejos. Combinamos experiencia práctica con metodologías de clase mundial.",
         "whyChooseUs": "¿Por qué elegirnos?",
@@ -142,20 +150,22 @@
                 "title": "Client Management Assistant, Millward Brown"
             },
             "1": {
-                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour — someone who gets things done! He is a calculated risk taker, pragmatic leader and realist. I have no hesitation in recommending Diego and know that he will always give his best in any endeavour.",
+                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour. He gets things done, is pragmatic and realistic, and I have no hesitation in recommending him.",
                 "author": "Yamel Ramos",
                 "title": "VP Attractions Business Development LA, White Water"
             },
             "2": {
                 "quote": "Excelentes habilidades de organización, planeación, liderazgo y negociación. Tengo la oportunidad de trabajar con ellos y siempre han tenido un compromiso profesional de entrega total a sus proyectos.",
                 "author": "Victor Garcia",
-                "title": "Chief Operation Officer, VidantaWorld Entertainment — Cirque Du Soleil"
+                "title": "Chief Operation Officer, VidantaWorld Entertainment, Cirque Du Soleil"
             }
         }
     },
     "contact": {
+        "eyebrow": "Escríbenos",
         "title": "Contáctanos",
         "description": "¿Buscas una consultoría empresarial con visión global? Escríbenos hoy y agenda una consulta inicial gratuita con nuestro equipo de expertos en gestión estratégica.",
+        "serviceQuestion": "¿Qué servicio te interesa?",
         "form": {
             "name": "Nombre Completo",
             "email": "Correo Electrónico",
@@ -185,7 +195,22 @@
         }
     },
     "footer": {
+        "explore": "Explorar",
+        "contact": "Contacto",
+        "remote": "Atención global · modalidad remota",
+        "madeWith": "Hecho con ❤️ para crecer sin fronteras",
         "text": "Firma líder en consultoría empresarial y gestión estratégica con enfoque internacional. +20 años transformando organizaciones en crecimiento.",
-        "copyright": "© {{year}} D2F Consulting — Todos los derechos reservados."
+        "copyright": "© {{year}} D2F Consulting. Todos los derechos reservados."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Preguntas frecuentes",
+        "description": "Resolvemos las dudas más comunes sobre nuestros servicios de consultoría empresarial con enfoque internacional."
+    },
+    "blog": {
+        "eyebrow": "Recursos",
+        "title": "Blog de Consultoría Empresarial Global",
+        "description": "Guías prácticas sobre gestión estratégica, transformación digital y crecimiento empresarial para organizaciones con visión internacional.",
+        "cta": "Ver todos los artículos"
     }
 }

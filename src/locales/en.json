@@ -8,13 +8,21 @@
         "contacto": "Contact"
     },
     "hero": {
+        "badge": "D2F Consulting · Strategic Business Consulting · Global",
         "title": "Strategic Consulting",
         "subtitle": "Transforming Growth",
         "description": "Driving innovation and excellence across industries with our five specialized business consulting services.",
         "servicesBtn": "Our Services",
-        "contactBtn": "Contact Us"
+        "contactBtn": "Contact Us",
+        "discover": "Discover",
+        "stats": {
+            "0": "Years of experience",
+            "1": "Clients served",
+            "2": "Satisfaction guaranteed"
+        }
     },
     "about": {
+        "badge": "About us",
         "title": "Driving business excellence since 2015",
         "description": "D2F Consulting is a management consulting firm dedicated to helping organizations achieve sustainable growth and operational excellence. We combine deep industry knowledge, functional expertise, and a client-centric approach to deliver exceptional results.",
         "whyChooseUs": "Why Choose Us?",
@@ -142,7 +150,7 @@
                 "title": "Client Management Assistant, Millward Brown."
             },
             "1": {
-                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour – someone who gets things done! He is a calculated risk taker, pragmatic leader and realist who seems to grasp ideas holistically whilst still taking note of the more acute details. I have no hesitation in recommending Diego and know that he will always give his best in any endeavour.",
+                "quote": "Diego has built a strong reputation as someone with vision, diligence and honour. He gets things done, is pragmatic and realistic, and I have no hesitation in recommending him.",
                 "author": "Yamel Ramos",
                 "title": "VP Attractions Business Development LA, White Water"
             },
@@ -154,8 +162,10 @@
         }
     },
     "contact": {
+        "eyebrow": "Get in touch",
         "title": "Contact Us",
         "description": "Ready to transform your business? Contact us today to schedule a consultation with our team of experts.",
+        "serviceQuestion": "What service are you interested in?",
         "form": {
             "name": "Full Name",
             "email": "Email Address",
@@ -185,7 +195,22 @@
         }
     },
     "footer": {
+        "explore": "Explore",
+        "contact": "Contact",
+        "remote": "Global support · remote model",
+        "madeWith": "Made with ❤️ to grow without borders",
         "text": "Transforming businesses with strategic consulting, innovation, and solutions designed to drive sustainable growth.",
-        "copyright": "© {{year}} D2F Consulting — All rights reserved."
+        "copyright": "© {{year}} D2F Consulting. All rights reserved."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently asked questions",
+        "description": "We answer the most common questions about our business consulting services with an international focus."
+    },
+    "blog": {
+        "eyebrow": "Resources",
+        "title": "Global Business Consulting Blog",
+        "description": "Practical guides on strategic management, digital transformation and business growth for organizations with an international vision.",
+        "cta": "See all articles"
     }
 }
