@@ -118,7 +118,7 @@ const Contact = () => {
     {
       icon: <MapPin size={20} />,
       title: t("contact.info.visit"),
-      detail: "We Work Bogotá · Medellín",
+      detail: "Atención global · modalidad remota",
       link: undefined,
     },
     {

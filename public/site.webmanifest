@@ -1,13 +1,13 @@
 {
-    "name": "D2F Consulting — Consultoría Empresarial Colombia",
+    "name": "D2F Consulting — Consultoría Empresarial",
     "short_name": "D2F Consulting",
-    "description": "Firma líder en consultoría empresarial, gestión estratégica y transformación digital en Colombia. Bogotá y Medellín.",
+    "description": "Firma líder en consultoría empresarial, gestión estratégica y transformación digital a nivel internacional.",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#1E76B8",
-    "lang": "es-CO",
+    "lang": "es-ES",
     "categories": ["business", "consulting", "productivity"],
     "icons": [
         {

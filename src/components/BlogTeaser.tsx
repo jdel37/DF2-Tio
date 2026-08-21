@@ -39,10 +39,10 @@ export default function BlogTeaser() {
                         className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-4"
                         style={{ fontFamily: "Poppins, sans-serif" }}
                     >
-                        Blog de Consultoría Empresarial
+                        Blog de Consultoría Empresarial Global
                     </h2>
                     <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Guías prácticas sobre gestión estratégica, transformación digital y crecimiento empresarial en Colombia.
+                        Guías prácticas sobre gestión estratégica, transformación digital y crecimiento empresarial para organizaciones con visión internacional.
                     </p>
                 </motion.div>
 

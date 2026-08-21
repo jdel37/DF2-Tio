@@ -7,15 +7,15 @@ import { Plus, HelpCircle } from "lucide-react";
 const faqs = [
     {
         q: "¿Qué es D2F Consulting y dónde opera?",
-        a: "D2F Consulting es una firma de consultoría empresarial y gestión estratégica fundada en 2015, con sedes en Bogotá y Medellín, Colombia. Atendemos empresas a nivel nacional e internacional con servicios de consultoría estratégica, transformación digital, gestión de proyectos, marketing, franquicias y academia empresarial.",
+        a: "D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. Acompañamos organizaciones en su crecimiento, transformación digital y ejecución estratégica con una mirada global y resultados medibles.",
     },
     {
         q: "¿Qué servicios de consultoría empresarial ofrece D2F Consulting?",
-        a: "Ofrecemos seis líneas de servicio: (1) Gestión Estratégica — planeación y desarrollo corporativo; (2) Transformación Digital — automatización y data analytics; (3) Gestión de Proyectos — metodologías ágiles y tradicionales; (4) Marketing y Comunicación — estrategia digital y gestión de marca; (5) Desarrollo de Franquicias — expansión nacional e internacional; (6) Academia Empresarial — formación en liderazgo e innovación.",
+        a: "Ofrecemos seis líneas de servicio: (1) Gestión Estratégica — planeación y desarrollo corporativo; (2) Transformación Digital — automatización y data analytics; (3) Gestión de Proyectos — metodologías ágiles y tradicionales; (4) Marketing y Comunicación — estrategia digital y gestión de marca; (5) Desarrollo de Franquicias — expansión y escalabilidad; (6) Academia Empresarial — formación en liderazgo e innovación.",
     },
     {
-        q: "¿Por qué elegir una consultoría empresarial en Colombia?",
-        a: "Contar con una consultora local como D2F Consulting garantiza conocimiento profundo del mercado colombiano, relaciones con el ecosistema empresarial local, comprensión de la regulación nacional y experiencia con los retos específicos de las empresas en Colombia. D2F tiene más de 20 años de trayectoria y más de 25 clientes satisfechos en todo el país.",
+        q: "¿Por qué elegir una consultoría empresarial global?",
+        a: "Una consultora con visión global aporta estructura, rigor analítico y acompañamiento práctico para resolver retos complejos. D2F combina experiencia real, metodologías probadas y ejecución enfocada en resultados para empresas en crecimiento.",
     },
     {
         q: "¿Cómo puedo contratar los servicios de consultoría empresarial de D2F?",
@@ -23,7 +23,7 @@ const faqs = [
     },
     {
         q: "¿D2F Consulting trabaja con empresas de todos los tamaños?",
-        a: "Sí. Atendemos desde startups y pymes hasta grandes corporaciones en Colombia. Nuestras soluciones de consultoría empresarial se diseñan a la medida de cada organización, adaptando metodologías y alcance según el tamaño y sector de la empresa.",
+        a: "Sí. Atendemos desde startups y pymes hasta grandes corporaciones. Nuestras soluciones se diseñan a la medida de cada organización, adaptando metodologías y alcance según el tamaño, sector y etapa de crecimiento.",
     },
     {
         q: "¿Cuánto cuesta una consultoría empresarial con D2F?",
@@ -62,7 +62,7 @@ export default function Faq() {
                         Preguntas frecuentes
                     </h2>
                     <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        Resolvemos las dudas más comunes sobre nuestros servicios de consultoría empresarial en Colombia.
+                        Resolvemos las dudas más comunes sobre nuestros servicios de consultoría empresarial con enfoque internacional.
                     </p>
                 </motion.div>
 

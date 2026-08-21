@@ -24,77 +24,77 @@ export interface Post {
 
 export const posts: Post[] = [
     {
-        slug: 'consultoria-empresarial-colombia',
-        title: 'Consultoría empresarial en Colombia: qué es, beneficios y cómo elegir la firma correcta',
+        slug: 'consultoria-empresarial-global',
+        title: 'Consultoría empresarial global: qué es, beneficios y cómo elegir la firma correcta',
         description:
-            'Guía completa de consultoría empresarial en Colombia: qué hace una consultora, beneficios reales y cómo elegir la firma adecuada para tu empresa.',
+            'Guía completa de consultoría empresarial internacional: qué hace una consultora, beneficios reales y cómo elegir la firma adecuada para tu empresa.',
         keywords: [
-            'consultoría empresarial Colombia',
-            'consultora empresarial Bogotá',
+            'consultoría empresarial global',
+            'consultora empresarial internacional',
             'cómo elegir consultoría empresarial',
-            'gestión estratégica Colombia',
+            'gestión estratégica internacional',
         ],
         datePublished: '2026-06-17',
         dateModified: '2026-06-17',
         image: '/images/strategic-planing.webp',
-        imageAlt: 'Consultores de D2F en sesión de planeación estratégica empresarial en Colombia',
+        imageAlt: 'Consultores de D2F en sesión de planeación estratégica empresarial global',
         readingTime: '7 min',
         excerpt:
-            'Qué es la consultoría empresarial, por qué las empresas colombianas la contratan y los criterios clave para elegir una firma que entregue resultados medibles.',
+            'Qué es la consultoría empresarial, por qué las organizaciones la contratan y los criterios clave para elegir una firma que entregue resultados medibles.',
         body: [
-            { type: 'p', text: 'La consultoría empresarial en Colombia ha dejado de ser un lujo reservado a las grandes corporaciones. Hoy, pymes, startups y multinacionales recurren a consultores externos para resolver problemas que el equipo interno no puede abordar con objetividad: definir una estrategia de crecimiento, profesionalizar procesos, entrar a nuevos mercados o ejecutar una transformación digital. En esta guía explicamos qué es realmente una consultora, qué beneficios entrega y cómo elegir la firma correcta.' },
+            { type: 'p', text: 'La consultoría empresarial global ha dejado de ser un lujo reservado a grandes corporaciones. Hoy, pymes, startups y multinacionales recurren a consultores externos para resolver problemas que el equipo interno no puede abordar con objetividad: definir una estrategia de crecimiento, profesionalizar procesos, entrar a nuevos mercados o ejecutar una transformación digital. En esta guía explicamos qué es realmente una consultora, qué beneficios entrega y cómo elegir la firma correcta.' },
 
             { type: 'h2', text: '¿Qué es la consultoría empresarial?' },
             { type: 'p', text: 'La consultoría empresarial es un servicio profesional en el que expertos externos analizan una organización, identifican oportunidades y riesgos, y diseñan e implementan soluciones para mejorar su desempeño. A diferencia de un empleado, el consultor aporta una mirada independiente, experiencia acumulada en múltiples empresas y metodologías probadas que aceleran resultados.' },
             { type: 'p', text: 'En la práctica, una firma de consultoría como D2F Consulting acompaña a la empresa en seis frentes habituales: gestión estratégica, transformación digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y formación de equipos.' },
 
-            { type: 'h2', text: 'Beneficios de contratar una consultoría empresarial en Colombia' },
+            { type: 'h2', text: 'Beneficios de contratar una consultoría empresarial' },
             { type: 'ul', items: [
                 'Visión externa y objetiva: el consultor ve los puntos ciegos que el equipo interno normaliza.',
-                'Conocimiento del mercado local: una consultora colombiana entiende la regulación, la cultura empresarial y los retos específicos del país.',
+                'Conocimiento del mercado y la operación: la consultora entiende el entorno, la competencia y los retos clave del negocio.',
                 'Velocidad: aplicar metodologías ya validadas evita meses de prueba y error.',
                 'Resultados medibles: una buena firma define indicadores (KPIs) y responde por ellos.',
                 'Transferencia de conocimiento: el equipo interno aprende y queda más capaz tras el proyecto.',
             ] },
 
             { type: 'h2', text: '¿Cuándo conviene contratar una consultora?' },
-            { type: 'p', text: 'Hay señales claras: las ventas se estancaron y no sabes por qué; los procesos dependen de personas y no de sistemas; quieres expandirte a otra ciudad o país pero no tienes un plan; la tecnología que usas ya no soporta la operación; o el equipo trabaja mucho pero los resultados no aparecen. En todos estos casos, una consultoría empresarial acorta el camino.' },
+            { type: 'p', text: 'Hay señales claras: las ventas se estancaron y no sabes por qué; los procesos dependen de personas y no de sistemas; quieres expandirte a un nuevo mercado o país pero no tienes un plan; la tecnología que usas ya no soporta la operación; o el equipo trabaja mucho pero los resultados no aparecen. En todos estos casos, una consultoría empresarial acorta el camino.' },
 
             { type: 'h2', text: 'Cómo elegir la firma de consultoría correcta' },
             { type: 'h3', text: '1. Experiencia comprobable' },
-            { type: 'p', text: 'Pide casos reales y resultados concretos. Una firma seria muestra clientes, sectores y los cambios que logró. D2F Consulting acumula más de 20 años de experiencia y más de 25 clientes en Colombia y Latinoamérica.' },
-            { type: 'h3', text: '2. Conocimiento del mercado colombiano' },
-            { type: 'p', text: 'La teoría global no basta. Elige consultores que entiendan la realidad de hacer empresa en Bogotá, Medellín y el resto del país: regulación, tributación, talento y dinámica competitiva local.' },
+            { type: 'p', text: 'Pide casos reales y resultados concretos. Una firma seria muestra clientes, sectores y los cambios que logró. D2F Consulting acumula más de 20 años de experiencia y más de 25 clientes en distintos mercados.' },
+            { type: 'h3', text: '2. Conocimiento del mercado y del entorno' },
+            { type: 'p', text: 'La teoría global no basta. Elige consultores que entiendan la realidad del negocio: regulación, competencia, talento y dinámica del mercado en el que operas.' },
             { type: 'h3', text: '3. Metodología y entregables claros' },
             { type: 'p', text: 'Antes de firmar, exige saber qué metodología usarán, qué entregables recibirás y con qué indicadores medirán el éxito. Si no pueden explicarlo con claridad, es una señal de alerta.' },
             { type: 'h3', text: '4. Acompañamiento en la implementación' },
             { type: 'p', text: 'Una estrategia en PDF no cambia nada. La mejor consultoría no solo recomienda: acompaña la ejecución hasta que los resultados se materializan.' },
 
             { type: 'h2', text: 'Conclusión' },
-            { type: 'p', text: 'La consultoría empresarial es una de las inversiones con mayor retorno cuando se elige bien. Busca experiencia real, conocimiento del mercado colombiano, metodología clara y acompañamiento en la implementación. Si tu empresa está lista para crecer con estrategia y resultados medibles, una firma local especializada marcará la diferencia.' },
-            { type: 'cta', text: '¿Quieres una consultoría empresarial en Colombia con resultados medibles? Agenda una consulta inicial gratuita con D2F Consulting.' },
+            { type: 'p', text: 'La consultoría empresarial es una de las inversiones con mayor retorno cuando se elige bien. Busca experiencia real, conocimiento del entorno, metodología clara y acompañamiento en la implementación. Si tu empresa está lista para crecer con estrategia y resultados medibles, una firma especializada marcará la diferencia.' },
+            { type: 'cta', text: '¿Quieres una consultoría empresarial con resultados medibles? Agenda una consulta inicial gratuita con D2F Consulting.' },
         ],
     },
     {
-        slug: 'transformacion-digital-pymes-colombia',
-        title: 'Transformación digital para pymes en Colombia: guía práctica 2026',
+        slug: 'transformacion-digital-pymes-global',
+        title: 'Transformación digital para pymes: guía práctica 2026',
         description:
-            'Cómo abordar la transformación digital en una pyme colombiana: por dónde empezar, errores comunes y pasos para digitalizar procesos con resultados.',
+            'Cómo abordar la transformación digital en una pyme: por dónde empezar, errores comunes y pasos para digitalizar procesos con resultados.',
         keywords: [
-            'transformación digital pymes Colombia',
+            'transformación digital pymes',
             'digitalización de procesos empresas',
-            'transformación digital Bogotá',
-            'tecnología para pymes Colombia',
+            'transformación digital empresarial',
+            'tecnología para pymes',
         ],
         datePublished: '2026-06-17',
         dateModified: '2026-06-17',
         image: '/images/marketing-digital-9.webp',
-        imageAlt: 'Equipo aplicando transformación digital y automatización en una pyme colombiana',
+        imageAlt: 'Equipo aplicando transformación digital y automatización en una pyme',
         readingTime: '8 min',
         excerpt:
             'Transformación digital sin tecnicismos: por dónde empezar, qué automatizar primero y cómo evitar los errores que hacen fracasar la digitalización en pymes.',
         body: [
-            { type: 'p', text: 'La transformación digital es la prioridad declarada de la mayoría de empresas colombianas, pero muchas pymes la abordan comprando software sin estrategia y terminan con herramientas que nadie usa. Transformarse digitalmente no es comprar tecnología: es rediseñar cómo opera el negocio usando datos y automatización para crecer más rápido y con menos fricción. Esta guía explica cómo hacerlo bien.' },
+            { type: 'p', text: 'La transformación digital es la prioridad declarada de la mayoría de empresas, pero muchas pymes la abordan comprando software sin estrategia y terminan con herramientas que nadie usa. Transformarse digitalmente no es comprar tecnología: es rediseñar cómo opera el negocio usando datos y automatización para crecer más rápido y con menos fricción. Esta guía explica cómo hacerlo bien.' },
 
             { type: 'h2', text: '¿Qué es realmente la transformación digital?' },
             { type: 'p', text: 'Es el proceso de integrar tecnología en todas las áreas de la empresa para cambiar la forma de operar y entregar valor al cliente. Incluye automatizar tareas manuales, centralizar la información, tomar decisiones con datos y, en muchos casos, crear nuevos modelos de negocio digitales.' },
@@ -128,30 +128,30 @@ export const posts: Post[] = [
             { type: 'p', text: 'La transformación digital es 30% tecnología y 70% personas y procesos. El mayor obstáculo no suele ser el software, sino la resistencia al cambio. Por eso el acompañamiento, la capacitación y una comunicación clara son tan importantes como la herramienta elegida.' },
 
             { type: 'h2', text: 'Conclusión' },
-            { type: 'p', text: 'Una pyme colombiana puede transformarse digitalmente sin grandes presupuestos si lo hace por etapas, partiendo de un diagnóstico, priorizando por impacto y cuidando a las personas. El resultado: menos trabajo manual, mejores decisiones y más capacidad de crecer.' },
+            { type: 'p', text: 'Una pyme puede transformarse digitalmente sin grandes presupuestos si lo hace por etapas, partiendo de un diagnóstico, priorizando por impacto y cuidando a las personas. El resultado: menos trabajo manual, mejores decisiones y más capacidad de crecer.' },
             { type: 'cta', text: '¿Tu pyme está lista para digitalizarse con estrategia? D2F Consulting te acompaña desde el diagnóstico hasta la implementación. Agenda una consulta gratuita.' },
         ],
     },
     {
-        slug: 'como-desarrollar-franquicia-colombia',
-        title: 'Cómo desarrollar una franquicia en Colombia: pasos clave para expandir tu negocio',
+        slug: 'como-desarrollar-franquicia-global',
+        title: 'Cómo desarrollar una franquicia: pasos clave para expandir tu negocio',
         description:
-            'Guía para convertir tu negocio en franquicia en Colombia: requisitos, pasos, costos y errores a evitar para una expansión rentable y escalable.',
+            'Guía para convertir tu negocio en franquicia: requisitos, pasos, costos y errores a evitar para una expansión rentable y escalable.',
         keywords: [
-            'desarrollo de franquicias Colombia',
+            'desarrollo de franquicias',
             'cómo franquiciar mi negocio',
-            'modelo de franquicia Colombia',
-            'expansión de negocios Colombia',
+            'modelo de franquicia',
+            'expansión de negocios',
         ],
         datePublished: '2026-06-17',
         dateModified: '2026-06-17',
         image: '/images/franchise-8.webp',
-        imageAlt: 'Modelo de franquicia empresarial en expansión en Colombia',
+        imageAlt: 'Modelo de franquicia empresarial en expansión internacional',
         readingTime: '8 min',
         excerpt:
-            'Franquiciar tu negocio en Colombia paso a paso: cuándo estás listo, qué documentos necesitas, cómo fijar la inversión y los errores que arruinan una red.',
+            'Franquiciar tu negocio paso a paso: cuándo estás listo, qué documentos necesitas, cómo fijar la inversión y los errores que arruinan una red.',
         body: [
-            { type: 'p', text: 'Franquiciar es una de las formas más eficientes de expandir un negocio: creces usando el capital y la gestión de terceros (los franquiciados) en lugar de abrir cada sede con recursos propios. Pero franquiciar mal destruye la marca. Esta guía explica cómo desarrollar una franquicia en Colombia de forma ordenada y rentable.' },
+            { type: 'p', text: 'Franquiciar es una de las formas más eficientes de expandir un negocio: creces usando el capital y la gestión de terceros (los franquiciados) en lugar de abrir cada sede con recursos propios. Pero franquiciar mal destruye la marca. Esta guía explica cómo desarrollar una franquicia de forma ordenada y rentable.' },
 
             { type: 'h2', text: '¿Tu negocio está listo para franquiciar?' },
             { type: 'p', text: 'Antes de pensar en expandir, tu modelo debe cumplir tres condiciones: ser rentable y comprobado en al menos una sede propia, ser replicable mediante procesos documentados (no depender del dueño) y tener una marca con valor que alguien quiera comprar. Si tu negocio depende de tu presencia diaria, primero hay que sistematizarlo.' },
@@ -162,7 +162,7 @@ export const posts: Post[] = [
             { type: 'h3', text: '2. Diseña el modelo económico' },
             { type: 'p', text: 'Define la inversión inicial, el canon de entrada (fee), las regalías periódicas (royalties) y el retorno esperado para el franquiciado. Los números deben funcionar para ambas partes; si el franquiciado no gana, la red se cae.' },
             { type: 'h3', text: '3. Estructura legal y contratos' },
-            { type: 'p', text: 'En Colombia la franquicia se articula mediante contratos de franquicia y licencia de marca. Se debe registrar la marca ante la SIC y blindar la propiedad intelectual. Un contrato sólido protege la marca y define obligaciones, territorio y causales de terminación.' },
+            { type: 'p', text: 'La franquicia se articula mediante contratos de franquicia y licencia de marca. Se debe registrar la marca y blindar la propiedad intelectual. Un contrato sólido protege la marca y define obligaciones, territorio y causales de terminación.' },
             { type: 'h3', text: '4. Crea el paquete de franquicia' },
             { type: 'p', text: 'Incluye el manual de marca, el manual operativo, el plan de capacitación, el soporte de apertura y el acompañamiento continuo. Esto es lo que realmente vendes.' },
             { type: 'h3', text: '5. Selecciona franquiciados (no vendas a cualquiera)' },
@@ -178,37 +178,37 @@ export const posts: Post[] = [
             ] },
 
             { type: 'h2', text: 'Conclusión' },
-            { type: 'p', text: 'Desarrollar una franquicia en Colombia es un proyecto estratégico que exige sistematizar la operación, diseñar un modelo económico justo, blindar lo legal y seleccionar bien a los franquiciados. Hecho con método, es una de las rutas más escalables para crecer a nivel nacional e internacional.' },
-            { type: 'cta', text: '¿Quieres convertir tu negocio en una franquicia rentable? D2F Consulting diseña y estructura modelos de franquicia en Colombia. Agenda una consulta gratuita.' },
+            { type: 'p', text: 'Desarrollar una franquicia es un proyecto estratégico que exige sistematizar la operación, diseñar un modelo económico justo, blindar lo legal y seleccionar bien a los franquiciados. Hecho con método, es una de las rutas más escalables para crecer de forma sostenida.' },
+            { type: 'cta', text: '¿Quieres convertir tu negocio en una franquicia rentable? D2F Consulting diseña y estructura modelos de franquicia para crecimiento sostenible. Agenda una consulta gratuita.' },
         ],
     },
     {
         slug: 'd2f-consulting-quienes-somos',
         title: 'D2F Consulting: quiénes somos, qué hacemos y por qué confían en nosotros',
         description:
-            'Conoce a D2F Consulting (D2F Gestión): firma de consultoría empresarial en Colombia desde 2015. Historia, equipo, servicios y filosofía de trabajo.',
+            'Conoce a D2F Consulting: firma de consultoría empresarial internacional desde 2015. Historia, equipo, servicios y filosofía de trabajo.',
         keywords: [
             'D2F',
             'D2F Consulting',
             'D2F Gestión',
-            'D2F Colombia',
+            'consultoría empresarial internacional',
             'quiénes somos D2F',
         ],
         datePublished: '2026-06-20',
         dateModified: '2026-06-20',
         image: '/images/equipo-1.webp',
-        imageAlt: 'Equipo de D2F Consulting, firma de consultoría empresarial en Colombia',
+        imageAlt: 'Equipo de D2F Consulting, firma de consultoría empresarial internacional',
         readingTime: '6 min',
         excerpt:
-            'Quién es D2F Consulting, de dónde venimos y por qué empresas de Colombia y Latinoamérica confían en nosotros para crecer con estrategia y resultados.',
+            'Quién es D2F Consulting, de dónde venimos y por qué organizaciones en distintos mercados confían en nosotros para crecer con estrategia y resultados.',
         body: [
-            { type: 'p', text: 'D2F Consulting —también conocida como D2F Gestión, o simplemente D2F— es una firma colombiana de consultoría empresarial y gestión estratégica fundada en 2015, con sedes en Bogotá y Medellín. En este artículo te contamos quiénes somos, qué hacemos y por qué más de 25 empresas en Colombia y Latinoamérica han confiado en nosotros para transformar sus organizaciones.' },
+            { type: 'p', text: 'D2F Consulting —también conocida como D2F Gestión, o simplemente D2F— es una firma internacional de consultoría empresarial y gestión estratégica fundada en 2015. En este artículo te contamos quiénes somos, qué hacemos y por qué más de 25 organizaciones han confiado en nosotros para transformar sus empresas.' },
 
             { type: 'h2', text: 'Qué es D2F Consulting' },
             { type: 'p', text: 'D2F nace de la unión de tres pilares que dan nombre a la marca: Gestión, Desarrollo y Comunicación. Somos una firma de consultoría empresarial que acompaña a empresas de todos los tamaños —pymes, startups y multinacionales— a definir su estrategia, profesionalizar su operación, digitalizarse y crecer de forma sostenible. No entregamos diagnósticos de escritorio: acompañamos la implementación hasta que los resultados aparecen.' },
 
             { type: 'h2', text: 'Nuestra historia' },
-            { type: 'p', text: 'Desde 2015, D2F ha trabajado con organizaciones de sectores tan diversos como cosmética, educación, entretenimiento, alimentos, salud y servicios. El liderazgo de la firma suma más de 20 años de experiencia en consultoría, innovación corporativa y gestión estratégica en Colombia y la región, lo que nos permite combinar conocimiento profundo del mercado local con metodologías de clase mundial.' },
+            { type: 'p', text: 'Desde 2015, D2F ha trabajado con organizaciones de sectores tan diversos como cosmética, educación, entretenimiento, alimentos, salud y servicios. El liderazgo de la firma suma más de 20 años de experiencia en consultoría, innovación corporativa y gestión estratégica, lo que nos permite combinar profundidad de mercado con metodologías de clase mundial.' },
 
             { type: 'h2', text: 'Qué hacemos: seis líneas de servicio' },
             { type: 'ul', items: [
@@ -222,9 +222,9 @@ export const posts: Post[] = [
 
             { type: 'h2', text: 'Quiénes lideran D2F' },
             { type: 'h3', text: 'Diego Forero — CEO' },
-            { type: 'p', text: 'Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias de Colombia y Latinoamérica.' },
+            { type: 'p', text: 'Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias internacionales.' },
             { type: 'h3', text: 'Alejandra Rivera — CSO' },
-            { type: 'p', text: 'Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de empresas colombianas, con foco en transformación digital y gestión organizacional.' },
+            { type: 'p', text: 'Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de organizaciones en expansión, con foco en transformación digital y gestión organizacional.' },
 
             { type: 'h2', text: 'Por qué confían en D2F' },
             { type: 'p', text: 'Nuestros clientes destacan tres cosas: el compromiso real con sus proyectos, la capacidad de convertir la estrategia en ejecución y los resultados medibles. Más de 20 años de trayectoria, más de 25 clientes atendidos y una satisfacción del 100% respaldan la forma en que trabajamos.' },
@@ -235,25 +235,25 @@ export const posts: Post[] = [
         ],
     },
     {
-        slug: 'planeacion-estrategica-empresas-colombia',
-        title: 'Planeación estratégica para empresas en Colombia: guía y método de D2F',
+        slug: 'planeacion-estrategica-empresas-global',
+        title: 'Planeación estratégica para empresas: guía y método de D2F',
         description:
-            'Qué es la planeación estratégica, por qué tu empresa la necesita y cómo D2F Consulting la implementa paso a paso en Colombia para lograr resultados.',
+            'Qué es la planeación estratégica, por qué tu empresa la necesita y cómo D2F Consulting la implementa paso a paso para lograr resultados.',
         keywords: [
-            'planeación estratégica Colombia',
+            'planeación estratégica empresarial',
             'plan estratégico empresa',
             'D2F planeación estratégica',
-            'consultoría estratégica Bogotá',
+            'consultoría estratégica',
         ],
         datePublished: '2026-06-20',
         dateModified: '2026-06-20',
         image: '/images/strategic-planing.webp',
-        imageAlt: 'Sesión de planeación estratégica empresarial de D2F Consulting en Colombia',
+        imageAlt: 'Sesión de planeación estratégica empresarial de D2F Consulting',
         readingTime: '7 min',
         excerpt:
             'La planeación estratégica convierte la visión en acción. Te explicamos qué es, sus etapas y cómo D2F la aplica para que tu empresa crezca con rumbo.',
         body: [
-            { type: 'p', text: 'Muchas empresas en Colombia trabajan duro pero sin rumbo claro: reaccionan al día a día en vez de avanzar hacia objetivos definidos. La planeación estratégica resuelve eso. En esta guía explicamos qué es, cuáles son sus etapas y cómo el equipo de D2F Consulting la implementa para convertir la estrategia en resultados concretos.' },
+            { type: 'p', text: 'Muchas empresas trabajan duro pero sin rumbo claro: reaccionan al día a día en vez de avanzar hacia objetivos definidos. La planeación estratégica resuelve eso. En esta guía explicamos qué es, cuáles son sus etapas y cómo el equipo de D2F Consulting la implementa para convertir la estrategia en resultados concretos.' },
 
             { type: 'h2', text: '¿Qué es la planeación estratégica?' },
             { type: 'p', text: 'Es el proceso mediante el cual una empresa define a dónde quiere llegar (visión y objetivos) y diseña el camino para lograrlo (estrategia y plan de acción). Una buena planeación estratégica alinea a todo el equipo, prioriza recursos y permite medir el avance con indicadores claros.' },
@@ -279,10 +279,10 @@ export const posts: Post[] = [
             { type: 'p', text: 'Acompañamos la implementación con tableros de control y revisiones periódicas para corregir el rumbo a tiempo. Esta es la etapa donde D2F marca la diferencia: no dejamos a la empresa sola con un documento.' },
 
             { type: 'h2', text: 'El método de D2F' },
-            { type: 'p', text: 'En D2F Consulting combinamos metodologías probadas con un conocimiento profundo del mercado colombiano. Trabajamos de la mano del equipo directivo, transferimos capacidades y medimos resultados en cada etapa, para que la planeación estratégica se convierta en crecimiento real y sostenible.' },
+            { type: 'p', text: 'En D2F Consulting combinamos metodologías probadas con un conocimiento profundo del mercado y la operación. Trabajamos de la mano del equipo directivo, transferimos capacidades y medimos resultados en cada etapa, para que la planeación estratégica se convierta en crecimiento real y sostenible.' },
 
             { type: 'h2', text: 'Conclusión' },
-            { type: 'p', text: 'La planeación estratégica no es un lujo de grandes corporaciones: es la herramienta que permite a cualquier empresa colombiana crecer con rumbo, priorizar bien y tomar decisiones con datos. Con el acompañamiento adecuado, se convierte en una de las inversiones de mayor retorno.' },
+            { type: 'p', text: 'La planeación estratégica no es un lujo de grandes corporaciones: es la herramienta que permite a cualquier empresa crecer con rumbo, priorizar bien y tomar decisiones con datos. Con el acompañamiento adecuado, se convierte en una de las inversiones de mayor retorno.' },
             { type: 'cta', text: '¿Quieres un plan estratégico que sí se ejecute? D2F Consulting te acompaña desde el diagnóstico hasta los resultados. Agenda una consulta gratuita.' },
         ],
     },

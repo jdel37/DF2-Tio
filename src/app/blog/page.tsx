@@ -7,16 +7,16 @@ import { posts } from '@/content/posts';
 const baseUrl = 'https://www.d2fgestion.com';
 
 export const metadata: Metadata = {
-    title: 'Blog de Consultoría Empresarial en Colombia',
+    title: 'Blog de Consultoría Empresarial Global',
     description:
-        'Artículos y guías sobre consultoría empresarial, gestión estratégica, transformación digital y franquicias en Colombia, por D2F Consulting.',
+        'Artículos y guías sobre consultoría empresarial, estrategia, transformación digital y crecimiento organizacional a nivel internacional, por D2F Consulting.',
     alternates: { canonical: `${baseUrl}/blog` },
     openGraph: {
         type: 'website',
         url: `${baseUrl}/blog`,
-        title: 'Blog de Consultoría Empresarial en Colombia | D2F Consulting',
+        title: 'Blog de Consultoría Empresarial Global | D2F Consulting',
         description:
-            'Guías de consultoría empresarial, gestión estratégica, transformación digital y franquicias en Colombia.',
+            'Guías de consultoría empresarial, gestión estratégica, transformación digital y expansión internacional.',
     },
 };
 
@@ -57,11 +57,11 @@ export default function BlogIndex() {
                         <span className="text-[#DF1021] font-bold text-xs uppercase tracking-widest">Blog</span>
                     </div>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                        Consultoría empresarial en Colombia
+                        Consultoría empresarial global
                     </h1>
                     <p className="text-white/70 mt-4 max-w-2xl text-sm sm:text-base leading-relaxed">
                         Guías prácticas sobre gestión estratégica, transformación digital, franquicias y crecimiento
-                        empresarial, escritas por el equipo de D2F Consulting.
+                        empresarial para organizaciones con visión internacional.
                     </p>
                 </div>
             </header>
@@ -116,7 +116,7 @@ export default function BlogIndex() {
                         ¿Listo para transformar tu empresa?
                     </h2>
                     <p className="text-gray-600 mb-6 text-sm sm:text-base">
-                        Agenda una consulta inicial gratuita con nuestros consultores en Colombia.
+                        Agenda una consulta inicial gratuita con nuestros consultores y definamos tu próximo paso.
                     </p>
                     <Link
                         href="/#contacto"

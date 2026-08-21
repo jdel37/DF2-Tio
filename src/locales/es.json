@@ -8,47 +8,47 @@
         "contacto": "Contacto"
     },
     "hero": {
-        "title": "Consultoría Empresarial en Colombia",
+        "title": "Consultoría Empresarial Global",
         "subtitle": "Gestión Estratégica y Crecimiento Real",
-        "description": "Firma de consultoría empresarial con más de 20 años de experiencia en Bogotá y Medellín. Transformamos organizaciones con estrategia, tecnología y resultados medibles.",
+        "description": "Firma de consultoría empresarial con más de 20 años de experiencia acompañando organizaciones a escalar con estrategia, tecnología y resultados medibles.",
         "servicesBtn": "Nuestros Servicios",
         "contactBtn": "Agenda tu Consulta"
     },
     "about": {
         "title": "Consultoría empresarial con resultados desde 2015",
-        "description": "D2F Consulting es una firma de consultoría empresarial y gestión estratégica con sede en Bogotá, Colombia. Llevamos más de 20 años ayudando a empresas colombianas y multinacionales a alcanzar crecimiento sostenible, eficiencia operativa y ventaja competitiva. Combinamos conocimiento profundo del mercado local con metodologías de clase mundial.",
+        "description": "D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica. Llevamos más de 20 años ayudando a organizaciones a alcanzar crecimiento sostenible, eficiencia operativa y ventaja competitiva en mercados complejos. Combinamos experiencia práctica con metodologías de clase mundial.",
         "whyChooseUs": "¿Por qué elegirnos?",
         "points": {
-            "0": "Más de 20 años de experiencia en consultoría empresarial en Colombia",
+            "0": "Más de 20 años de experiencia en consultoría empresarial internacional",
             "1": "Soluciones a la medida para empresas de todos los tamaños y sectores",
             "2": "Metodologías probadas con resultados tangibles y medibles",
-            "3": "Presencia en Bogotá, Medellín y cobertura nacional"
+            "3": "Cobertura global con enfoque práctico y estratégico"
         },
         "stats": {
             "experience": "Años de Experiencia",
-            "clients": "Clientes en Colombia",
+            "clients": "Clientes Atendidos",
             "satisfied": "Clientes Satisfechos",
             "associates": "Asociados de las Industrias"
         }
     },
     "businessLines": {
         "title": "Servicios de Consultoría Empresarial",
-        "description": "Ofrecemos consultoría empresarial integral en Colombia a través de seis líneas especializadas, diseñadas para resolver los retos más complejos de su organización y crear valor sostenible.",
+        "description": "Ofrecemos consultoría empresarial integral para organizaciones que requieren claridad estratégica, ejecución efectiva y crecimiento sostenible en mercados competitivos.",
         "servicesTitle": "Lo que incluye",
         "lines": {
             "0": {
                 "title": "Gestión Estratégica",
-                "description": "Ayudamos a empresas colombianas a desarrollar e implementar planes estratégicos que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestra consultoría en gestión estratégica combina análisis de mercado, diseño de modelos de negocio y ejecución disciplinada para obtener resultados reales.",
+                "description": "Ayudamos a empresas a desarrollar e implementar planes estratégicos que impulsan el crecimiento sostenible y la ventaja competitiva. Nuestra consultoría en gestión estratégica combina análisis de mercado, diseño de modelos de negocio y ejecución disciplinada para obtener resultados reales.",
                 "services": {
                     "0": "Planeación Estratégica Corporativa",
-                    "1": "Entrada al Mercado & Expansión Colombia",
+                    "1": "Entrada al Mercado & Expansión Internacional",
                     "2": "Análisis Competitivo y de Mercado",
                     "3": "Estrategia de Crecimiento e Innovación"
                 }
             },
             "1": {
                 "title": "Transformación Digital",
-                "description": "Acompañamos a las empresas en su proceso de transformación digital, desde la estrategia hasta la implementación. Integramos tecnología emergente para optimizar operaciones, mejorar la experiencia del cliente y crear nuevos modelos de negocio adaptados al mercado colombiano.",
+                "description": "Acompañamos a las organizaciones en su proceso de transformación digital, desde la estrategia hasta la implementación. Integramos tecnología emergente para optimizar operaciones, mejorar la experiencia del cliente y crear nuevos modelos de negocio adaptados a un entorno cambiante.",
                 "services": {
                     "0": "Estrategia Digital & Hoja de Ruta",
                     "1": "Automatización de Procesos Empresariales",
@@ -58,7 +58,7 @@
             },
             "2": {
                 "title": "Gestión de Proyectos",
-                "description": "Brindamos consultoría especializada en gestión de proyectos empresariales para optimizar resultados, controlar riesgos y garantizar entrega eficiente. Aplicamos metodologías ágiles y tradicionales según la naturaleza de cada proyecto en Colombia.",
+                "description": "Brindamos consultoría especializada en gestión de proyectos empresariales para optimizar resultados, controlar riesgos y garantizar entrega eficiente. Aplicamos metodologías ágiles y tradicionales según la naturaleza de cada proyecto.",
                 "services": {
                     "0": "Planificación y Ejecución de Proyectos",
                     "1": "Gestión de Recursos y Presupuesto",
@@ -68,7 +68,7 @@
             },
             "3": {
                 "title": "Marketing y Comunicación",
-                "description": "Diseñamos e implementamos estrategias de marketing digital y comunicación corporativa para empresas colombianas. Fortalecemos su marca, aumentamos la visibilidad online y generamos más clientes con campañas orientadas a resultados.",
+                "description": "Diseñamos e implementamos estrategias de marketing digital y comunicación corporativa para organizaciones con visión de crecimiento. Fortalecemos su marca, aumentamos la visibilidad online y generamos más clientes con campañas orientadas a resultados.",
                 "services": {
                     "0": "Estrategia de Marketing Digital",
                     "1": "Gestión y Posicionamiento de Marca",
@@ -78,7 +78,7 @@
             },
             "4": {
                 "title": "Franquicias",
-                "description": "Somos expertos en desarrollo de franquicias en Colombia. Guiamos a empresas en la creación, estructuración y expansión de su modelo de franquicia, garantizando escalabilidad, control operativo y rentabilidad tanto a nivel nacional como internacional.",
+                "description": "Somos expertos en desarrollo de franquicias y expansión de modelos empresariales. Guiamos a empresas en la creación, estructuración y crecimiento de su red de franquicias con enfoque rentable y escalable.",
                 "services": {
                     "0": "Diseño del Modelo de Franquicia",
                     "1": "Expansión Nacional & Internacional",
@@ -88,7 +88,7 @@
             },
             "5": {
                 "title": "Academia",
-                "description": "Fortalecemos el capital humano de las empresas colombianas con programas de formación empresarial, liderazgo y gestión. Nuestros cursos están diseñados para líderes y equipos que quieren llevar su organización al siguiente nivel.",
+                "description": "Fortalecemos el capital humano de las organizaciones con programas de formación empresarial, liderazgo y gestión. Nuestros cursos están diseñados para líderes y equipos que quieren llevar su organización al siguiente nivel.",
                 "services": {
                     "0": "Formación en Gestión Estratégica",
                     "1": "Liderazgo y Desarrollo Directivo",
@@ -100,7 +100,7 @@
     },
     "clients": {
         "title": "Empresas que confían en nosotros",
-        "description": "Hemos ayudado a transformar más de 25 empresas en Colombia en sectores como cosmética, educación, entretenimiento, alimentos y servicios, generando resultados medibles y relaciones de largo plazo.",
+        "description": "Hemos ayudado a transformar más de 25 organizaciones en sectores como cosmética, educación, entretenimiento, alimentos y servicios, generando resultados medibles y relaciones de largo plazo.",
         "cta": "Conviértete en Nuestra Próxima Historia de Éxito",
         "industries": {
             "cosmetica": "Cosmética",
@@ -118,23 +118,23 @@
     },
     "team": {
         "title": "Equipo de Liderazgo",
-        "description": "Conozca a los consultores empresariales que lideran D2F Consulting en Colombia, con décadas de experiencia en gestión estratégica, transformación digital y desarrollo organizacional.",
+        "description": "Conoce a los consultores empresariales que lideran D2F Consulting, con décadas de experiencia en gestión estratégica, transformación digital y desarrollo organizacional a nivel internacional.",
         "members": {
             "0": {
                 "name": "Diego Forero",
                 "title": "Chief Executive Officer (CEO)",
-                "bio": "Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias de Colombia y Latinoamérica."
+                "bio": "Consultor empresarial con más de 20 años de experiencia en gestión estratégica, innovación corporativa y liderazgo de alto nivel en múltiples industrias internacionales."
             },
             "1": {
                 "name": "Alejandra Rivera",
                 "title": "Chief Strategy Officer (CSO)",
-                "bio": "Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de empresas colombianas. Experta en transformación digital y gestión organizacional."
+                "bio": "Especialista en análisis de datos, inteligencia de negocios y optimización estratégica para el crecimiento de organizaciones en expansión. Experta en transformación digital y gestión organizacional."
             }
         }
     },
     "testimonials": {
         "title": "Lo que dicen nuestros clientes",
-        "description": "Empresas líderes en Colombia y Latinoamérica avalan nuestra consultoría empresarial. Estos son algunos testimonios de quienes han transformado sus organizaciones con D2F Consulting.",
+        "description": "Empresas líderes en distintos mercados avalan nuestra consultoría empresarial. Estos son algunos testimonios de quienes han transformado sus organizaciones con D2F Consulting.",
         "list": {
             "0": {
                 "quote": "Tuve la maravillosa oportunidad de trabajar con Diego, con quien pude compartir la creación de proyectos y vi cómo su pasión, conocimientos, liderazgo y gran compromiso hacen de él un excelente profesional y, más que eso, un gran ser humano.",
@@ -155,7 +155,7 @@
     },
     "contact": {
         "title": "Contáctanos",
-        "description": "¿Buscas una consultoría empresarial en Colombia? Escríbenos hoy y agenda una consulta inicial gratuita con nuestro equipo de expertos en gestión estratégica.",
+        "description": "¿Buscas una consultoría empresarial con visión global? Escríbenos hoy y agenda una consulta inicial gratuita con nuestro equipo de expertos en gestión estratégica.",
         "form": {
             "name": "Nombre Completo",
             "email": "Correo Electrónico",
@@ -185,7 +185,7 @@
         }
     },
     "footer": {
-        "text": "Firma líder en consultoría empresarial y gestión estratégica en Colombia. Bogotá · Medellín · +20 años transformando organizaciones.",
+        "text": "Firma líder en consultoría empresarial y gestión estratégica con enfoque internacional. +20 años transformando organizaciones en crecimiento.",
         "copyright": "© {{year}} D2F Consulting — Todos los derechos reservados."
     }
 }

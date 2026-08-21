@@ -105,7 +105,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 image: `${baseUrl}${post.image}`,
                 datePublished: post.datePublished,
                 dateModified: post.dateModified,
-                inLanguage: 'es-CO',
+                inLanguage: 'es-ES',
                 mainEntityOfPage: { '@type': 'WebPage', '@id': url },
                 author: { '@id': `${baseUrl}/#organization` },
                 publisher: { '@id': `${baseUrl}/#organization` },

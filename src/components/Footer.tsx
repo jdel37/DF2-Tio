@@ -124,7 +124,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/60 text-sm">
                 <MapPin size={16} className="text-[#DF1021] shrink-0 mt-0.5" />
-                <span>We Work Bogotá · Medellín</span>
+                <span>Atención global · modalidad remota</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Mail size={16} className="text-[#DF1021] shrink-0" />
@@ -151,7 +151,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} D2F Consulting Agency · Todos los derechos reservados.
           </p>
           <p className="flex items-center gap-1.5">
-            Hecho con <span className="text-[#DF1021] text-base">&hearts;</span> en Colombia
+            Hecho con <span className="text-[#DF1021] text-base">&hearts;</span> para crecer sin fronteras
           </p>
         </div>
       </div>

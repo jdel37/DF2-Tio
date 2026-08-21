@@ -69,17 +69,16 @@ export default function Home() {
                     <ol itemScope itemType="https://schema.org/BreadcrumbList">
                         <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
                             <a itemProp="item" href="https://www.d2fgestion.com">
-                                <span itemProp="name">D2F Consulting — Consultoría Empresarial Colombia</span>
+                                <span itemProp="name">D2F Consulting — Consultoría Empresarial Global</span>
                             </a>
                             <meta itemProp="position" content="1" />
                         </li>
                     </ol>
                 </nav>
                 <p>
-                    D2F Consulting es la firma de consultoría empresarial y gestión estratégica líder en Colombia,
-                    con sedes en Bogotá y Medellín. Ofrecemos servicios de consultoría estratégica, transformación
-                    digital, gestión de proyectos, marketing y comunicación, desarrollo de franquicias y academia
-                    empresarial para empresas de todos los tamaños en Colombia.
+                    D2F Consulting es una firma internacional de consultoría empresarial y gestión estratégica,
+                    con enfoque global en crecimiento, transformación digital, estrategia y ejecución para
+                    empresas que buscan escalar con claridad y resultados medibles.
                 </p>
             </div>
             <About />
